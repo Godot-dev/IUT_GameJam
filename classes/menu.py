@@ -2,6 +2,8 @@ import pygame
 
 class Menu:
     def __init__(self):
+        # Image de background
+        self.background = pygame.image.load('assets/background.png')
         # Instanciations des éléments liés au menu
         self.play_button = pygame.image.load('assets/play.png')
         self.play_button = pygame.transform.scale(self.play_button,(400,107)) # On redimensionne
@@ -21,6 +23,7 @@ class Menu:
 
 
     def drawMenu(self,screen): # on affiche le menu, chaque bouton est positionné au rectangle formé par sa hitbox
+        screen.blit(self.background, (0, 0))
         screen.blit(self.play_button,self.play_button_rect)
         screen.blit(self.options_button,self.options_button_rect)
         screen.blit(self.quit_button,self.quit_button_rect)
