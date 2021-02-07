@@ -8,5 +8,5 @@ class Options:
     def drawOptions(self,screen):
         pass
 
-    def catch_signal(self,game,event):
+    def catch_signal(self,event):
         pass

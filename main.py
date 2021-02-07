@@ -32,8 +32,12 @@ while running:
         if event.type == pygame.QUIT:
             running = False
             pygame.quit()
-        elif event.type == MOUSEBUTTONDOWN and not game.is_playing:
+        elif event.type == MOUSEBUTTONDOWN and not game.is_playing and not options.is_configure:
             if not menu.catch_signal(game,options,event): # Si la fonction renvoit faux, on doit arrêter le programme
                 running = False
                 pygame.quit()
+        elif event.type == MOUSEBUTTONDOWN and not game.is_playing:
+            options.catch_signal(event)
+        else:
+            game.catch_signal(event)
 

@@ -6,4 +6,7 @@ class Game:
 
 
     def boucleJeu(self,screen):
-        print("test")
+        pass
+
+    def catch_signal(self,event):
+        pass
