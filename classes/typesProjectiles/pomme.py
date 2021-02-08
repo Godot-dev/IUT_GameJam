@@ -10,7 +10,7 @@ class Pomme(Projectile): # la pomme se déplace en ligne droite, de taille 64x64
         self.pointDeDepart = random.randint(0, 3)
         self.angle = 90 * self.pointDeDepart
         self.image = pygame.image.load("assets/pomme.png")
+        self.image = pygame.transform.scale(self.image, (57, 64))
         self.image = pygame.transform.rotate(self.image, self.angle)
-        self.image = pygame.transform.scale(self.image, (64, 64))
         self.rect = self.image.get_rect()
         self.rect_init()

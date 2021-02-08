@@ -13,8 +13,8 @@ class Salade(Projectile): # la salade se déplace en diagonale, de taille 64x64,
             self.direction = -1
         self.angle = 90 * self.pointDeDepart
         self.image = pygame.image.load("assets/citrouille.png")
-        self.image = pygame.transform.rotate(self.image, self.angle)
         self.image = pygame.transform.scale(self.image, (64, 64))
+        self.image = pygame.transform.rotate(self.image, self.angle)
         self.rect = self.image.get_rect()
         self.rect_init()
 

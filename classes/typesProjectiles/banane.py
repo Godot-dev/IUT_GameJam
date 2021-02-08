@@ -14,8 +14,8 @@ class Banane(Projectile): # la salade se déplace en diagonale, de taille 64x64,
         self.i = 1
         self.angle = 90 * self.pointDeDepart
         self.image = pygame.image.load("assets/banane.png")
+        self.image = pygame.transform.scale(self.image, (64, 133))
         self.image = pygame.transform.rotate(self.image, self.angle)
-        self.image = pygame.transform.scale(self.image, (64, 64))
         self.rect = self.image.get_rect()
         self.rect_init()
 
