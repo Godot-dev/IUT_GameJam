@@ -7,13 +7,18 @@ from classes.options import Options
 # Instanciations obligatoires initiales
 pygame.init()
 pygame.display.set_caption("Game")
-screen = pygame.display.set_mode((1024, 768)) # Taille fixe du jeu, imposée dans les consignes, ne pas changer
+screen = pygame.display.set_mode((1024, 768))
 game = Game()
 menu = Menu()
 options = Options()
 running = True
+background = pygame.image.load('assets/background.png')
+
+
 
 while running: 
+    screen.blit(background, (0, 0))
+
     if game.is_playing: # Si on est en jeu, on lance la boucle du jeu
         game.drawJeu(screen)
     elif options.is_configure: # Si on est dans les options, on affiche les options
@@ -27,16 +32,11 @@ while running:
         if event.type == pygame.QUIT:
             running = False
             pygame.quit()
-        elif event.type == MOUSEBUTTONDOWN and not game.is_playing and not options.is_configure:
-            if not menu.catch_signal(game, options, event): # Si la fonction renvoie faux, on doit arrêter le programme
-                running = False
-                pygame.quit()
-        elif event.type == MOUSEBUTTONDOWN and not game.is_playing:
-            options.catch_signal(event)
-        else:
+        elif game.is_playing:
             game.catch_signal(event)
         elif event.type == MOUSEBUTTONDOWN and options.is_configure:
             options.catch_signal(event)
-        elif event.type == MOUSEBUTTONDOWN and not menu.catch_signal(game,options,event): # Si la fonction renvoie faux, on doit arrêter le programme
-                running = False
-                pygame.quit()
+        elif event.type == MOUSEBUTTONDOWN and not menu.catch_signal(game, options, event): # Si la fonction renvoie faux, on doit arrêter le programme
+            running = False
+            pygame.quit()
+
