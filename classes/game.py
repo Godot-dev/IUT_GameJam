@@ -14,7 +14,7 @@ class Game:
     def drawJeu(self,screen):
         screen.blit(self.background, (0, 0))
         if not self.jour and self.phaseDeJeu == None:
-            self.phaseDeJeu = Cauchemar(self.etape, self.phaseDeJeu)
+            self.phaseDeJeu = Cauchemar(self.etape, self.phaseDeJeu, self)
         elif not self.jour:
             self.phaseDeJeu.drawCauchemar(screen)
 

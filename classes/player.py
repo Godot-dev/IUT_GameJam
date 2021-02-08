@@ -13,6 +13,7 @@ class Player(pygame.sprite.Sprite):
         self.rect.x = 540
         self.rect.y = 360
         self.imageVie = pygame.image.load('assets/3coeurs.png')
+        #self.imageVie = pygame.transform.scale(self.imageVie,(128,128))
 
     def move_right(self):
         self.rect.x += self.velocity

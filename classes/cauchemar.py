@@ -13,23 +13,23 @@ from classes.typesProjectiles.cerise import Cerise
 from classes.typesProjectiles.raisin import Raisin
 
 class Cauchemar:
-    def __init__(self, difficulty, legumesFruits):
-        self.player = Player()    
+    def __init__(self, difficulty, legumesFruits, game):
         self.difficulty = difficulty
-        self.liste_projectiles = pygame.sprite.Group()
-        self.i = 1 # Permets de créer un nouveau projectile à l'écran tous les x temps
-        self.MAX = 30 # Le MAX devra être changé en fonction de la difficulté
         self.legumesFruits = ["Poireau", "Raisin", "Carotte"]
+        self.game = game
+        self.player = Player()    
+        self.liste_projectiles = pygame.sprite.Group()
+        self.time = 0 # Indique le nombre de frames effectuées dans le cauchemar depuis son début
+        self.frequence = 30 # La fréquence à laquelle on crée un ennemi / update le timer
         self.cooldownDash = 120 # Permets de ne pas autoriser le joueur de faire des dash à l'infini mais toutes les deux secondes
 
     def drawCauchemar(self, screen):
         screen.blit(self.player.image, self.player.rect)
         
-        self.i += 1
-        if self.i == self.MAX:
+        self.time += 1
+        if self.time % self.frequence == 0: # On ajoute un ennemi tous les self.frequence frames
             j = random.randint(0,2) # sélectionne l'un des trois legumes/fruits du cauchemar
             self.liste_projectiles.add(globals()[self.legumesFruits[j]](self)) # et l'ajoute à l'écran
-            self.i = 0
         for projectile in self.liste_projectiles:
             projectile.move()
             if projectile.rect.x < 0 or projectile.rect.x > 1024 or projectile.rect.y < 0 or projectile.rect.y > 768: 
@@ -45,7 +45,11 @@ class Cauchemar:
                     pass
 
         self.liste_projectiles.draw(screen)
-        screen.blit(self.player.imageVie, (950,700))
+        self.updateTimeBar(screen)
+        if self.cooldownDash < 120:
+            self.updateDashBar(screen)
+        #screen.blit(self.player.imageVie, (950,700))
+        screen.blit(self.player.imageVie, (884,670))
 
     def catch_signal(self, pressed):
         f = self.player.velocity
@@ -73,3 +77,30 @@ class Cauchemar:
 
     def check_collision(self, sprite, group):
         return pygame.sprite.spritecollide(sprite, group, True, pygame.sprite.collide_mask)
+
+    def updateTimeBar(self, screen):
+        bar_back_color = (60,63,60) # Couleur de fond
+        bar_color = (111,210,46) # Couleur affichant l'avancée du niveau
+
+        bar_back_position = [30, 730, 128, 10]
+        l = self.time / 30
+        bar_position = [30, 730, l, 10]
+
+        pygame.draw.rect(screen,bar_back_color,bar_back_position)
+        pygame.draw.rect(screen,bar_color,bar_position)
+
+        if(l == 128): # Le niveau est terminé
+            self.terminerCauchemar()
+
+    def updateDashBar(self, screen):
+        bar_back_color = (60,63,60) # Couleur de fond
+        bar_color = (111,210,46) # Couleur affichant l'avancée du niveau
+
+        bar_back_position = [448, 730, 128, 10]
+        bar_position = [448, 730, self.cooldownDash, 10]
+
+        pygame.draw.rect(screen,bar_back_color,bar_back_position)
+        pygame.draw.rect(screen,bar_color,bar_position)
+
+    def terminerCauchemar(self):
+        self.game.jour = True
