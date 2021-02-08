@@ -6,34 +6,34 @@ class Projectile(pygame.sprite.Sprite):
         super(Projectile, self).__init__()
         self.cauchemar = cauchemar
         self.velocity = 3
-        self.direction = random.randint(0, 3)
-        self.angle = 90 * self.direction
+        self.pointDeDepart = random.randint(0, 3) # Indique si on part d'en bas de l'écran, à gauche de l'écran etc...
+        self.angle = 90 * self.pointDeDepart
         self.rect_init()
 
     def rect_init(self):
-        if self.direction == 0:  # part d'en haut
+        if self.pointDeDepart == 0:  # part d'en bas 
+            self.rect.x = random.randint(0, 1024)
             self.rect.y = 768
-            self.rect.x = random.randint(0, 1024)
-        elif self.direction == 1:  # part de gauche
+        elif self.pointDeDepart == 1:  # part de droite
             self.rect.x = 1024
-            self.rect.y = random.randint(0, 768 - self.rect.height)
-        elif self.direction == 2:  # part d'en bas
-            self.rect.y = - self.rect.y
+            self.rect.y = random.randint(0, 768)
+        elif self.pointDeDepart == 2:  # part d'en haut
             self.rect.x = random.randint(0, 1024)
-        elif self.direction == 3:  # part de droite
-            self.rect.x = - self.rect.width
-            self.rect.y = random.randint(0, 768 - self.rect.height)
+            self.rect.y = 0
+        elif self.pointDeDepart == 3:  # part de gauche
+            self.rect.x = 0
+            self.rect.y = random.randint(0, 768)
 
     def move(self): # A faire hériter aux classes filles pour modifier les patterns
-        if self.direction == 0:
+        if self.pointDeDepart == 0:
             self.rect.y -= self.velocity
-        elif self.direction == 1:
+        elif self.pointDeDepart == 1:
             self.rect.x -= self.velocity
-        elif self.direction == 2:
+        elif self.pointDeDepart == 2:
             self.rect.y += self.velocity
-        elif self.direction == 3:
+        elif self.pointDeDepart == 3:
             self.rect.x += self.velocity
         
-    def nettoyage(self):
+    def supprimer(self):
         self.cauchemar.liste_projectiles.remove(self)
         

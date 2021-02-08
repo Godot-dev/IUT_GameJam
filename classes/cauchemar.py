@@ -12,17 +12,17 @@ class Cauchemar:
 
     def drawCauchemar(self, screen):
         screen.blit(self.player.image, self.player.rect)
-        screen.blit(self.player.imageVie, (950,700))
+        
         self.i += 1
         if self.i == 30:
             self.liste_projectiles.add(Pomme(self))
             self.i = 0
         for projectile in self.liste_projectiles:
             projectile.move()
-            if projectile.rect.x < - projectile.rect.width or projectile.rect.x > 1024 + projectile.rect.width or projectile.rect.y < 0 - projectile.rect.y or projectile.rect.y > 768 + projectile.rect.y:
-                projectile.nettoyage() # A rajouter à la fin de tous les move pour supprimer le projectile, s'il n'est plus sur l'écran
+            if projectile.rect.x < 0 or projectile.rect.x > 1024 or projectile.rect.y < 0 or projectile.rect.y > 768: 
+                projectile.supprimer() # A rajouter à la fin de tous les move pour supprimer le projectile, s'il n'est plus sur l'écran
             elif self.check_collision(self.player,self.liste_projectiles):
-                projectile.nettoyage()
+                projectile.supprimer()
                 self.player.health -= 1
                 if self.player.health == 2:
                     self.player.imageVie = pygame.image.load('assets/2coeurs.png')
@@ -32,6 +32,7 @@ class Cauchemar:
                     pass
 
         self.liste_projectiles.draw(screen)
+        screen.blit(self.player.imageVie, (950,700))
 
     def catch_signal(self, pressed):
         f = self.player.velocity
