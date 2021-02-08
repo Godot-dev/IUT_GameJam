@@ -7,7 +7,7 @@ class Cauchemar:
         self.difficulty = difficulty
         self.legumes = legumes
 
-    def drawCauchemar(self, screen, pressed):
+    def drawCauchemar(self, screen):
         screen.blit(self.player.image, self.player.rect)
 
     def catch_signal(self, pressed):
