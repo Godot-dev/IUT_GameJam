@@ -16,9 +16,9 @@ class Game:
         if not self.jour and self.phaseDeJeu == None:
             self.phaseDeJeu = Cauchemar(self.etape, self.phaseDeJeu)
         elif not self.jour:
-            self.phaseDeJeu.drawCauchemar(screen)
+            self.phaseDeJeu.drawCauchemar(screen, self.pressed)
 
-    def catch_signal(self,event):
+    def catch_signal(self):
         # On effectue les actions du jeu en fonction de l'endroit où nous sommes
         if not self.jour and self.phaseDeJeu != None:
             self.phaseDeJeu.catch_signal(self.pressed)
