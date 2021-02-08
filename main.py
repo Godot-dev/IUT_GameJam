@@ -17,7 +17,7 @@ background = pygame.image.load('assets/background.png')
 clock = pygame.time.Clock()
 
 while running: 
-    dt = clock.tick(60) / 1000
+    clock.tick(60) / 1000
 
     screen.blit(background, (0, 0))
 
