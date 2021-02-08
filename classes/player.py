@@ -25,3 +25,24 @@ class Player(pygame.sprite.Sprite):
 
     def move_down(self):
         self.rect.y += self.velocity
+    
+    def dash(self,pressed):
+        f = self.velocity
+        # Si le joueur va en diagonale, sa vitesse doit être réduite car il va faire deux déplacements en une seule action
+        for i in range(20):
+            if (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_DOWN)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_DOWN)):
+                f *= 0.7
+                self.velocity = int(f)
+            if pressed.get(pygame.K_RIGHT) and self.rect.x + self.rect.width < 1024:
+                self.move_right()
+            if pressed.get(pygame.K_LEFT) and self.rect.x > 0:
+                self.move_left()
+            if pressed.get(pygame.K_UP) and self.rect.y > 0:
+                self.move_up()
+            if pressed.get(pygame.K_DOWN) and self.rect.y + self.rect.height < 768:
+                self.move_down()
+
+            if (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_DOWN)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_DOWN)):
+                self.velocity = int(f/0.7)
+        
+        

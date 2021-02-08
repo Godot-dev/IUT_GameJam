@@ -20,6 +20,7 @@ class Cauchemar:
         self.i = 1 # Permets de créer un nouveau projectile à l'écran tous les x temps
         self.MAX = 30 # Le MAX devra être changé en fonction de la difficulté
         self.legumesFruits = ["Poireau", "Raisin", "Carotte"]
+        self.cooldownDash = 120 # Permets de ne pas autoriser le joueur de faire des dash à l'infini mais toutes les deux secondes
 
     def drawCauchemar(self, screen):
         screen.blit(self.player.image, self.player.rect)
@@ -48,6 +49,7 @@ class Cauchemar:
 
     def catch_signal(self, pressed):
         f = self.player.velocity
+        self.cooldownDash += 1
         # Si le joueur va en diagonale, sa vitesse doit être réduite car il va faire deux déplacements en une seule action
         if (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_DOWN)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_DOWN)):
             f *= 0.7
@@ -61,6 +63,9 @@ class Cauchemar:
             self.player.move_up()
         if pressed.get(pygame.K_DOWN) and self.player.rect.y + self.player.rect.height < 768:
             self.player.move_down()
+        if pressed.get(pygame.K_SPACE) and self.cooldownDash > 120:
+            self.player.dash(pressed)
+            self.cooldownDash = 0 # On remets le cooldown à 0, il faudra donc attendre deux secondes (60*2 = 120) pour en effectuer un à nouveau 
 
         # Sa vitesse peut désormais être remise par défaut
         if (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_DOWN)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_DOWN)):
