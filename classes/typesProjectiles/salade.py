@@ -12,7 +12,7 @@ class Salade(Projectile): # la salade se déplace en diagonale, de taille 64x64,
         if self.direction == 0: # On a besoin que self.direction soit égal à 1 ou -1, pas 0
             self.direction = -1
         self.angle = 90 * self.pointDeDepart
-        self.image = pygame.image.load("assets/bowling-ball.png")
+        self.image = pygame.image.load("assets/citrouille.png")
         self.image = pygame.transform.rotate(self.image, self.angle)
         self.image = pygame.transform.scale(self.image, (64, 64))
         self.rect = self.image.get_rect()
