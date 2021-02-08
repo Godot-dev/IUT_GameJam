@@ -4,9 +4,9 @@ class Options:
     def __init__(self):
         # Image de background
         self.background = pygame.image.load('assets/background.png')
-        # Instanciations des éléments liés au menu des options
+        # Instanciation des éléments liés au menu des options
         self.is_configure = False
-        
+
     def drawOptions(self,screen):
         screen.blit(self.background, (0, 0))
 
