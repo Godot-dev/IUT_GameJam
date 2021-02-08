@@ -3,6 +3,7 @@ from pygame.constants import MOUSEBUTTONDOWN
 from classes.game import Game
 from classes.menu import Menu
 from classes.options import Options
+from time import sleep
 
 # Instanciations obligatoires initiales
 pygame.init()
@@ -46,3 +47,4 @@ while running:
             running = False
             pygame.quit()
 
+    sleep(1.0/60)
