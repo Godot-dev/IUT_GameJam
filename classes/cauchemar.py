@@ -1,21 +1,27 @@
 import pygame
+import random
 from classes.player import Player
 from classes.projectile import Projectile
 from classes.typesProjectiles.pomme import Pomme
+from classes.typesProjectiles.salade import Salade
+from classes.typesProjectiles.banane import Banane
 
 class Cauchemar:
-    def __init__(self, difficulty, legumes):
+    def __init__(self, difficulty, legumesFruits):
         self.player = Player()    
         self.difficulty = difficulty
         self.liste_projectiles = pygame.sprite.Group()
         self.i = 1 # Permets de créer un nouveau projectile à l'écran tous les x temps
+        self.MAX = 30 # Le MAX devra être changé en fonction de la difficulté
+        self.legumesFruits = ["Pomme", "Salade", "Banane"]
 
     def drawCauchemar(self, screen):
         screen.blit(self.player.image, self.player.rect)
         
         self.i += 1
-        if self.i == 30:
-            self.liste_projectiles.add(Pomme(self))
+        if self.i == self.MAX:
+            j = random.randint(0,2) # sélectionne l'un des trois legumes/fruits du cauchemar
+            self.liste_projectiles.add(globals()[self.legumesFruits[j]](self)) # et l'ajoute à l'écran
             self.i = 0
         for projectile in self.liste_projectiles:
             projectile.move()

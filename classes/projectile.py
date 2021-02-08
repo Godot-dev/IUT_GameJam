@@ -10,7 +10,7 @@ class Projectile(pygame.sprite.Sprite):
         self.angle = 90 * self.pointDeDepart
         self.rect_init()
 
-    def rect_init(self):
+    def rect_init(self): # A modifier chez les classes filles si nous voulons changer l'emplacement des points de spawn
         if self.pointDeDepart == 0:  # part d'en bas 
             self.rect.x = random.randint(0, 1024)
             self.rect.y = 768
@@ -24,7 +24,7 @@ class Projectile(pygame.sprite.Sprite):
             self.rect.x = 0
             self.rect.y = random.randint(0, 768)
 
-    def move(self): # A faire hériter aux classes filles pour modifier les patterns
+    def move(self): # A modifier si chez les classes filles pour modifier les patterns de déplacement
         if self.pointDeDepart == 0:
             self.rect.y -= self.velocity
         elif self.pointDeDepart == 1:

@@ -7,8 +7,8 @@ class Pomme(Projectile): # la pomme se déplace en ligne droite, de taille 64x64
         super(Projectile, self).__init__()
         self.cauchemar = cauchemar
         self.velocity = 3
-        self.direction = random.randint(0, 3)
-        self.angle = 90 * self.direction
+        self.pointDeDepart = random.randint(0, 3)
+        self.angle = 90 * self.pointDeDepart
         self.image = pygame.image.load("assets/bowling-ball.png")
         self.image = pygame.transform.rotate(self.image, self.angle)
         self.image = pygame.transform.scale(self.image, (64, 64))
