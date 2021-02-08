@@ -1,9 +1,9 @@
 import pygame
+import time
 from pygame.constants import MOUSEBUTTONDOWN
 from classes.game import Game
 from classes.menu import Menu
 from classes.options import Options
-from time import sleep
 
 # Instanciations obligatoires initiales
 pygame.init()
@@ -15,9 +15,11 @@ options = Options()
 running = True
 background = pygame.image.load('assets/background.png')
 
-
-
+i=0
 while running: 
+    # Début du calcul du temps d'exécution
+    deb = time.time()
+
     screen.blit(background, (0, 0))
 
     if game.is_playing: # Si on est en jeu, on lance la boucle du jeu
@@ -33,7 +35,6 @@ while running:
     for event in pygame.event.get(): # Pour tous les events de l'itération de boucle en question
         if event.type == pygame.QUIT:
             running = False
-            pygame.quit()
 
         if game.is_playing:
             # On met à jour pressed
@@ -45,6 +46,12 @@ while running:
             options.catch_signal(event)
         elif event.type == MOUSEBUTTONDOWN and not menu.catch_signal(game, options, event): # Si la fonction renvoie faux, on doit arrêter le programme
             running = False
-            pygame.quit()
+    
+    # Fin du calcul du temps d'exécution et attente en fonction pour brider le jeu en 60fps
+    fin = time.time()
+    t = fin - deb
+    if (1.0/60)-t > 0:
+        time.sleep((1.0/60)-t)
 
-    sleep(1.0/60)
+        
+pygame.quit()
