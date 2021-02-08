@@ -32,7 +32,13 @@ while running:
         if event.type == pygame.QUIT:
             running = False
             pygame.quit()
-        elif game.is_playing:
+        # On met à jour pressed
+        elif event.type == pygame.KEYDOWN:
+            game.pressed[event.key] = True
+        elif event.type == pygame.KEYUP:
+            game.pressed[event.key] = False
+
+        if game.is_playing:
             game.catch_signal(event)
         elif event.type == MOUSEBUTTONDOWN and options.is_configure:
             options.catch_signal(event)

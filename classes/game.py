@@ -1,4 +1,3 @@
-from classes.cauchemar import Cauchemar
 import pygame
 from classes.cauchemar import Cauchemar
 
@@ -8,9 +7,7 @@ class Game:
         self.background = pygame.image.load('assets/1.png')
         self.is_playing = False
         self.pressed = {} # Représente les touches actuellement enfoncées par le joueur
-        self.etape = 2 # 1, 3 et 5 sont les étapes jour, et les cauchemars sont aux étapes 2, 4 et 6. 7 et 8 correspondent aux deux fins
-        self.cauchemar = None
-        self.visualNovelPart = None
+        self.etape = 1 # 1 représente le premier jour
 
 
     def drawJeu(self,screen):
