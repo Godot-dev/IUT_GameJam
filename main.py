@@ -15,7 +15,6 @@ options = Options()
 running = True
 background = pygame.image.load('assets/background.png')
 
-i=0
 while running: 
     # Début du calcul du temps d'exécution
     deb = time.time()
