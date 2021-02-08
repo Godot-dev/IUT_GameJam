@@ -14,10 +14,10 @@ menu = Menu()
 options = Options()
 running = True
 background = pygame.image.load('assets/background.png')
+clock = pygame.time.Clock()
 
 while running: 
-    # Début du calcul du temps d'exécution
-    deb = time.time()
+    dt = clock.tick(60) / 1000
 
     screen.blit(background, (0, 0))
 
@@ -44,13 +44,7 @@ while running:
         elif event.type == MOUSEBUTTONDOWN and options.is_configure:
             options.catch_signal(event)
         elif event.type == MOUSEBUTTONDOWN and not menu.catch_signal(game, options, event): # Si la fonction renvoie faux, on doit arrêter le programme
-            running = False
-    
-    # Fin du calcul du temps d'exécution et attente en fonction pour brider le jeu en 60fps
-    fin = time.time()
-    t = fin - deb
-    if (1.0/60)-t > 0:
-        time.sleep((1.0/60)-t)
+            running = False 
 
         
 pygame.quit()
