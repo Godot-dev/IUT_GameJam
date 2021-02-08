@@ -12,11 +12,25 @@ class Cauchemar:
 
     def drawCauchemar(self, screen):
         screen.blit(self.player.image, self.player.rect)
+        screen.blit(self.player.imageVie, (950,700))
         self.i += 1
         if self.i == 30:
             self.liste_projectiles.add(Pomme(self))
+            self.i = 0
         for projectile in self.liste_projectiles:
             projectile.move()
+            if projectile.rect.x < - projectile.rect.width or projectile.rect.x > 1024 + projectile.rect.width or projectile.rect.y < 0 - projectile.rect.y or projectile.rect.y > 768 + projectile.rect.y:
+                projectile.nettoyage() # A rajouter à la fin de tous les move pour supprimer le projectile, s'il n'est plus sur l'écran
+            elif self.check_collision(self.player,self.liste_projectiles):
+                projectile.nettoyage()
+                self.player.health -= 1
+                if self.player.health == 2:
+                    self.player.imageVie = pygame.image.load('assets/2coeurs.png')
+                elif self.player.health == 1:
+                    self.player.imageVie = pygame.image.load('assets/1coeurs.png')
+                else: # Le joueur perds la partie, il faudra remplir plus tard le else
+                    pass
+
         self.liste_projectiles.draw(screen)
 
     def catch_signal(self, pressed):
@@ -38,3 +52,6 @@ class Cauchemar:
         # Sa vitesse peut désormais être remise par défaut
         if (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_DOWN)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_DOWN)):
             self.player.velocity = int(f/0.7)
+
+    def check_collision(self, sprite, group):
+        return pygame.sprite.spritecollide(sprite, group, True, pygame.sprite.collide_mask)
