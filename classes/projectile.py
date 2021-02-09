@@ -32,7 +32,5 @@ class Projectile(pygame.sprite.Sprite):
             self.rect.x += self.velocity
         
     def supprimer(self):
-        print(self.__class__.__name__)
-        if self.__class__.__name__ != 'Citrouille' or (self.__class__.__name__ == 'Citrouille' and self.cooldown > 120): # On n'a pas le même principe de collision sur les citrouilles
-            self.cauchemar.liste_projectiles.remove(self)
+        self.cauchemar.liste_projectiles.remove(self)
         

@@ -18,12 +18,15 @@ class Cauchemar:
         self.legumesFruits = ["Poireau", "Banane", "Citrouille"]
         self.game = game
         self.player = Player()    
+        self.background = pygame.image.load('assets/backgroundMedium.png')
+        self.background = pygame.transform.scale(self.background, (1024, 768))
         self.liste_projectiles = pygame.sprite.Group()
         self.time = 0 # Indique le nombre de frames effectuées dans le cauchemar depuis son début
-        self.frequence = 30 # La fréquence à laquelle on crée un ennemi / update le timer
+        self.frequence = 75 - 1 * 15 # La fréquence à laquelle on crée un ennemi
         self.cooldownDash = 120 # Permets de ne pas autoriser le joueur de faire des dash à l'infini mais toutes les deux secondes
 
     def drawCauchemar(self, screen):
+        screen.blit(self.background, (0,0))
         screen.blit(self.player.image, self.player.rect)
         
         self.time += 1

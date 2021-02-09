@@ -4,7 +4,6 @@ from classes.cauchemar import Cauchemar
 class Game:
     def __init__(self):
         # Image de background
-        self.background = pygame.image.load('assets/1.png')
         self.is_playing = False
         self.pressed = {} # Représente les touches actuellement enfoncées par le joueur
         self.etape = 1 # 1 représente le premier jour, 2 le deuxième, 3 le troisième, et les suivants représentent les cinématiques de fin
@@ -12,7 +11,6 @@ class Game:
         self.phaseDeJeu = None
 
     def drawJeu(self,screen):
-        screen.blit(self.background, (0, 0))
         if not self.jour and self.phaseDeJeu == None:
             self.phaseDeJeu = Cauchemar(self.etape, self.phaseDeJeu, self)
         elif not self.jour:
