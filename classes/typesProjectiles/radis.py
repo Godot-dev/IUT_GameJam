@@ -3,10 +3,10 @@ import pygame
 from classes.projectile import Projectile
 
 class Radis(Projectile): # Le radis se déplace en ligne droite, mais beaucoup plus rapidement que les autres fruits et légumes
-    def __init__(self, cauchemar, image):
+    def __init__(self, difficulty, image):
         super(Projectile, self).__init__()
-        self.cauchemar = cauchemar
-        self.velocity = 4 + 2 * cauchemar.difficulty
+        self.difficulty = difficulty
+        self.velocity = 4 + 2 * difficulty
         self.pointDeDepart = random.randint(0, 3)
         self.angle = 90 * self.pointDeDepart
         self.image = image

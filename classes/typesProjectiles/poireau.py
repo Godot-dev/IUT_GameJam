@@ -3,10 +3,10 @@ import pygame
 from classes.projectile import Projectile
 
 class Poireau(Projectile): # Le poireau avance en ligne droite jusqu'au milieur de l'écran puis fait demi-tour
-    def __init__(self, cauchemar, image):
+    def __init__(self, difficulty, image):
         super(Projectile, self).__init__()
-        self.cauchemar = cauchemar
-        self.velocity = 3 + cauchemar.difficulty
+        self.difficulty = difficulty
+        self.velocity = 3 + difficulty
         self.pointDeDepart = random.randint(0, 3)
         self.angle = 90 * self.pointDeDepart
         self.image = image

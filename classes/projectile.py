@@ -2,10 +2,9 @@ import random
 import pygame
 
 class Projectile(pygame.sprite.Sprite):
-    def __init__(self, cauchemar):
+    def __init__(self):
         super(Projectile, self).__init__()
-        self.cauchemar = cauchemar
-        self.velocity = 3
+        self.velocity = 6
 
     def rect_init(self): # A modifier chez les classes filles si nous voulons changer l'emplacement des points de spawn
         if self.pointDeDepart == 0:  # part d'en bas 
@@ -29,8 +28,4 @@ class Projectile(pygame.sprite.Sprite):
         elif self.pointDeDepart == 2:
             self.rect.y += self.velocity
         elif self.pointDeDepart == 3:
-            self.rect.x += self.velocity
-        
-    def supprimer(self):
-        self.cauchemar.liste_projectiles.remove(self)
-        
+            self.rect.x += self.velocity        

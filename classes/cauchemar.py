@@ -33,14 +33,14 @@ class Cauchemar:
         self.time += 1
         if self.time % self.frequence == 0: # On ajoute un ennemi tous les self.frequence frames
             j = random.randint(0,2) # sélectionne l'un des trois legumes/fruits du cauchemar
-            self.liste_projectiles.add(globals()[self.legumesFruits[j]](self, self.images[j])) # et l'ajoute à l'écran
+            self.liste_projectiles.add(globals()[self.legumesFruits[j]](self.difficulty, self.images[j])) # et l'ajoute à l'écran
         for projectile in self.liste_projectiles:
             projectile.move()
             screen.blit(projectile.image,projectile.rect)
             if projectile.rect.x + projectile.rect.w < 0  or projectile.rect.x - projectile.rect.w > 1024 or projectile.rect.y + projectile.rect.h < 0 or projectile.rect.y - projectile.rect.h > 768: 
-                projectile.supprimer() 
-            elif self.check_collision(self.player,self.liste_projectiles):
-                projectile.supprimer()
+                self.liste_projectiles.remove(projectile)
+            elif self.check_collision(projectile):
+                self.liste_projectiles.remove(projectile)
                 self.player.health -= 1
                 if self.player.health == 2:
                     self.player.imageVie = pygame.image.load('assets/2coeurs.png')
@@ -78,8 +78,8 @@ class Cauchemar:
         if (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_DOWN)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_DOWN)):
             self.player.velocity = int(f/0.7)
 
-    def check_collision(self, sprite, group):
-        return pygame.sprite.spritecollide(sprite, group, True, pygame.sprite.collide_mask)
+    def check_collision(self, projectile):
+        return self.player.rect.colliderect(projectile.rect)
 
     def updateTimeBar(self, screen):
         bar_back_color = (60,63,60) # Couleur de fond
