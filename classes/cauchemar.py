@@ -35,8 +35,8 @@ class Cauchemar:
             self.liste_projectiles.add(globals()[self.legumesFruits[j]](self)) # et l'ajoute à l'écran
         for projectile in self.liste_projectiles:
             projectile.move()
-            if projectile.rect.x < 0 or projectile.rect.x > 1024 or projectile.rect.y < 0 or projectile.rect.y > 768: 
-                projectile.supprimer() # A rajouter à la fin de tous les move pour supprimer le projectile, s'il n'est plus sur l'écran
+            if projectile.rect.x + projectile.rect.w < 0  or projectile.rect.x - projectile.rect.w > 1024 or projectile.rect.y + projectile.rect.h < 0 or projectile.rect.y - projectile.rect.h > 768: 
+                projectile.supprimer() 
             elif self.check_collision(self.player,self.liste_projectiles):
                 projectile.supprimer()
                 self.player.health -= 1
