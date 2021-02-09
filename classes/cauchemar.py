@@ -15,7 +15,7 @@ from classes.typesProjectiles.raisin import Raisin
 class Cauchemar:
     def __init__(self, difficulty, legumesFruits, game):
         self.difficulty = difficulty
-        self.legumesFruits = ["Poireau", "Raisin", "Carotte"]
+        self.legumesFruits = ["Poireau", "Banane", "Citrouille"]
         self.game = game
         self.player = Player()    
         self.liste_projectiles = pygame.sprite.Group()
