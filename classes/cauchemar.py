@@ -23,7 +23,7 @@ class Cauchemar:
         self.background = pygame.transform.scale(self.background, (1024, 768))
         self.liste_projectiles = pygame.sprite.Group()
         self.time = 0 # Indique le nombre de frames effectuées dans le cauchemar depuis son début
-        self.frequence = 70 - difficulty * 15 # La fréquence à laquelle on crée un ennemi
+        self.frequence = 60 - difficulty * 15 # La fréquence à laquelle on crée un ennemi
         self.cooldownDash = 120 # Permets de ne pas autoriser le joueur de faire des dash à l'infini mais toutes les deux secondes
 
     def drawCauchemar(self, screen):

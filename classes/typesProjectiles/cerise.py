@@ -10,7 +10,6 @@ class Cerise(Projectile): # La cerise commence tout droit puis fait un virage à
         self.pointDeDepart = random.randint(0, 3)
         self.angle = 90 * self.pointDeDepart
         self.image = image
-        self.image = pygame.transform.scale(self.image, (100, 100))
         self.image = pygame.transform.rotate(self.image, self.angle)
         self.rect = self.image.get_rect()
         self.firstStep = True # Passera à False quand la cerise commencera son angle

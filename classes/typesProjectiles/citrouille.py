@@ -10,7 +10,6 @@ class Citrouille(Projectile): # la pomme se déplace en ligne droite, de taille 
         self.pointDeDepart = random.randint(0, 3)
         self.angle = 90 * self.pointDeDepart
         self.image = image
-        self.image = pygame.transform.scale(self.image, (165, 150))
         self.image = pygame.transform.rotate(self.image, self.angle)
         self.rect = self.image.get_rect()
         self.rect_init()
