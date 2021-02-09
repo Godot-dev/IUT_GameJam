@@ -13,12 +13,10 @@ game = Game()
 menu = Menu()
 options = Options()
 running = True
-background = pygame.image.load('assets/background.png')
 clock = pygame.time.Clock()
 
 while running: 
-    clock.tick(60) / 1000
-    screen.blit(background, (0, 0))
+    clock.tick(60) 
     if game.is_playing: # Si on est en jeu, on lance la boucle du jeu
         game.drawJeu(screen)
         game.catch_signal()

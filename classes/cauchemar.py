@@ -23,7 +23,7 @@ class Cauchemar:
         self.background = pygame.transform.scale(self.background, (1024, 768))
         self.liste_projectiles = pygame.sprite.Group()
         self.time = 0 # Indique le nombre de frames effectuées dans le cauchemar depuis son début
-        self.frequence = 60 - difficulty * 15 # La fréquence à laquelle on crée un ennemi
+        self.frequence = 75 - difficulty * 15 # La fréquence à laquelle on crée un ennemi
         self.cooldownDash = 120 # Permets de ne pas autoriser le joueur de faire des dash à l'infini mais toutes les deux secondes
 
     def drawCauchemar(self, screen):
@@ -36,6 +36,7 @@ class Cauchemar:
             self.liste_projectiles.add(globals()[self.legumesFruits[j]](self, self.images[j])) # et l'ajoute à l'écran
         for projectile in self.liste_projectiles:
             projectile.move()
+            screen.blit(projectile.image,projectile.rect)
             if projectile.rect.x + projectile.rect.w < 0  or projectile.rect.x - projectile.rect.w > 1024 or projectile.rect.y + projectile.rect.h < 0 or projectile.rect.y - projectile.rect.h > 768: 
                 projectile.supprimer() 
             elif self.check_collision(self.player,self.liste_projectiles):
@@ -48,11 +49,9 @@ class Cauchemar:
                 else: # Le joueur perds la partie, il faudra remplir plus tard le else
                     pass
 
-        self.liste_projectiles.draw(screen)
         self.updateTimeBar(screen)
         if self.cooldownDash < 120:
             self.updateDashBar(screen)
-        #screen.blit(self.player.imageVie, (950,700))
         screen.blit(self.player.imageVie, (884,670))
 
     def catch_signal(self, pressed):
