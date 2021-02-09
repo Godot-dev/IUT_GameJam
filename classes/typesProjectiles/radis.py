@@ -2,15 +2,15 @@ import random
 import pygame
 from classes.projectile import Projectile
 
-class Radis(Projectile): # la pomme se déplace en ligne droite, de taille 64x64, de vitesse moyenne
-    def __init__(self, cauchemar):
+class Radis(Projectile): # Le radis se déplace en ligne droite, mais beaucoup plus rapidement que les autres fruits et légumes
+    def __init__(self, cauchemar, image):
         super(Projectile, self).__init__()
         self.cauchemar = cauchemar
-        self.velocity = 3 + cauchemar.difficulty
+        self.velocity = 4 + 2 * cauchemar.difficulty
         self.pointDeDepart = random.randint(0, 3)
         self.angle = 90 * self.pointDeDepart
-        self.image = pygame.image.load("assets/radis.png")
-        self.image = pygame.transform.scale(self.image, (150, 150))
+        self.image = image
+        self.image = pygame.transform.scale(self.image, (200, 200))
         self.image = pygame.transform.rotate(self.image, self.angle)
         self.rect = self.image.get_rect()
         self.rect_init()

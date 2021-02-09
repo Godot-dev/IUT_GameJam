@@ -15,14 +15,15 @@ from classes.typesProjectiles.raisin import Raisin
 class Cauchemar:
     def __init__(self, difficulty, legumesFruits, game):
         self.difficulty = difficulty
-        self.legumesFruits = ["Cerise", "Radis", "Citrouille"]
+        self.legumesFruits = ["Cerise", "Pomme", "Citrouille"]
+        self.images = self.loadImagesEnnemis()
         self.game = game
         self.player = Player()    
         self.background = pygame.image.load(f'assets/backgroundD{difficulty}.jpg')
         self.background = pygame.transform.scale(self.background, (1024, 768))
         self.liste_projectiles = pygame.sprite.Group()
         self.time = 0 # Indique le nombre de frames effectuées dans le cauchemar depuis son début
-        self.frequence = 75 - difficulty * 15 # La fréquence à laquelle on crée un ennemi
+        self.frequence = 70 - difficulty * 15 # La fréquence à laquelle on crée un ennemi
         self.cooldownDash = 120 # Permets de ne pas autoriser le joueur de faire des dash à l'infini mais toutes les deux secondes
 
     def drawCauchemar(self, screen):
@@ -32,7 +33,7 @@ class Cauchemar:
         self.time += 1
         if self.time % self.frequence == 0: # On ajoute un ennemi tous les self.frequence frames
             j = random.randint(0,2) # sélectionne l'un des trois legumes/fruits du cauchemar
-            self.liste_projectiles.add(globals()[self.legumesFruits[j]](self)) # et l'ajoute à l'écran
+            self.liste_projectiles.add(globals()[self.legumesFruits[j]](self, self.images[j])) # et l'ajoute à l'écran
         for projectile in self.liste_projectiles:
             projectile.move()
             if projectile.rect.x + projectile.rect.w < 0  or projectile.rect.x - projectile.rect.w > 1024 or projectile.rect.y + projectile.rect.h < 0 or projectile.rect.y - projectile.rect.h > 768: 
@@ -107,3 +108,7 @@ class Cauchemar:
 
     def terminerCauchemar(self):
         self.game.jour = True
+    
+    def loadImagesEnnemis(self):
+        return [pygame.image.load(f'assets/{self.legumesFruits[0]}.png'),pygame.image.load(f'assets/{self.legumesFruits[1]}.png'),pygame.image.load(f'assets/{self.legumesFruits[2]}.png')]
+

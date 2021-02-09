@@ -18,9 +18,7 @@ clock = pygame.time.Clock()
 
 while running: 
     clock.tick(60) / 1000
-
     screen.blit(background, (0, 0))
-
     if game.is_playing: # Si on est en jeu, on lance la boucle du jeu
         game.drawJeu(screen)
         game.catch_signal()

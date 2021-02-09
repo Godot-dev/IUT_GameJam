@@ -3,7 +3,7 @@ import pygame
 from classes.projectile import Projectile
 
 class Salade(Projectile): # la salade se déplace en diagonale, de taille 64x64, de vitesse moyenne
-    def __init__(self, cauchemar):
+    def __init__(self, cauchemar, image):
         super(Projectile, self).__init__()
         self.cauchemar = cauchemar
         self.velocity = 2 + cauchemar.difficulty
@@ -12,8 +12,7 @@ class Salade(Projectile): # la salade se déplace en diagonale, de taille 64x64,
         if self.direction == 0: # On a besoin que self.direction soit égal à 1 ou -1, pas 0
             self.direction = -1
         self.angle = 90 * self.pointDeDepart
-        self.image = pygame.image.load("assets/salade.png")
-        self.image = pygame.transform.scale(self.image, (64, 64))
+        self.image = pygame.transform.scale(self.image, (200, 200))
         self.image = pygame.transform.rotate(self.image, self.angle)
         self.rect = self.image.get_rect()
         self.rect_init()

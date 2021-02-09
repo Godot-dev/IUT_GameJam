@@ -32,6 +32,5 @@ class Projectile(pygame.sprite.Sprite):
             self.rect.x += self.velocity
         
     def supprimer(self):
-        print("a")
         self.cauchemar.liste_projectiles.remove(self)
         
