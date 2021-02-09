@@ -11,6 +11,10 @@ class Game:
         self.phaseDeJeu = None
 
     def drawJeu(self,screen):
+        if self.jour and self.phaseDeJeu == None:
+            self.phaseDeJeu = VisualNovel('k', screen)
+        elif self.jour:
+            self.phaseDeJeu.drawNovel(screen)
         if not self.jour and self.phaseDeJeu == None:
             self.phaseDeJeu = Cauchemar(self.etape, self.phaseDeJeu, self)
         elif not self.jour:
