@@ -6,7 +6,7 @@ class Salade(Projectile): # la salade se déplace en diagonale, de taille 64x64,
     def __init__(self, cauchemar):
         super(Projectile, self).__init__()
         self.cauchemar = cauchemar
-        self.velocity = 2
+        self.velocity = 2 + cauchemar.difficulty
         self.pointDeDepart = random.randint(0, 3)
         self.direction = random.randint(0, 1) # Indique si la salade ira en diagonale vers sa gauche ou vers sa droite
         if self.direction == 0: # On a besoin que self.direction soit égal à 1 ou -1, pas 0

@@ -6,7 +6,7 @@ class Pomme(Projectile): # la pomme se déplace en ligne droite, de taille 64x64
     def __init__(self, cauchemar):
         super(Projectile, self).__init__()
         self.cauchemar = cauchemar
-        self.velocity = 3
+        self.velocity = 3 + cauchemar.difficulty
         self.pointDeDepart = random.randint(0, 3)
         self.angle = 90 * self.pointDeDepart
         self.image = pygame.image.load("assets/pomme.png")
