@@ -1,5 +1,6 @@
 import pygame
 import random
+import time
 from classes.player import Player
 from classes.projectile import Projectile
 from classes.typesProjectiles.pomme import Pomme
@@ -15,25 +16,25 @@ from classes.typesProjectiles.raisin import Raisin
 class Cauchemar:
     def __init__(self, difficulty, legumesFruits, game):
         self.difficulty = difficulty
-        self.legumesFruits = ["Cerise", "Pomme", "Citrouille"]
+        self.legumesFruits = ["Cerise", "Pomme", "Raisin"]
         self.images = self.loadImagesEnnemis()
         self.game = game
         self.player = Player()    
         self.background = pygame.image.load(f'assets/backgroundD{difficulty}.jpg')
         self.background = pygame.transform.scale(self.background, (1024, 768))
-        self.liste_projectiles = pygame.sprite.Group()
+        self.liste_projectiles = []
         self.time = 0 # Indique le nombre de frames effectuées dans le cauchemar depuis son début
-        self.frequence = 75 - difficulty * 15 # La fréquence à laquelle on crée un ennemi
+        self.frequence = 60 - difficulty * 15 # La fréquence à laquelle on crée un ennemi
         self.cooldownDash = 120 # Permets de ne pas autoriser le joueur de faire des dash à l'infini mais toutes les deux secondes
 
     def drawCauchemar(self, screen):
         screen.blit(self.background, (0,0))
         screen.blit(self.player.image, self.player.rect)
-        
+        t1 = time.time()
         self.time += 1
         if self.time % self.frequence == 0: # On ajoute un ennemi tous les self.frequence frames
             j = random.randint(0,2) # sélectionne l'un des trois legumes/fruits du cauchemar
-            self.liste_projectiles.add(globals()[self.legumesFruits[j]](self.difficulty, self.images[j])) # et l'ajoute à l'écran
+            self.liste_projectiles.append(globals()[self.legumesFruits[j]](self.difficulty, self.images[j])) # et l'ajoute à l'écran
         for projectile in self.liste_projectiles:
             projectile.move()
             screen.blit(projectile.image,projectile.rect)
@@ -48,11 +49,12 @@ class Cauchemar:
                     self.player.imageVie = pygame.image.load('assets/1coeurs.png')
                 else: # Le joueur perds la partie, il faudra remplir plus tard le else
                     pass
-
+        print(1 / (time.time() - t1))
         self.updateTimeBar(screen)
         if self.cooldownDash < 120:
             self.updateDashBar(screen)
         screen.blit(self.player.imageVie, (884,670))
+        
 
     def catch_signal(self, pressed):
         f = self.player.velocity
