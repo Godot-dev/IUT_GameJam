@@ -14,6 +14,7 @@ class Poireau(Projectile): # Le poireau avance en ligne droite jusqu'au milieur 
         self.image = pygame.transform.rotate(self.image, self.angle)
         self.rect = self.image.get_rect()
         self.firstStep = True # Passera à False quand le poireau commencera son demi-tour
+        self.mask = pygame.mask.from_surface(self.image)
         self.rect_init()
 
     def move(self): 

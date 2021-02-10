@@ -7,7 +7,7 @@ class Game:
         # Image de background
         self.is_playing = False
         self.pressed = {} # Représente les touches actuellement enfoncées par le joueur
-        self.etape = 1 # 1 représente le premier jour, 2 le deuxième, 3 le troisième, et les suivants représentent les cinématiques de fin
+        self.etape = 3 # 1 représente le premier jour, 2 le deuxième, 3 le troisième, et les suivants représentent les cinématiques de fin
         self.jour = False # indique s'il fait jour ou nuit, au début du jeu, on est sur la phase Jour 
         self.phaseDeJeu = None
 

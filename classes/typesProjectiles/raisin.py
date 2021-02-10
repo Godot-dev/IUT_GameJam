@@ -13,4 +13,5 @@ class Raisin(Projectile): # la pomme se déplace en ligne droite, de taille 64x6
         self.image = pygame.transform.scale(self.image, (64, 77))
         self.image = pygame.transform.rotate(self.image, self.angle)
         self.rect = self.image.get_rect()
+        self.mask = pygame.mask.from_surface(self.image)
         self.rect_init()

@@ -12,4 +12,5 @@ class Pomme(Projectile): # la pomme se déplace en ligne droite, de taille 64x64
         self.image = image
         self.image = pygame.transform.rotate(self.image, self.angle)
         self.rect = self.image.get_rect()
+        self.mask = pygame.mask.from_surface(self.image)
         self.rect_init()

@@ -15,7 +15,7 @@ from classes.typesProjectiles.raisin import Raisin
 class Cauchemar:
     def __init__(self, difficulty, legumesFruits, game):
         self.difficulty = difficulty
-        self.legumesFruits = ["Cerise", "Pomme", "Raisin"]
+        self.legumesFruits = ["Cerise", "Salade", "Radis"]
         self.images = self.loadImagesEnnemis()
         self.game = game
         self.player = Player()    
@@ -58,25 +58,31 @@ class Cauchemar:
     def catch_signal(self, pressed):
         f = self.player.velocity
         self.cooldownDash += 1
+        diagonale = (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_DOWN)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_DOWN))
+        immobile = True # On ne sait pas encore si le joueur bouge, on part donc du principe qu'il est immobile
         # Si le joueur va en diagonale, sa vitesse doit être réduite car il va faire deux déplacements en une seule action
-        if (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_DOWN)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_DOWN)):
+        if (diagonale): # Si le joueur se déplace quelque part en diagonale
             f *= 0.7
             self.player.velocity = int(f)
 
         if pressed.get(pygame.K_RIGHT) and self.player.rect.x + self.player.rect.width < 1024:
             self.player.move_right()
+            immobile = False
         if pressed.get(pygame.K_LEFT) and self.player.rect.x > 0:
             self.player.move_left()
+            immobile = False
         if pressed.get(pygame.K_UP) and self.player.rect.y > 0:
             self.player.move_up()
+            immobile = False
         if pressed.get(pygame.K_DOWN) and self.player.rect.y + self.player.rect.height < 768:
             self.player.move_down()
-        if pressed.get(pygame.K_SPACE) and self.cooldownDash > 120:
+            immobile = False
+        if pressed.get(pygame.K_SPACE) and self.cooldownDash > 120 and not diagonale and not immobile:
             self.player.dash(pressed)
             self.cooldownDash = 0 # On remets le cooldown à 0, il faudra donc attendre deux secondes (60*2 = 120) pour en effectuer un à nouveau 
 
         # Sa vitesse peut désormais être remise par défaut
-        if (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_RIGHT) and pressed.get(pygame.K_DOWN)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_UP)) or (pressed.get(pygame.K_LEFT) and pressed.get(pygame.K_DOWN)):
+        if (diagonale):
             self.player.velocity = int(f/0.7)
 
     def check_collision(self, projectile):
