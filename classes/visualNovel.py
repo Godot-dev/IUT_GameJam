@@ -106,7 +106,7 @@ class VisualNovel:
                     i = 0
                     for choix in self.listCurrentChoix:
                         if choix.hitbox.collidepoint(event.pos):
-                            print(int(self.currentDialog.choices[i][1]))
+                            #print(int(self.currentDialog.choices[i][1]))
                             nextI = int(self.currentDialog.choices[i][1])
                             if nextI == -1:
                                 return True

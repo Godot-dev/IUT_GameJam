@@ -52,7 +52,8 @@ class Cauchemar:
                 elif self.player.health == 1:
                     self.player.imageVie = pygame.image.load('assets/1coeurs.png')
                 else: # Le joueur perds la partie, il faudra remplir plus tard le else
-                    pass     
+                    self.game.perdu = True # Permettra de charger la bonne cinématique de défaite
+                    self.terminerCauchemar()
         self.updateTimeBar(screen)
         if self.cooldownDash < 120:
             self.updateDashBar(screen)
@@ -120,7 +121,7 @@ class Cauchemar:
         pygame.draw.rect(screen,bar_color,bar_position)
 
     def terminerCauchemar(self):
-        self.game.jour = True
+        self.game.finCauchemar = True
         self.game.phaseDeJeu = None
     
     def loadImagesEnnemis(self):

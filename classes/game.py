@@ -11,14 +11,20 @@ class Game:
         self.jour = True # indique s'il fait jour ou nuit, au début du jeu, on est sur la phase Jour 
         self.phaseDeJeu = None
         self.legumesFruits = []
+        self.perdu = False # Passe à true si le joueur meurt pendant le cauchemar
+        self.finCauchemar = False
 
     def drawJeu(self,screen,display):
+        if self.perdu and self.phaseDeJeu == None:
+            print(f"assets/novels/defaiteDay{self.etape}.json")
+            self.jour = True
+            self.phaseDeJeu = VisualNovel(f"assets/novels/defaiteDay{self.etape}.json", screen, display)
         if self.jour and self.phaseDeJeu == None:
             self.phaseDeJeu = VisualNovel("assets/novels/day1.json", screen, display)
         if not self.jour and self.phaseDeJeu == None:
             print()
             self.phaseDeJeu = Cauchemar(self.etape, self.legumesFruits, self)
-        if not self.jour:
+        if not self.jour and not self.finCauchemar:
             self.phaseDeJeu.drawCauchemar(screen)
 
     def catch_signal(self, event):
@@ -30,5 +36,6 @@ class Game:
                     #self.legumesFruits.append(lg)
                 self.jour = False
                 self.phaseDeJeu = None
-        else:
+        elif not self.perdu:
             self.phaseDeJeu.catch_signal(self.pressed)
+            
