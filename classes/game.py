@@ -21,5 +21,9 @@ class Game:
 
     def catch_signal(self):
         # On effectue les actions du jeu en fonction de l'endroit où nous sommes
-        if not self.jour and self.phaseDeJeu != None:
+        if self.jour:
+            if self.phaseDeJeu.catch_signal(self.pressed):
+                self.jour = False
+                self.phaseDeJeu = None
+        else:
             self.phaseDeJeu.catch_signal(self.pressed)

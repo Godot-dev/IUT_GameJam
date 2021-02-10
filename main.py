@@ -19,6 +19,7 @@ while running:
     if game.is_playing: # Si on est en jeu, on lance la boucle du jeu
         game.drawJeu(screen, pygame.display)
         game.catch_signal()
+        game.pressed["Clic"] = False
     elif options.is_configure: # Si on est dans les options, on affiche les options
         options.drawOptions(screen)
     else: # Sinon on affiche le menu principal (c'est ce qui se passe quand on lance le jeu)
@@ -32,10 +33,17 @@ while running:
 
         if game.is_playing:
             # On met à jour pressed
-            if event.type == pygame.KEYDOWN:
-                game.pressed[event.key] = True
-            elif event.type == pygame.KEYUP:
-                game.pressed[event.key] = False
+            if event.type == MOUSEBUTTONDOWN:
+                game.pressed["Clic"] = True
+            else:
+                if event.type == pygame.KEYDOWN:
+                    game.pressed[event.key] = True
+                elif event.type == pygame.KEYUP:
+                    game.pressed[event.key] = False
+                elif event.type == pygame.K_SPACE:
+                    game.pressed[event.key] = False
+                elif event.type == pygame.K_RETURN:
+                    game.pressed[event.key] = False
         elif event.type == MOUSEBUTTONDOWN and options.is_configure:
             options.catch_signal(event)
         elif event.type == MOUSEBUTTONDOWN and not menu.catch_signal(game, options, event): # Si la fonction renvoie faux, on doit arrêter le programme
