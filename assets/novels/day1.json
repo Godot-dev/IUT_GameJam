@@ -3,7 +3,7 @@
         "0": {
             "type": "text", "img": "backgroundD1.jpg", "name": "Introduction", "text": "Robert Johnson, est un vieux fermier du sud de la Californie. Robert vient d'une famille d'agriculteurs. Mais apr\u00e8s 45 ans de dur labeur, Robert est maintenant la seule personne qui reste pour diriger la ferme familiale. Les derni\u00e8res ann\u00e9es ont \u00e9t\u00e9 particuli\u00e8rement difficiles pour Robert. La chute du prix d'achat de ses fruits et l\u00e9gumes par les grossistes, ainsi que diverses catastrophes naturelles, ont fortement affect\u00e9 sa production et ses revenus. Robert travaille dur tous les jours, peut-\u00eatre trop pour son âge avanc\u00e9. Mais malgr\u00e9 cela, la production ne s'am\u00e9liore pas et ses revenus continuent de baisser.", "next": 1},
         "1": {
-            "type": "text", "img": "backgroundD2.jpg", "name": "Jour 1", "text": "Une nouvelle journ\u00e9e commence pour Robert, le soleil est d\u00e9 j\u00e0 haut dans le ciel et semble brûler tout ce qu'il touche, comme d'habitude \u00e0 cette \u00e9 poque de l'ann\u00e9 e.", "next": 2},
+            "type": "text", "img": "backgroundD2.jpg", "name": "Jour 1", "text": "Une nouvelle journ\u00e9e commence pour Robert, le soleil est d\u00e9ej\u00e0 haut dans le ciel et semble brûler tout ce qu'il touche, comme d'habitude \u00e0 cette \u00e9poque de l'ann\u00e9e.", "next": 2},
         "2": {
             "type": "narchoice", "img": "backgroundD3.jpg", "name": "Jour 1", "text": "Robert s'appr\u00eate \u00e0 arroser ses champs de salades, quand le bruit sourd de pneu crissant sur l'asphalte interrompt le silence habituel de la ferme.", "choices": [["Sortir pour voir ce qu'il se passe","3"], ["Rester \u00e0 l'int\u00e9rieur et continuer de se pr\u00e9parer","4"]]},
         "3": {
@@ -23,6 +23,14 @@
         "10":{
             "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert mange son repas et va se coucher. Fin de la premi\u00e8re journ\u00e9e.", "next": 11},
         "11":{
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "C'est une nuit tourment\u00e9e pour Robert, il se retrouve dans un cauchemar inhabituel, comme si son âme \u00e9 tait pourchass\u00e9 e……", "next": -1}
+            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "C'est une nuit tourment\u00e9e pour Robert, il se retrouve dans un cauchemar inhabituel, comme si son âme \u00e9tait pourchass\u00e9e……", "next": 12},
+        "12":{
+            "type": "notice", "img":"background.png", "name": "Jour 1", "text" : "Comme vous pouvez le voir, notre petit fermier est actuellement en train de faire un cauchemar rempli de fruits et de l\u00e9gumes ! Est ce que cela est li\u00e9 \u00e0 ce qu'il a mang\u00e9 tout \u00e0 l'heure? Hum.... Excellente question ! Déplacez vous avec les fl\u00e8ches et esquivez tous ces \u00e9tranges assaillants, sinon ce cauchemar pourrait bien emp\u00eacher notre fermier de se r\u00e9veiller \u00e0 tout jamais ! ", "next": 13},
+        "13":{
+            "type": "notice", "img":"background.png", "name": "Jour 1", "text" : "Vous pouvez \u00e9galement effectuer une petite ru\u00e9e en appuyant en m\u00eame temps sur une fl\u00e8che de direction et la touche espace. Survivez 60 secondes sans \u00e9puiser vos 3 vies et votre fermier se r\u00e9veillera demain.", "next": 14},
+        "14":{
+            "type": "notice", "img":"background.png", "name": "Jour 1", "text" : "Est ce que vous \u00eates pr\u00eats? 3..2..1...", "next": 15},
+        "15":{
+            "type": "notice", "img":"background.png", "name": "Jour 1", "text" : "C'est parti !", "next": -1}        
     }
 }
