@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+import sys
 import pygame
 import json
 import math
@@ -75,7 +78,8 @@ class VisualNovel:
         butLen += missing / l
         added = 0
         for i in range(l):
-            choiceText = self.fontChoix.render(self.currentDialog.choices[i][0], 0, (255, 255, 255))
+            str = self.currentDialog.choices[i][0]
+            choiceText = self.fontChoix.render(str, 0, (255, 255, 255))
             largChoixText, hautChoixText = choiceText.get_size()
             if lastmissing > 0 and added > 0:
                 self.listCurrentChoix.append(BorderRectangle(butLen+1, 50, 30+added+i*butLen-3*i, 688, 3, (0, 0, 0, 128), (255, 255, 255), self.screen))
@@ -118,9 +122,13 @@ class VisualNovel:
                 for choix in self.listCurrentChoix:
                     if choix.hitbox.collidepoint(event.pos):
                         print(int(self.currentDialog.choices[i][1]))
-                        self.currentDialog = self.listDialog[int(self.currentDialog.choices[i][1])]
-                        self.listCurrentChoix = []
-                        self.drawDialog()
+                        nextI = int(self.currentDialog.choices[i][1])
+                        if nextI == -1:
+                            return True
+                        else:
+                            self.currentDialog = self.listDialog[nextI]
+                            self.listCurrentChoix = []
+                            self.drawDialog()
                     i += 1
         elif self.currentDialog.type == "choice":
             if event != None:
