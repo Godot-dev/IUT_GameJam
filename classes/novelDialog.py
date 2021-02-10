@@ -9,5 +9,4 @@ class NovelDialog:
         self.text = text
         self.choices = choices
         self.next = next
-        
 

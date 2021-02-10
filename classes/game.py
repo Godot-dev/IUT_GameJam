@@ -19,10 +19,10 @@ class Game:
         if not self.jour:
             self.phaseDeJeu.drawCauchemar(screen)
 
-    def catch_signal(self):
+    def catch_signal(self, event):
         # On effectue les actions du jeu en fonction de l'endroit où nous sommes
         if self.jour:
-            if self.phaseDeJeu.catch_signal(self.pressed):
+            if self.phaseDeJeu.catch_signal(self.pressed, event):
                 self.jour = False
                 self.phaseDeJeu = None
         else:
