@@ -13,7 +13,7 @@ class Game:
 
     def drawJeu(self,screen,display):
         if self.jour and self.phaseDeJeu == None:
-            self.phaseDeJeu = VisualNovel("assets/novels/test.json", screen, display)
+            self.phaseDeJeu = VisualNovel("assets/novels/day1.json", screen, display)
         if not self.jour and self.phaseDeJeu == None:
             self.phaseDeJeu = Cauchemar(self.etape, self.phaseDeJeu, self)
         if not self.jour:

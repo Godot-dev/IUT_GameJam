@@ -1,0 +1,17 @@
+{
+    "dialogs": {
+        "21": {
+            "type": "narchoice", "img": "backgroundD2.jpg", "name": "Jour 3", "text": "C’est un réveil difficile pour Robert, cette nuit remplie de cauchemar l’a éreinté. Malgré tout il faut retourner travailler.", "choices": [["Appliquer du produit sur toutes les cultures pour maximiser les profits ","22"],["Jeter le produit et s’occuper des plans comme avant ","23"]]},
+        "22": {
+            "type": "narchoice", "img": "backgroundD3.jpg", "name": "Jour 3", "text": "Robert applique tout le produit restant sur les cultures de fruits et de légumes et décides d’en commander en plus. Malgré tout il pense que ses cauchemars ont un lien avec ce produit.", "choices": [["Arrêter de consommer les fruits et légumes traiter avec le produit","24"], ["Continuer de consommer les fruits et légumes traiter avec le produit ","25"]]},
+        "23": {
+            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "Robert jette le produit et retourne cultiver son exploitation comme il le faisait avant.", "next": 24},        
+        "24": {
+            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "Quand la nuit approche il rentre chez lui et se couche après avoir mangé des sushis commandés sur UberEats, étant trop fatigué pour cuisiner.","next": 26},
+        "25":{
+            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "Quand la nuit approche il rentre chez lui et se couche après avoir mangé une pomme comme seul repas, étant trop fatigué pour cuisiner.", "next": 26},   
+        "26":{
+            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "C’est encore une nuit tourmentée pour Robert, mais c’est encore pire qu’hier, il se retrouve dans un cauchemar inhabituel, comme si son âme était pourchassée……", "next" : -1}
+        
+    }
+}

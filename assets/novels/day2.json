@@ -1,0 +1,23 @@
+{
+    "dialogs": {
+        "12": {
+            "type": "narchoice", "img": "backgroundD1.jpg", "name": "Jour 2", "text": "Après cette nuit mouvementée il est temps de se remettre au travail. Robert prend son petit-déjeuner et sort de chez lui pour aller entretenir ses légumes. Le soleil est encore bas dans le ciel et la pénombre commence tout juste à se dissiper.", "choices": [["Aller s'occuper des carottes","13"],["Aller s'occuper des salades","14"]]},
+        "13": {
+            "type": "narchoice", "img": "backgroundD2.jpg", "name": "Jour 2", "text": "Robert se dirige en direction des champs de carottes, mais…. Qu’est-ce que ?.. Il y’a au moins deux fois plus de carottes qu’hier ! C’est incroyable ! Robert sort une carotte du sol pour l’examiner, et…, la carotte est au moins TROIS fois plus grosse que tout ce qu’il a pu ramasser jusqu’à aujourd’hui.", "choices": [["Aller s'occuper des salades","14"],["Suivant","15"]]},
+        "14": {
+            "type": "narchoice", "img": "backgroundD3.jpg", "name": "Jour 2", "text": "Il faut maintenant aller ramasser les salades. Mais encore une fois Robert est stupéfait en découvrant qu’il n’y a plus aucune limace sur les salades, et ces dernières ont toutes grossi sans même les avoir arrosés.", "choices": [["Aller s’occuper des carottes","13"], ["Suivant","15"]]},
+        "15": {
+            "type": "narchoice", "img":"background.png", "name": "Jour 2", "text" : "Robert réalise que c’est le produit donné par le commercial d’hier qui a permis ces miracles. Il se demande alors si le produit serait efficace sur les fruits. Il se dit que ce produit pourrait enfin le rendre riche, il n’aurait alors plus à trimer tous les jours au champ et pourrait alors employer de la main d’œuvre pour s’occuper de sa ferme", "choices": [["Utiliser le produit sur les arbres fruitiers ","16"],["Ne pas utiliser de produit sur les arbres fruitiers ","17"]]},        
+        "16": {
+            "type": "narchoice", "img":"background.png", "name": "Jour 2", "text" : "Robert répand du produit sur les arbres fruitiers pendant le reste de la journée. Robert cueille les légumes nécessaires pour préparer son repas et rentre pour cuisine.", "choices": [["Cueillir Carotte, salade et pomme ","18"],["Cueillir Citrouille, poireau et raisin ","19"]]},
+        "17":{
+            "type": "narchoice", "img":"background.png", "name": "Jour 2", "text" : "Robert continue sa journée de travail, lorsque le ciel s’assombrit et se teinte d’une voile orange Robert cueille les légumes nécessaires pour préparer son repas et rentre pour cuisine.", "choices": [["Cueillir Carotte, salade et pomme","18"],["Cueillir Citrouille, poireau et raisin ","19"]]},   
+        "18":{
+            "type": "text", "img":"background.png", "name": "Jour 2", "text" : "Robert prépare une salade et une soupe de carotte et mange une pomme au dessert. Puis il va se coucher", "next" : 20},
+        "19":{
+            "type": "text", "img":"background.png", "name": "Jour 2", "text" : "Robert prépare une soupe de citrouille et de poireau et mange du raisin au dessert. Puis il va se coucher. ", "next": 20},
+        "20":{
+            "type": "text", "img":"background.png", "name": "Jour 2", "text" : "C’est encore une nuit tourmentée pour Robert, mais c’est encore pire qu’hier, il se retrouve dans un cauchemar inhabituel, comme si son âme était pourchassée……", "next": -1}
+    
+    }
+}
