@@ -30,7 +30,6 @@ class Cauchemar:
     def drawCauchemar(self, screen):
         screen.blit(self.background, (0,0))
         screen.blit(self.player.image, self.player.rect)
-        t1 = time.time()
         self.time += 1
         if self.time % self.frequence == 0: # On ajoute un ennemi tous les self.frequence frames
             j = random.randint(0,2) # sélectionne l'un des trois legumes/fruits du cauchemar
@@ -49,7 +48,6 @@ class Cauchemar:
                     self.player.imageVie = pygame.image.load('assets/1coeurs.png')
                 else: # Le joueur perds la partie, il faudra remplir plus tard le else
                     pass
-        print(1 / (time.time() - t1))
         self.updateTimeBar(screen)
         if self.cooldownDash < 120:
             self.updateDashBar(screen)
@@ -109,7 +107,8 @@ class Cauchemar:
 
     def terminerCauchemar(self):
         self.game.jour = True
+        self.game.phaseDeJeu = None
     
     def loadImagesEnnemis(self):
-        return [pygame.image.load(f'assets/{self.legumesFruits[0]}.png'),pygame.image.load(f'assets/{self.legumesFruits[1]}.png'),pygame.image.load(f'assets/{self.legumesFruits[2]}.png')]
+        return [pygame.image.load(f'assets/projectiles/{self.legumesFruits[0]}.png'),pygame.image.load(f'assets/projectiles/{self.legumesFruits[1]}.png'),pygame.image.load(f'assets/projectiles/{self.legumesFruits[2]}.png')]
 

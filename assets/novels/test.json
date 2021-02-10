@@ -1,0 +1,6 @@
+{
+    "novels": [
+        {"id": 0, "type": "text", "img": "1.png", "name": "Le testeur fou", "text": "Ceci est un test et c'est incroyable", "next": 1},
+        {"id": 1, "type": "text", "img": "1.png", "name": "Le testeur fou", "text": "Ça a l'air de marcher", "next": -1}
+    ]
+}

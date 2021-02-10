@@ -5,11 +5,9 @@ class VisualNovel:
         self.file = file
         self.fontTexte = pygame.font.Font("assets/fonts/font.ttf", 24)
         self.fontNom = pygame.font.Font('assets/fonts/fontBold.ttf', 32)
-    
-    def drawNovel(self, screen):
         # Rectangle du nom
         s = pygame.Surface((250, 50), pygame.SRCALPHA)
-        s.fill((0, 0, 0, 128))
+        s.fill((0, 0, 0, 175))
         screen.blit(s, (30, 508))
         # Bordures du nom
         pygame.draw.rect(screen, pygame.Color(255, 255, 255), pygame.Rect(30, 508, 3, 50))
@@ -20,13 +18,15 @@ class VisualNovel:
         screen.blit(self.fontNom.render("Marie-Christine", 0, (255, 255, 255)), (40, 518))
         # Rectangle du texte
         s = pygame.Surface((964, 170), pygame.SRCALPHA)
-        s.fill((0, 0, 0, 128))
+        s.fill((0, 0, 0, 175))
         screen.blit(s, (30, 568))
         # Bordures du texte
         pygame.draw.rect(screen, pygame.Color(255, 255, 255), pygame.Rect(30, 568, 3, 170))
         pygame.draw.rect(screen, pygame.Color(255, 255, 255), pygame.Rect(30, 568, 964, 3))
         pygame.draw.rect(screen, pygame.Color(255, 255, 255), pygame.Rect(991, 568, 3, 170))
         pygame.draw.rect(screen, pygame.Color(255, 255, 255), pygame.Rect(30, 735, 964, 3))
+    
+    def drawNovel(self, screen):
         # Texte
         self.afficherMessage("Bonjour je m'appelle Marie-Christine et j'aime les pâtes mais pas mon prénom.", screen)
         
