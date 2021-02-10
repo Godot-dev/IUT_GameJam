@@ -1,5 +1,4 @@
 import pygame
-import time
 from pygame.constants import MOUSEBUTTONDOWN
 from classes.game import Game
 from classes.menu import Menu
@@ -18,7 +17,7 @@ clock = pygame.time.Clock()
 while running: 
     clock.tick(60) 
     if game.is_playing: # Si on est en jeu, on lance la boucle du jeu
-        game.drawJeu(screen)
+        game.drawJeu(screen, pygame.display)
         game.catch_signal()
     elif options.is_configure: # Si on est dans les options, on affiche les options
         options.drawOptions(screen)
