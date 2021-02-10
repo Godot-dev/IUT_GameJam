@@ -80,7 +80,7 @@ class Cauchemar:
             self.player.velocity = int(f/0.7)
 
     def check_collision(self, projectile):
-        return self.player.rect.colliderect(projectile.rect)
+        return pygame.sprite.collide_mask(self.player, projectile)
 
     def updateTimeBar(self, screen):
         bar_back_color = (60,63,60) # Couleur de fond
