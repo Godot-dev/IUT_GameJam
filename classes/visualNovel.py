@@ -31,15 +31,16 @@ class VisualNovel:
     def drawDialog(self):
         # Background
         self.screen.blit(pygame.transform.scale(pygame.image.load(self.currentDialog.img), (1024, 768)), (0, 0))
-        BorderRectangle(250, 50, 30, 508, 3, (0, 0, 0, 128), (255, 255, 255), self.screen)
         BorderRectangle(964, 170, 30, 568, 3, (0, 0, 0, 128), (255, 255, 255), self.screen)
         # Nom
-        self.screen.blit(self.fontNom.render(self.currentDialog.name, 0, (255, 255, 255)), (40, 518))
+        if self.currentDialog.type != "notice":
+            BorderRectangle(250, 50, 30, 508, 3, (0, 0, 0, 128), (255, 255, 255), self.screen)
+            self.screen.blit(self.fontNom.render(self.currentDialog.name, 0, (255, 255, 255)), (40, 518))
         #Choix
         if self.currentDialog.type == "narchoice" or self.currentDialog.type == "choice":
             self.afficherChoix()
         # Texte
-        self.threadTexte = TextDisplayer(self.currentDialog.text, self.screen, self.display, self.fontTexte)
+        self.threadTexte = TextDisplayer(self.currentDialog.text, self.screen, self.display, self.currentDialog.type, self.fontTexte)
         self.threadTexte.start()
 
     def afficherChoix(self):
@@ -80,6 +81,8 @@ class VisualNovel:
             for pid, dialog in data["dialogs"].items():
                 if (dialog['type'] == "text"):
                     self.listDialog.append(NovelDialog(pid, dialog['type'], dialog['img'], dialog['name'], dialog['text'], None, dialog['next']))
+                elif (dialog['type'] == "notice"):
+                    self.listDialog.append(NovelDialog(pid, dialog['type'], dialog['img'], None, dialog['text'], dialog['choices'], None))
                 elif (dialog['type'] == "narchoice"):
                     self.listDialog.append(NovelDialog(pid, dialog['type'], dialog['img'], dialog['name'], dialog['text'], dialog['choices'], None))
                 elif (dialog['type'] == "choice"):
