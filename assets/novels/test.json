@@ -3,6 +3,6 @@
         "0": {
             "type": "text", "img": "backgroundD1.jpg", "name": "Le testeur fou", "text": "Ceci est un test et c'est incroyable", "next": 1},
         "1": {
-            "type": "text", "img": "backgroundD2.jpg", "name": "Le testeur fou", "text": "Ça a l'air de marcher", "next": -1}
+            "type": "text", "img": "backgroundD2.jpg", "name": "Le testeur fou", "text": "Ca a l'air de marcher", "next": -1}
     }
 }
