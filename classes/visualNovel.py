@@ -82,7 +82,7 @@ class VisualNovel:
                 if (dialog['type'] == "text"):
                     self.listDialog.append(NovelDialog(pid, dialog['type'], dialog['img'], dialog['name'], dialog['text'], None, dialog['next']))
                 elif (dialog['type'] == "notice"):
-                    self.listDialog.append(NovelDialog(pid, dialog['type'], dialog['img'], None, dialog['text'], dialog['choices'], None))
+                    self.listDialog.append(NovelDialog(pid, dialog['type'], dialog['img'], None, dialog['text'], None, dialog['next']))
                 elif (dialog['type'] == "narchoice"):
                     self.listDialog.append(NovelDialog(pid, dialog['type'], dialog['img'], dialog['name'], dialog['text'], dialog['choices'], None))
                 elif (dialog['type'] == "choice"):
