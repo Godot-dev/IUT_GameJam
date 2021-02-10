@@ -94,7 +94,7 @@ class VisualNovel:
         if self.threadTexte.displaying and (pressed.get(pygame.K_SPACE) or pressed.get(pygame.K_RETURN) or pressed.get("Clic")):
             self.threadTexte.displaying = False
         else:
-            if self.currentDialog.type == "text":
+            if self.currentDialog.type == "text" or self.currentDialog.type == "notice":
                 if pressed.get(pygame.K_SPACE) or pressed.get(pygame.K_RETURN) or pressed.get("Clic"):
                     if self.currentDialog.next == -1:
                         return True
