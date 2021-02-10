@@ -23,6 +23,8 @@ class Game:
         # On effectue les actions du jeu en fonction de l'endroit où nous sommes
         if self.jour:
             if self.phaseDeJeu.catch_signal(self.pressed, event):
+                for v in self.phaseDeJeu.listValeurs:
+                    print(v)
                 self.jour = False
                 self.phaseDeJeu = None
         else:

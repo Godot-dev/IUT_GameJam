@@ -16,6 +16,7 @@ class VisualNovel:
         self.display = display
         self.listDialog = []
         self.listCurrentChoix = []
+        self.listValeurs = []
         self.getElementsFromFile(file)
         self.currentDialog = self.listDialog[0]
 
@@ -66,14 +67,11 @@ class VisualNovel:
         lastmissing = 0
         if intornot != 0:
             lastmissing = round(intornot * l)
-            print(lastmissing)
         missing = (l-1)*3
         lastmissing += missing % l
-        print(lastmissing)
         if lastmissing > l:
             butLen += 1
             lastmissing = lastmissing % l
-            print(lastmissing)
         butLen += missing / l
         added = 0
         for i in range(l):
@@ -101,6 +99,8 @@ class VisualNovel:
                     self.listDialog.append(NovelDialog(pid, dialog['type'], dialog['img'], dialog['name'], dialog['text'], None, dialog['next']))
                 elif (dialog['type'] == "narchoice"):
                     self.listDialog.append(NovelDialog(pid, dialog['type'], dialog['img'], dialog['name'], dialog['text'], dialog['choices'], None))
+                elif (dialog['type'] == "choice"):
+                    self.listDialog.append(NovelDialog(pid, dialog['type'], dialog['img'], dialog['name'], dialog['text'], dialog['choices'], dialog['next']))
                 else:
                     print(f"La novel dialog numéro {pid} a une erreur de type")
                 
@@ -121,5 +121,18 @@ class VisualNovel:
                         self.currentDialog = self.listDialog[int(self.currentDialog.choices[i][1])]
                         self.listCurrentChoix = []
                         self.drawDialog()
+                    i += 1
+        elif self.currentDialog.type == "choice":
+            if event != None:
+                i = 0
+                for choix in self.listCurrentChoix:
+                    if choix.hitbox.collidepoint(event.pos):
+                        self.listValeurs.append(self.currentDialog.choices[i][1])
+                        self.listCurrentChoix = []
+                        if self.currentDialog.next == -1:
+                            return True
+                        else:
+                            self.currentDialog = self.listDialog[self.currentDialog.next]
+                            self.drawDialog()
                     i += 1
             
