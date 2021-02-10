@@ -3,13 +3,18 @@ from threading import Thread
 from queue import Queue
 
 class TextDisplayer(Thread):
-    def __init__(self, text, screen, display, font):
+    def __init__(self, text, screen, display, type, font):
         Thread.__init__(self)
         self.text = text
         self.screen = screen
         self.display = display
         self.displaying = False
-        self.fontTexte = font
+        if type == "notice":
+            self.color = (77, 230, 39)
+            self.fontTexte = pygame.font.Font('Arial', 24) # Application de la police
+        else:
+            self.color = (255, 255, 255)
+            self.fontTexte = font
 
     def run(self):
         self.afficherTexte()
@@ -23,13 +28,13 @@ class TextDisplayer(Thread):
         self.displaying = True
         for ligne in mots:
             for mot in ligne:
-                surfMot = self.fontTexte.render(mot, 0, (255, 255, 255))
+                surfMot = self.fontTexte.render(mot, 0, self.color)
                 largMot, hautMot = surfMot.get_size()
                 if x + largMot >= largMax:
                     x = 45  # Réinitialisation de x
                     y += hautMot  # Reprendre sur une nouvelle ligne
                 for car in mot:
-                    surfCaractere = self.fontTexte.render(car, 0, (255, 255, 255))
+                    surfCaractere = self.fontTexte.render(car, 0, self.color)
                     largCar, hautCar = surfCaractere.get_size()
                     self.screen.blit(surfCaractere, (x, y))
                     if self.displaying:
