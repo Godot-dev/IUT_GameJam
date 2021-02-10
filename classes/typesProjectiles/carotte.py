@@ -21,11 +21,11 @@ class Carotte(Projectile): # Apparait sur les bords de l'écran, puis lance un l
         if self.pointDeDepart == 0:  # part d'en bas 
             self.rect.x = random.randint(0, 1024 - self.rect.w) 
             self.rect.y = 768 
-            self.bar_position = [self.rect.x + self.rect.w / 2, 0, 10, self.rect.y]
+            self.bar_position = [self.rect.x + self.rect.w / 2 - 5, 0, 10, self.rect.y - self.rect.h / 2]
         elif self.pointDeDepart == 1:  # part de droite
             self.rect.x = 1024 
             self.rect.y = random.randint(0, 768 - self.rect.h) 
-            self.bar_position = [0, self.rect.y + self.rect.h / 2, self.rect.x, 10]
+            self.bar_position = [0, self.rect.y + self.rect.h / 2 - 5, self.rect.x - self.rect.w / 2, 10]
         elif self.pointDeDepart == 2:  # part d'en haut
             self.rect.x = random.randint(0, 1024 - self.rect.w) 
             self.rect.y = 0 - self.rect.h
@@ -33,7 +33,7 @@ class Carotte(Projectile): # Apparait sur les bords de l'écran, puis lance un l
         elif self.pointDeDepart == 3:  # part de gauche
             self.rect.x = 0 - self.rect.w
             self.rect.y = random.randint(0, 768 - self.rect.h) 
-            self.bar_position = [0 + self.rect.w / 2, self.rect.y + self.rect.h / 2, 1024, 10]
+            self.bar_position = [0 + self.rect.w / 2, self.rect.y + self.rect.h / 2 - 5, 1024, 10]
 
     def move(self):
         if self.time > 180:
