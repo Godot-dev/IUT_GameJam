@@ -1,0 +1,12 @@
+{
+    "dialogs": {
+        "0": {
+            "type": "text", "img": "backgroundD1.jpg", "name": "Le testeur fou", "text": "Ceci est un test et c'est incroyable", "next": 1},
+        "1": {
+            "type": "text", "img": "backgroundD2.jpg", "name": "Le testeur fou", "text": "Ca a l'air de marcher", "next": 2},
+        "2": {
+            "type": "narchoice", "img": "backgroundD3.jpg", "name": "Le testeur fou", "text": "Reparti pour des tests", "choices": [["Debut ?", "0"], ["Milieu ?", "1"], ["Suivant ?", "3"]]},
+        "3": {
+            "type": "choice", "img": "background.png", "name": "Le testeur fou", "text": "Encore des choix ? Non mais ca serait pas incroyable ca par hasard ?", "choices": [["Des carottes ?", "Carotte"], ["Des cerises ?", "Cerise"], ["Des pommes ?", "Pomme"]], "next": -1}
+    }
+}

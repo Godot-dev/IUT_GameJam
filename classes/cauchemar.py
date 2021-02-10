@@ -1,6 +1,5 @@
 import pygame
 import random
-import time
 from classes.player import Player
 from classes.projectile import Projectile
 from classes.typesProjectiles.pomme import Pomme
@@ -38,8 +37,7 @@ class Cauchemar:
         for projectile in self.liste_projectiles:
             projectile.move()
             
-            screen.blit(projectile.image,projectile.rect)
-            t1 = time.time() 
+            screen.blit(projectile.image,projectile.rect) 
             if projectile.rect.x + projectile.rect.w < 0  or projectile.rect.x - projectile.rect.w > 1024 or projectile.rect.y + projectile.rect.h < 0 or projectile.rect.y - projectile.rect.h > 768: 
                 self.liste_projectiles.remove(projectile)
             elif self.check_collision(projectile):
@@ -51,7 +49,6 @@ class Cauchemar:
                     self.player.imageVie = pygame.image.load('assets/1coeurs.png')
                 else: # Le joueur perds la partie, il faudra remplir plus tard le else
                     pass     
-            print((time.time() - t1) * 1000000)
         self.updateTimeBar(screen)
         if self.cooldownDash < 120:
             self.updateDashBar(screen)
@@ -111,7 +108,8 @@ class Cauchemar:
 
     def terminerCauchemar(self):
         self.game.jour = True
+        self.game.phaseDeJeu = None
     
     def loadImagesEnnemis(self):
-        return [pygame.image.load(f'assets/{self.legumesFruits[0]}.png'),pygame.image.load(f'assets/{self.legumesFruits[1]}.png'),pygame.image.load(f'assets/{self.legumesFruits[2]}.png')]
+        return [pygame.image.load(f'assets/projectiles/{self.legumesFruits[0]}.png'),pygame.image.load(f'assets/projectiles/{self.legumesFruits[1]}.png'),pygame.image.load(f'assets/projectiles/{self.legumesFruits[2]}.png')]
 
