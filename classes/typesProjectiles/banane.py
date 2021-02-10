@@ -3,10 +3,10 @@ import pygame
 from classes.projectile import Projectile
 
 class Banane(Projectile): # la salade se déplace en diagonale, de taille 64x64, de vitesse moyenne
-    def __init__(self, cauchemar, image):
+    def __init__(self, difficulty, image):
         super(Projectile, self).__init__()
-        self.cauchemar = cauchemar
-        self.velocity = 2 + cauchemar.difficulty
+        self.difficulty = difficulty
+        self.velocity = 2 + difficulty
         self.pointDeDepart = random.randint(0, 3)
         self.direction = random.randint(0, 1) # Indique si la salade ira en diagonale vers sa gauche ou vers sa droite
         if self.direction == 0: # On a besoin que self.direction soit égal à 1 ou -1, pas 0

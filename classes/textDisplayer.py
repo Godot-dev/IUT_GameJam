@@ -11,7 +11,7 @@ class TextDisplayer(Thread):
         self.displaying = False
         if type == "notice":
             self.color = (77, 230, 39)
-            self.fontTexte = pygame.font.Font('Arial', 24) # Application de la police
+            self.fontTexte = pygame.font.Font('assets/fonts/font.ttf', 24) # Application de la police
         else:
             self.color = (255, 255, 255)
             self.fontTexte = font

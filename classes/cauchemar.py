@@ -15,7 +15,8 @@ from classes.typesProjectiles.raisin import Raisin
 class Cauchemar:
     def __init__(self, difficulty, legumesFruits, game):
         self.difficulty = difficulty
-        self.legumesFruits = ["Citrouille", "Carotte", "Radis"]
+        self.legumesFruits = legumesFruits
+        print(legumesFruits)
         self.images = self.loadImagesEnnemis()
         self.game = game
         self.player = Player()    
