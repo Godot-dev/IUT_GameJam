@@ -20,7 +20,7 @@ class Projectile(pygame.sprite.Sprite):
             self.rect.x = 0 - self.rect.w
             self.rect.y = random.randint(0, 768 - self.rect.h)
 
-    def move(self): # A modifier si chez les classes filles pour modifier les patterns de déplacement
+    def move(self): # A modifier si chez les classes filles la pattern n'est pas simplement en ligne droite
         if self.pointDeDepart == 0:
             self.rect.y -= self.velocity
         elif self.pointDeDepart == 1:

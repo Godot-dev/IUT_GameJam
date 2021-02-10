@@ -32,13 +32,12 @@ class Cerise(Projectile): # La cerise commence tout droit puis fait un virage à
 
     def move(self): 
         if self.pointDeDepart == 0:
-            if self.firstStep == True and self.rect.y > 384 - self.rect.h/2: # Pour faire demi tour pile au milieu
+            if self.firstStep == True and self.rect.y > 384 - self.rect.h/2: # Pour faire un virage pile au milieu
                 self.rect.y -= self.velocity
             elif self.firstStep == False:
                 self.rect.x += self.velocity
             else:
                 self.firstStep = False
-                self.velocity += 2
         elif self.pointDeDepart == 1:
             if self.firstStep == True and self.rect.x > 512 - self.rect.w/2:
                 self.rect.x -= self.velocity
@@ -46,7 +45,6 @@ class Cerise(Projectile): # La cerise commence tout droit puis fait un virage à
                 self.rect.y += self.velocity
             else:
                 self.firstStep = False
-                self.velocity += 2
         elif self.pointDeDepart == 2:
             if self.firstStep == True and self.rect.y < 384 - self.rect.h/2:
                 self.rect.y += self.velocity
@@ -54,7 +52,6 @@ class Cerise(Projectile): # La cerise commence tout droit puis fait un virage à
                 self.rect.x -= self.velocity
             else:
                 self.firstStep = False
-                self.velocity += 2
         elif self.pointDeDepart == 3:
             if self.firstStep == True and self.rect.x < 512 - self.rect.w/2:
                 self.rect.x += self.velocity
@@ -62,4 +59,3 @@ class Cerise(Projectile): # La cerise commence tout droit puis fait un virage à
                 self.rect.y -= self.velocity
             else:
                 self.firstStep = False
-                self.velocity += 2

@@ -15,7 +15,7 @@ from classes.typesProjectiles.raisin import Raisin
 class Cauchemar:
     def __init__(self, difficulty, legumesFruits, game):
         self.difficulty = difficulty
-        self.legumesFruits = ["Cerise", "Salade", "Radis"]
+        self.legumesFruits = ["Citrouille", "Carotte", "Radis"]
         self.images = self.loadImagesEnnemis()
         self.game = game
         self.player = Player()    
@@ -118,4 +118,3 @@ class Cauchemar:
     
     def loadImagesEnnemis(self):
         return [pygame.image.load(f'assets/projectiles/{self.legumesFruits[0]}.png'),pygame.image.load(f'assets/projectiles/{self.legumesFruits[1]}.png'),pygame.image.load(f'assets/projectiles/{self.legumesFruits[2]}.png')]
-
