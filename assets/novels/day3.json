@@ -11,7 +11,7 @@
         "25":{
             "type": "text", "img":"background.png", "name": "Jour 3", "text" : "Quand la nuit approche il rentre chez lui et se couche après avoir mangé une pomme comme seul repas, étant trop fatigué pour cuisiner.", "next": 26},   
         "26":{
-            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "C’est encore une nuit tourmentée pour Robert, mais c’est encore pire qu’hier, il se retrouve dans un cauchemar inhabituel, comme si son âme était pourchassée……", "next" : 28}
+            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "C’est encore une nuit tourmentée pour Robert, mais c’est encore pire qu’hier, il se retrouve dans un cauchemar inhabituel, comme si son âme était pourchassée……", "next" : -1}
         
     }
 }

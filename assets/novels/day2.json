@@ -17,7 +17,7 @@
         "19":{
             "type": "text", "img":"background.png", "name": "Jour 2", "text" : "Robert prépare une soupe de citrouille et de poireau et mange du raisin au dessert. Puis il va se coucher. ", "next": 20},
         "20":{
-            "type": "text", "img":"background.png", "name": "Jour 2", "text" : "C’est encore une nuit tourmentée pour Robert, mais c’est encore pire qu’hier, il se retrouve dans un cauchemar inhabituel, comme si son âme était pourchassée……", "next": 21}
+            "type": "text", "img":"background.png", "name": "Jour 2", "text" : "C’est encore une nuit tourmentée pour Robert, mais c’est encore pire qu’hier, il se retrouve dans un cauchemar inhabituel, comme si son âme était pourchassée……", "next": -1}
     
     }
 }
