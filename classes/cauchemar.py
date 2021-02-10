@@ -38,6 +38,9 @@ class Cauchemar:
             projectile.move()
             
             screen.blit(projectile.image,projectile.rect) 
+            if(projectile.__class__.__name__ == "Carotte" and projectile.time > 120 and projectile.time < 180):
+                pygame.draw.rect(screen,(255,255,255),projectile.bar_position)
+
             if projectile.rect.x + projectile.rect.w < 0  or projectile.rect.x - projectile.rect.w > 1024 or projectile.rect.y + projectile.rect.h < 0 or projectile.rect.y - projectile.rect.h > 768: 
                 self.liste_projectiles.remove(projectile)
             elif self.check_collision(projectile):
@@ -86,7 +89,10 @@ class Cauchemar:
             self.player.velocity = int(f/0.7)
 
     def check_collision(self, projectile):
-        return pygame.sprite.collide_mask(self.player, projectile)
+        if(projectile.__class__.__name__ == "Carotte" and projectile.time > 120 and projectile.time < 180):
+            return self.player.rect.colliderect(projectile.bar_position)
+        else:
+            return pygame.sprite.collide_mask(self.player, projectile)
 
     def updateTimeBar(self, screen):
         bar_back_color = (60,63,60) # Couleur de fond
