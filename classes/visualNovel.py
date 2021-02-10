@@ -4,6 +4,7 @@ import sys
 import pygame
 import json
 import math
+from classes.textDisplayer import TextDisplayer
 from classes.novelDialog import NovelDialog
 from classes.borderRectangle import BorderRectangle
 
@@ -22,6 +23,7 @@ class VisualNovel:
         self.listValeurs = []
         self.getElementsFromFile(file)
         self.currentDialog = self.listDialog[0]
+        self.threadTexte = None
 
         # AFFICHAGE
         self.drawDialog()
@@ -37,31 +39,8 @@ class VisualNovel:
         if self.currentDialog.type == "narchoice" or self.currentDialog.type == "choice":
             self.afficherChoix()
         # Texte
-        self.afficherTexte(self.currentDialog.text)
-        
-    def afficherTexte(self, text):
-        mots = [mot.split(' ') for mot in text.splitlines()]  # Créé un tableau en 2D où chaque ligne est un tableau de mots
-        esp = self.fontTexte.size(' ')[0]  # Largeur d'un espace
-        largMax, hautMax = self.screen.get_size()
-        largMax -= 45
-        x, y = (45, 580)
-        for ligne in mots:
-            for mot in ligne:
-                surfMot = self.fontTexte.render(mot, 0, (255, 255, 255))
-                largMot, hautMot = surfMot.get_size()
-                if x + largMot >= largMax:
-                    x = 45  # Réinitialisation de x
-                    y += hautMot  # Reprendre sur une nouvelle ligne
-                for car in mot:
-                    surfCaractere = self.fontTexte.render(car, 0, (255, 255, 255))
-                    largCar, hautCar = surfCaractere.get_size()
-                    self.screen.blit(surfCaractere, (x, y))
-                    self.display.flip()
-                    pygame.time.delay(15)
-                    x += largCar 
-                x += esp
-            x = 45  # Réinitialisation de x
-            y += hautMot  # Reprendre sur une nouvelle ligne
+        self.threadTexte = TextDisplayer(self.currentDialog.text, self.screen, self.display, self.fontTexte)
+        self.threadTexte.start()
 
     def afficherChoix(self):
         l = len(self.currentDialog.choices)
@@ -109,38 +88,40 @@ class VisualNovel:
                     print(f"La novel dialog numéro {pid} a une erreur de type")
                 
     def catch_signal(self, pressed, event):
-        if self.currentDialog.type == "text":
-            if pressed.get(pygame.K_SPACE) or pressed.get(pygame.K_RETURN) or pressed.get("Clic"):
-                if self.currentDialog.next == -1:
-                    return True
-                else:
-                    self.currentDialog = self.listDialog[self.currentDialog.next]
-                    self.drawDialog()
-        elif self.currentDialog.type == "narchoice":
-            if event != None:
-                i = 0
-                for choix in self.listCurrentChoix:
-                    if choix.hitbox.collidepoint(event.pos):
-                        print(int(self.currentDialog.choices[i][1]))
-                        nextI = int(self.currentDialog.choices[i][1])
-                        if nextI == -1:
-                            return True
-                        else:
-                            self.currentDialog = self.listDialog[nextI]
+        if self.threadTexte.displaying and (pressed.get(pygame.K_SPACE) or pressed.get(pygame.K_RETURN) or pressed.get("Clic")):
+            self.threadTexte.displaying = False
+        else:
+            if self.currentDialog.type == "text":
+                if pressed.get(pygame.K_SPACE) or pressed.get(pygame.K_RETURN) or pressed.get("Clic"):
+                    if self.currentDialog.next == -1:
+                        return True
+                    else:
+                        self.currentDialog = self.listDialog[self.currentDialog.next]
+                        self.drawDialog()
+            elif self.currentDialog.type == "narchoice":
+                if event != None:
+                    i = 0
+                    for choix in self.listCurrentChoix:
+                        if choix.hitbox.collidepoint(event.pos):
+                            print(int(self.currentDialog.choices[i][1]))
+                            nextI = int(self.currentDialog.choices[i][1])
+                            if nextI == -1:
+                                return True
+                            else:
+                                self.currentDialog = self.listDialog[nextI]
+                                self.listCurrentChoix = []
+                                self.drawDialog()
+                        i += 1
+            elif self.currentDialog.type == "choice":
+                if event != None:
+                    i = 0
+                    for choix in self.listCurrentChoix:
+                        if choix.hitbox.collidepoint(event.pos):
+                            self.listValeurs.append(self.currentDialog.choices[i][1])
                             self.listCurrentChoix = []
-                            self.drawDialog()
-                    i += 1
-        elif self.currentDialog.type == "choice":
-            if event != None:
-                i = 0
-                for choix in self.listCurrentChoix:
-                    if choix.hitbox.collidepoint(event.pos):
-                        self.listValeurs.append(self.currentDialog.choices[i][1])
-                        self.listCurrentChoix = []
-                        if self.currentDialog.next == -1:
-                            return True
-                        else:
-                            self.currentDialog = self.listDialog[self.currentDialog.next]
-                            self.drawDialog()
-                    i += 1
-            
+                            if self.currentDialog.next == -1:
+                                return True
+                            else:
+                                self.currentDialog = self.listDialog[self.currentDialog.next]
+                                self.drawDialog()
+                        i += 1            

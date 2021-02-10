@@ -1,28 +1,28 @@
 {
     "dialogs": {
         "0": {
-            "type": "text", "img": "backgroundD1.jpg", "name": "Introduction", "text": "Robert Johnson, est un vieux fermier du sud de la Californie. Robert vient d'une famille d’agriculteurs. Mais après 45 ans de dur labeur, Robert est maintenant la seule personne qui reste pour diriger la ferme familiale. Les dernières années ont été particulièrement difficiles pour Robert. La chute du prix d'achat de ses fruits et légumes par les grossistes, ainsi que diverses catastrophes naturelles, ont fortement affecté sa production et ses revenus. Robert travaille dur tous les jours, peut-être trop pour son âge avancé. Mais malgré cela, la production ne s'améliore pas et ses revenus continuent de baisser.", "next": 1},
+            "type": "text", "img": "backgroundD1.jpg", "name": "Introduction", "text": "Robert Johnson, est un vieux fermier du sud de la Californie. Robert vient d'une famille d'agriculteurs. Mais apr\u00e8s 45 ans de dur labeur, Robert est maintenant la seule personne qui reste pour diriger la ferme familiale. Les derni\u00e8res ann\u00e9es ont \u00e9t\u00e9 particuli\u00e8rement difficiles pour Robert. La chute du prix d'achat de ses fruits et l\u00e9gumes par les grossistes, ainsi que diverses catastrophes naturelles, ont fortement affect\u00e9 sa production et ses revenus. Robert travaille dur tous les jours, peut-\u00eatre trop pour son âge avanc\u00e9. Mais malgr\u00e9 cela, la production ne s'am\u00e9liore pas et ses revenus continuent de baisser.", "next": 1},
         "1": {
-            "type": "text", "img": "backgroundD2.jpg", "name": "Jour 1", "text": "Une nouvelle journée commence pour Robert, le soleil est déjà haut dans le ciel et semble brûler tout ce qu'il touche, comme d'habitude à cette époque de l'année.", "next": 2},
+            "type": "text", "img": "backgroundD2.jpg", "name": "Jour 1", "text": "Une nouvelle journ\u00e9e commence pour Robert, le soleil est d\u00e9 j\u00e0 haut dans le ciel et semble brûler tout ce qu'il touche, comme d'habitude \u00e0 cette \u00e9 poque de l'ann\u00e9 e.", "next": 2},
         "2": {
-            "type": "narchoice", "img": "backgroundD3.jpg", "name": "Jour 1", "text": "Robert s'apprête à arroser ses champs de salades, quand le bruit sourd de pneu crissant sur l'asphalte interrompt le silence habituel de la ferme.", "choices": [["Sortir pour voir ce qu'il se passe","3"], ["Rester à l'intérieur et continuer de se préparer","4"]]},
+            "type": "narchoice", "img": "backgroundD3.jpg", "name": "Jour 1", "text": "Robert s'appr\u00eate \u00e0 arroser ses champs de salades, quand le bruit sourd de pneu crissant sur l'asphalte interrompt le silence habituel de la ferme.", "choices": [["Sortir pour voir ce qu'il se passe","3"], ["Rester \u00e0 l'int\u00e9rieur et continuer de se pr\u00e9parer","4"]]},
         "3": {
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert voit un homme en costume sortir de la voiture et marcher vers lui.", "next": 5},        
+            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert voit un homme en costume sortir de la voiture et marcher vers lui.", "next": 5},
         "4": {
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Quelqu'un sonne à la porte", "next": 5},
+            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Quelqu'un sonne \u00e0 la porte", "next": 5},
         "5":{
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "L'homme s'approche et s'exclame : << Bonjour Monsieur, je suis vendeur chez Utopia Worldwide, je fais le tour de la région pour promouvoir notre nouveau produit le SquareUp >>", "next": 6},   
+            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "L'homme s'approche et s'exclame : << Bonjour Monsieur, je suis vendeur chez Utopia Worldwide, je fais le tour de la r\u00e9gion pour promouvoir notre nouveau produit le SquareUp >>", "next": 6},
         "6":{
-            "type": "narchoice", "img":"background.png", "name": "Jour 1", "text" : "Vendeur : Avec notre produit, vous pouvez dire adieu aux pertes de production, aux dégâts causés par les insectes, vos plantations produiront deux fois plus que la normale ! Souhaitez-vous un kit d'essai pour vivre l'expérience par vous-même ? Si le produit vous a convaincu, il vous suffit de remplir ce document et de nous l'envoyer pour en commander d'autres.", "choices": [["Accepter le kit d’essai","7"], ["Décliner l’offre","8"]] },
+            "type": "narchoice", "img":"background.png", "name": "Jour 1", "text" : "Vendeur : Avec notre produit, vous pouvez dire adieu aux pertes de production, aux d\u00e9gâts caus\u00e9s par les insectes, vos plantations produiront deux fois plus que la normale ! Souhaitez-vous un kit d'essai pour vivre l'exp\u00e9rience par vous-m\u00eame ? Si le produit vous a convaincu, il vous suffit de remplir ce document et de nous l'envoyer pour en commander d'autres.", "choices": [["Accepter le kit d'essai","7"], ["D\u00e9cliner l'offre","8"]] },
         "7":{
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert prend le kit de test, l'homme s'en va, et Robert décide d'essayer ce nouveau produit sur ses carottes qui ont très peu produit et ses salades qui sont envahies par les limaces.", "next": 9},
+            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert prend le kit de test, l'homme sen va, et Robert d\u00e9cide d'essayer ce nouveau produit sur ses carottes qui ont tr\u00e8s peu produit et ses salades qui sont envahies par les limaces.", "next": 9},
         "8":{
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Le vendeur explique à Robert tous les avantages que ce produit pourrait apporter à sa ferme, et lui fait une démonstration sur certains de ses plans de carottes, lui laisse le kit d'essai en cadeau, puis s'en va.", "next": 9},
+            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Le vendeur explique \u00e0 Robert tous les avantages que ce produit pourrait apporter \u00e0 sa ferme, et lui fait une d\u00e9 monstration sur certains de ses plans de carottes, lui laisse le kit d'essai en cadeau, puis s'en va.", "next": 9},
         "9":{
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert choisit ses légumes pour son repas avant de rentrer chez lui pour cuisiner, il décide de prendre une partie des légumes sur lesquels le produit a été appliqué pour voir si leur goût est altéré.", "next": 10},    
+            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert choisit ses l\u00e9gumes pour son repas avant de rentrer chez lui pour cuisiner, il d\u00e9cide de prendre une partie des l\u00e9gumes sur lesquels le produit a \u00e9t\u00e9 appliqu\u00e9 pour voir si leur goût est alt\u00e9r\u00e9.", "next": 10},
         "10":{
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert mange son repas et va se coucher. Fin de la première journée.", "next": 11},
+            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert mange son repas et va se coucher. Fin de la premi\u00e8re journ\u00e9e.", "next": 11},
         "11":{
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "C’est une nuit tourmentée pour Robert, il se retrouve dans un cauchemar inhabituel, comme si son âme était pourchassée……", "next": 12}
+            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "C'est une nuit tourment\u00e9e pour Robert, il se retrouve dans un cauchemar inhabituel, comme si son âme \u00e9 tait pourchass\u00e9 e……", "next": -1}
     }
 }
