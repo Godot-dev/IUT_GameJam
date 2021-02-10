@@ -16,6 +16,20 @@ class Cerise(Projectile): # La cerise commence tout droit puis fait un virage à
         self.firstStep = True # Passera à False quand la cerise commencera son angle
         self.rect_init()
 
+    def rect_init(self): # A modifier chez les classes filles si nous voulons changer l'emplacement des points de spawn
+        if self.pointDeDepart == 0:  # part d'en bas 
+            self.rect.x = 512 - self.rect.w / 2
+            self.rect.y = 768 + self.rect.h
+        elif self.pointDeDepart == 1:  # part de droite
+            self.rect.x = 1024
+            self.rect.y = 384 - self.rect.h/2
+        elif self.pointDeDepart == 2:  # part d'en haut
+            self.rect.x = 512 - self.rect.w / 2
+            self.rect.y = 0 - self.rect.h
+        elif self.pointDeDepart == 3:  # part de gauche
+            self.rect.x = 0 - self.rect.w
+            self.rect.y = 384 - self.rect.h/2
+
     def move(self): 
         if self.pointDeDepart == 0:
             if self.firstStep == True and self.rect.y > 384 - self.rect.h/2: # Pour faire demi tour pile au milieu
@@ -34,7 +48,7 @@ class Cerise(Projectile): # La cerise commence tout droit puis fait un virage à
                 self.firstStep = False
                 self.velocity += 2
         elif self.pointDeDepart == 2:
-            if self.firstStep == True and self.rect.y < 384 + self.rect.h/2:
+            if self.firstStep == True and self.rect.y < 384 - self.rect.h/2:
                 self.rect.y += self.velocity
             elif self.firstStep == False:
                 self.rect.x -= self.velocity
@@ -42,7 +56,7 @@ class Cerise(Projectile): # La cerise commence tout droit puis fait un virage à
                 self.firstStep = False
                 self.velocity += 2
         elif self.pointDeDepart == 3:
-            if self.firstStep == True and self.rect.x < 512 + self.rect.w/2:
+            if self.firstStep == True and self.rect.x < 512 - self.rect.w/2:
                 self.rect.x += self.velocity
             elif self.firstStep == False:
                 self.rect.y -= self.velocity

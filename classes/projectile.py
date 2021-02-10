@@ -9,7 +9,7 @@ class Projectile(pygame.sprite.Sprite):
     def rect_init(self): # A modifier chez les classes filles si nous voulons changer l'emplacement des points de spawn
         if self.pointDeDepart == 0:  # part d'en bas 
             self.rect.x = random.randint(0, 1024 - self.rect.w)
-            self.rect.y = 768 + self.rect.h
+            self.rect.y = 768 
         elif self.pointDeDepart == 1:  # part de droite
             self.rect.x = 1024
             self.rect.y = random.randint(0, 768 - self.rect.h)
