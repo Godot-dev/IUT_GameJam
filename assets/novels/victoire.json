@@ -1,7 +1,7 @@
 {
     "dialogs": {
         "0": {
-            "type": "text", "img": "tree.png", "name": "Fin", "text": "Robert n'a jamais \u00e9t\u00e9 aussi heureux de se r\u00e9veiller le matin, il a vaincu ses d\u00e9mons et il a d\u00e9velopp\u00e9 une immunit\u00e9 au virus.", "next" : 1},
+            "type": "text", "img": "tree.png", "name": "Fin", "text": "Robert n'a jamais \u00e9t\u00e9 aussi heureux de se r\u00e9veiller le matin, il a vaincu ses d\u00e9mons et il a d\u00e9velopp\u00e9 une immunit\u00e9 à ces fruits et ces l\u00e9gumes.", "next" : 1},
         "1": {
             "type": "text", "img": "tree.png", "name": "Fin", "text": "Il a donc r\u00e9v\u00e9l\u00e9 la v\u00e9rit\u00e9 au monde entier et sauv\u00e9 le monde, qui a pu supprimer toute trace de ce produit myst\u00e9rieux. Le fabricant du produit a \u00e9t\u00e9 retrouv\u00e9 et comdamn\u00e9 \u00e0 mort pour crime contre l'humanit\u00e9.", "next": 2},
         "2": {

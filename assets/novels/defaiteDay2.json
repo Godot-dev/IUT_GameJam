@@ -1,8 +1,8 @@
 {
     "dialogs": {
         "0": {
-            "type": "notice", "img": "backgroundD2.jpg", "name": "Le testeur fou", "text": "Haha ! Je te l'avais dit ! Tu ne survivras pas \u00e0 ce cauchemar ! Cette fois-ci tu n'as pas pu sauver Robert, qui restera comdamn\u00e9 \u00e0 mourir \u00e0 l'infini car tu n'arriveras jamais \u00e0 finir tous les niveaux !", "next": 1},
+            "type": "notice", "img": "tree.png", "name": "Le testeur fou", "text": "Haha ! Je te l'avais dit ! Tu ne survivras pas \u00e0 ce cauchemar ! Cette fois-ci tu n'as pas pu sauver Robert, qui restera comdamn\u00e9 \u00e0 mourir \u00e0 l'infini car tu n'arriveras jamais \u00e0 finir tous les niveaux !", "next": 1},
         "1": {
-            "type": "notice", "img": "backgroundD2.jpg", "name": "Le testeur fou", "text": "Aucun joueur ne peut me battre dans ce monde, je suis invincible ! Tu as juste eu un coup de chance au niveau pr\u00e9c\u00e9dent. Si tu le souhaites, tu peux r\u00e9essayer, mais comme tu l'as vu, quand je suis s\u00e9rieux, tu ne peux pas me battre ! Mouahahahaa", "next": -1}
+            "type": "notice", "img": "tree.png", "name": "Le testeur fou", "text": "Aucun joueur ne peut me battre dans ce monde, je suis invincible ! Tu as juste eu un coup de chance au niveau pr\u00e9c\u00e9dent. Si tu le souhaites, tu peux r\u00e9essayer, mais comme tu l'as vu, quand je suis s\u00e9rieux, tu ne peux pas me battre ! Mouahahahaa", "next": -1}
     }
 }

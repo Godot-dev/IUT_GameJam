@@ -3,6 +3,6 @@
         "0": {
             "type": "notice", "img": "tree.png", "name": "???", "text": "D\u00e9sol\u00e9 de te l'annoncer, mais tu as perdu ! Robert est mort tu\u00e9 par ses l\u00e9gumes \u00e0 cause de ton incomp\u00e9tence ! Ce jeu doit être un peu trop difficile pour toi, j'ai d\u00fb surestimer tes capacit\u00e9s...", "next": 1},
         "1": {
-            "type": "notice", "img": "tree.png", "name": "???", "text": "Comme je suis gentil, je vais te donner un conseil : les fruits et l\u00e9gumes que tu choisis pendant le jour auront un impact sur la difficult\u00e9 du cauchemar. Alors.... choisis bien la prochaine fois ;)", "next": -1}
+            "type": "notice", "img": "tree.png", "name": "???", "text": "Comme je suis gentil, je vais te donner un conseil : les fruits et l\u00e9gumes que tu choisis pendant le jour auront un impact sur la difficult\u00e9 du cauchemar. Alors... choisis bien la prochaine fois ;)", "next": -1}
     }
 }

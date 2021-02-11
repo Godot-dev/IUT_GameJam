@@ -3,7 +3,7 @@
         "0": {
             "type": "text", "img": "interior2.png", "name": "Jour 3", "text": "Cette fois-ci, Robert se souvient parfaitement de son cauchemar. Le produit pr\u00e9sent sur les l\u00e9gumes leurs permettent de prendre vie dans les r\u00eaves de la personnes qui l'a mang\u00e9.", "next" : 1},
         "1": {
-            "type": "text", "img": "interior2.png", "name": "Jour 3", "text": "Il comprit alors que si les l\u00e9gumes parviennent \u00e0 le tuer dans un de ses cauchemars, les l\u00e9gumes pourraient se mettre \u00e0 contr\u00f4ler le corps de Robert pour se venger des humains qui les mangent depuis des ann\u00e9es en utilisant le corps de Robert et des autres humains infect\u00e9s par le virus pour d\u00e9truire l'humanit\u00e9", "next": 2},
+            "type": "text", "img": "interior2.png", "name": "Jour 3", "text": "Il comprend alors que si les l\u00e9gumes parviennent \u00e0 le tuer dans un de ses cauchemars, les l\u00e9gumes pourraient se mettre \u00e0 contr\u00f4ler le corps de Robert. La raison qui lui vient \u00e0 l'esprit est une vengeance contre les humains qui mangent les fruits et les l\u00e9gumes depuis des ann\u00e9es. Il se dit que s'ils utilisent son corps et celui d'autres humains \"poss\u00e9d\u00e9s\" par le virus pour d\u00e9truire l'humanit\u00e9", "next": 2},
         "2": {
             "type": "text", "img": "fire.png", "name": "Jour 3", "text":"Robert d\u00e9cide alors de sortir de sa maison, et de se d\u00e9barasser de tous les fruits et l\u00e9gumes de son potager en les faisant tous br\u00fbler dans un immense feu.", "next": 3},
         "3": {
