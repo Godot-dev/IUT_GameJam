@@ -1,17 +1,35 @@
 {
     "dialogs": {
         "0": {
-            "type": "narchoice", "img": "backgroundD2.jpg", "name": "Jour 3", "text": "C'est un r\u00e9veil difficile pour Robert, il a encore oublié ce qui s'est passé dans son cauchemar, mais Robert se souvient qu'il était très effrayant. Malgr\u00e9 tout il faut retourner travailler. Il commença donc par :", "choices": [["Appliquer du produit sur toutes les cultures pour maximiser les profits ","1"],["Jeter le produit et s'occuper des plans comme avant ","2"]]},
+            "type": "text", "img": "backgroundD1.jpg", "name": "Jour 3", "text": "Cette fois-ci, Robert se souvient parfaitement de son cauchemar. Le produit présent sur les légumes leurs permettent de prendre vie dans les rêves de la personnes qui l'a mangé.", "next" : 1},
         "1": {
-            "type": "narchoice", "img": "backgroundD3.jpg", "name": "Jour 3", "text": "Robert applique tout le produit restant sur les cultures de fruits et de l\u00e9gumes et d\u00e9cides d'en commander en plus. Malgr\u00e9 tout il pense que ses cauchemars ont un lien avec ce produit.", "choices": [["Arr\u00e8ter de consommer les fruits et l\u00e9gumes traiter avec le produit","24"], ["Continuer de consommer les fruits et l\u00e9gumes traiter avec le produit ","25"]]},
+            "type": "text", "img": "backgroundD2.jpg", "name": "Jour 3", "text": "Il comprit alors que si les légumes parviennent à le tuer dans un de ses cauchemars, les légumes pourraient se mettre à contrôler le corps de Robert pour se venger des humains qui les mangent depuis des années en utilisant le corps de Robert et des autres humains infectés par le virus pour détruire l'humanité", "next": 2},
         "2": {
-            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "Robert jette le produit et retourne cultiver son exploitation comme il le faisait avant.", "next": 24},
+            "type": "text", "img": "backgroundD3.jpg", "name": "Jour 3", "text":"Robert décide alors de sortir de sa maison, et de se débarasser de tous les fruits et légumes de son potager en les faisant tous brûler dans un immense feu.", "next": 3},
         "3": {
-            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "Quand la nuit approche il rentre chez lui et se couche apr\u00e8s avoir mang\u00e9 des sushis command\u00e9s sur UberEats, \u00e9tant trop fatigu\u00e9 pour cuisiner.","next": 26},
-        "4":{
-            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "Quand la nuit approche il rentre chez lui et se couche apr\u00e8s avoir mang\u00e9 une pomme comme seul repas, \u00e9tant trop fatigu\u00e9 pour cuisiner.", "next": 26},
+            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "Après avoir fini cette tâche très fatiguante, Robert se rendit compte qu'il avait très fin et rien d'autre à manger que ses fruits et légumes, infectés par le produit.", "next": 4},
+        "4": {
+            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "C'est alors que Robert décida de commander une pizza bien grasse sans le moindre légume, afin de ne pas reproduire encore une fois un cauchemar mortel.", "next": 5},
         "5":{
-            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "C'est encore une nuit tourment\u00e9e pour Robert, mais c'est encore pire qu'hier, il se retrouve dans un cauchemar inhabituel, comme si son âme \u00e9tait pourchass\u00e9e……", "next" : -1}
+            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "Après avoir mangé sa délicieuse pizza, Robert s'approcha de sa cuisine pour faire la vaiselle quand soundain...", "next": 6},
+        "6":{
+            "type": "choice", "img":"background.png", "name": "Jour 3", "text" : "Tout d'un coup, une force mystérieuse s'empare de lui et saisit :", "choices": [["Des pommes", "Pomme"], ["Des citrouilles", "Citrouille"], ["Des radis", "Radis"]], "next": 7},
+        "7":{
+            "type": "choice", "img":"background.png", "name": "Jour 3", "text" : "Robert essaie de lutter tant bien que mal, mais il s'empare tout de même de :", "choices": [["Des salades", "Salade"], ["Des bananes", "Banane"], ["Des poireaux", "Poireau"]], "next": 8},
+        "8":{
+            "type": "choice", "img":"background.png", "name": "Jour 3", "text" : "La force mystérieuse continue de manipuler Robert et le force à prendre :", "choices": [["Des carottes", "Carotte"], ["Des raisins", "Raisin"], ["Des cerises", "Cerise"]],  "next": 9},
+        "9":{
+            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "Robert cuisine les 3 aliments restants contre son gré, et lutte tant bien que mal pour ne pas les manger mais il finit tout de même par les dévorer. Cette force terrorisse Robert, mais dans un élan de courage, celui-ci décide de faire face à ses peurs et décide d'aller se coucher pour en finir une bonne fois pour toutes.", "next": 10},
+        "10":{
+            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "Cette nuit est la nuit ultime. Robert sent que s'il parvient à survivre face à ses démons dans son cauchemar, cette fois il sera libéré.", "next": 11},
+        "11":{
+            "type": "notice", "img":"background.png", "name": "Jour 3", "text" : "Grrrrr. Vous commencez sérieusement à m'énerver... Comment êtes vous arrivés jusque là? Avez vous triché? De toute façon ce n'est pas grave, j'ai toujours ma botte secrète, le cauchemar de ce fermier sera si effrayant que même vous ne parviendrez pas à vous concentrer pour esquivez les fruits et légumes !", "next": 12},
+        "12":{
+            "type": "notice", "img":"background.png", "name": "Jour 3", "text" : "Je suis le jeu vidéo ultime ! Immortel ! Jamais un simple humain mortel ne pourra me vaincre ! JAMAIS !!!! ", "next": 13},
+        "13":{
+            "type": "notice", "img":"background.png", "name": "Jour 3", "text" : "Vous allez perdre lamentablement face à ma grande puissance dans 3..2..1...", "next": 14},
+        "14":{
+            "type": "notice", "img":"background.png", "name": "Jour 3", "text" : "Maintenant !", "next": -1}    
 
     }
 }
