@@ -7,6 +7,7 @@ import math
 from classes.textDisplayer import TextDisplayer
 from classes.novelDialog import NovelDialog
 from classes.borderRectangle import BorderRectangle
+pygame.mixer.init
 
 class VisualNovel:
     def __init__(self, file, screen, display):
@@ -14,6 +15,7 @@ class VisualNovel:
         self.fontTexte = pygame.font.Font("assets/fonts/font.ttf", 24)
         self.fontNom = pygame.font.Font('assets/fonts/fontBold.ttf', 32)
         self.fontChoix = pygame.font.Font('assets/fonts/fontItalic.ttf', 24)
+        self.alpha = 215
 
         # Remplissage des attributs
         self.screen = screen
@@ -31,10 +33,10 @@ class VisualNovel:
     def drawDialog(self):
         # Background
         self.screen.blit(pygame.transform.scale(pygame.image.load(self.currentDialog.img), (1024, 768)), (0, 0))
-        BorderRectangle(964, 170, 30, 568, 3, (0, 0, 0, 175), (255, 255, 255), self.screen)
+        BorderRectangle(964, 170, 30, 568, 3, (0, 0, 0, self.alpha), (255, 255, 255), self.screen)
         # Nom
         if self.currentDialog.type != "notice":
-            BorderRectangle(250, 50, 30, 508, 3, (0, 0, 0, 175), (255, 255, 255), self.screen)
+            BorderRectangle(250, 50, 30, 508, 3, (0, 0, 0, self.alpha), (255, 255, 255), self.screen)
             self.screen.blit(self.fontNom.render(self.currentDialog.name, 0, (255, 255, 255)), (40, 518))
         #Choix
         if self.currentDialog.type == "narchoice" or self.currentDialog.type == "choice":
@@ -62,15 +64,15 @@ class VisualNovel:
             choiceText = self.fontChoix.render(str, 0, (255, 255, 255))
             largChoixText, hautChoixText = choiceText.get_size()
             if lastmissing > 0 and added > 0:
-                rect = BorderRectangle(butLen+1, 50, 30+added+i*butLen-3*i, 688, 3, (0, 0, 0, 175), (255, 255, 255), self.screen)
+                rect = BorderRectangle(butLen+1, 50, 30+added+i*butLen-3*i, 688, 3, (0, 0, 0, self.alpha), (255, 255, 255), self.screen)
                 added += 1
                 lastmissing -= 1
             elif lastmissing > 0:
-                rect = BorderRectangle(butLen+1, 50, 30+i*butLen-3*i, 688, 3, (0, 0, 0, 175), (255, 255, 255), self.screen)
+                rect = BorderRectangle(butLen+1, 50, 30+i*butLen-3*i, 688, 3, (0, 0, 0, self.alpha), (255, 255, 255), self.screen)
             elif added > 0:
-                rect = BorderRectangle(butLen, 50, 30+added+i*butLen-3*i, 688, 3, (0, 0, 0, 175), (255, 255, 255), self.screen)
+                rect = BorderRectangle(butLen, 50, 30+added+i*butLen-3*i, 688, 3, (0, 0, 0, self.alpha), (255, 255, 255), self.screen)
             else:
-                rect = BorderRectangle(butLen, 50, 30+i*butLen-3*i, 688, 3, (0, 0, 0, 175), (255, 255, 255), self.screen)
+                rect = BorderRectangle(butLen, 50, 30+i*butLen-3*i, 688, 3, (0, 0, 0, self.alpha), (255, 255, 255), self.screen)
             self.listCurrentChoix.append(rect)
             largMax = self.listCurrentChoix[i].width
             hautMax = self.listCurrentChoix[i].height
@@ -93,10 +95,12 @@ class VisualNovel:
                 
     def catch_signal(self, pressed, event):
         if self.threadTexte.displaying and (pressed.get(pygame.K_SPACE) or pressed.get(pygame.K_RETURN) or pressed.get("Clic")):
+            pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Select1.wav'))
             self.threadTexte.displaying = False
         else:
             if self.currentDialog.type == "text" or self.currentDialog.type == "notice":
                 if pressed.get(pygame.K_SPACE) or pressed.get(pygame.K_RETURN) or pressed.get("Clic"):
+                    pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Select1.wav'))
                     if self.currentDialog.next == -1:
                         return True
                     else:
@@ -107,6 +111,7 @@ class VisualNovel:
                     i = 0
                     for choix in self.listCurrentChoix:
                         if choix.hitbox.collidepoint(event.pos):
+                            pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Select1.wav'))
                             nextI = int(self.currentDialog.choices[i][1])
                             if nextI == -1:
                                 return True
@@ -120,6 +125,7 @@ class VisualNovel:
                     i = 0
                     for choix in self.listCurrentChoix:
                         if choix.hitbox.collidepoint(event.pos):
+                            pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Select1.wav'))
                             self.listValeurs.append(self.currentDialog.choices[i][1])
                             self.listCurrentChoix = []
                             if self.currentDialog.next == -1:
