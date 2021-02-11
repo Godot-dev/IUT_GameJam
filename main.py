@@ -2,7 +2,7 @@ import pygame
 from pygame.constants import MOUSEBUTTONDOWN
 from classes.game import Game
 from classes.menu import Menu
-from classes.options import Options
+from classes.credits import Credits
 
 # Instanciations obligatoires initiales
 pygame.init()
@@ -10,7 +10,7 @@ pygame.display.set_caption("Game")
 screen = pygame.display.set_mode((1024, 768))
 game = Game()
 menu = Menu()
-options = Options()
+credits = Credits()
 currentEvent = None
 running = True
 clock = pygame.time.Clock()
@@ -23,8 +23,8 @@ while running:
         game.catch_signal(currentEvent)
         currentEvent = None
         game.pressed["Clic"] = False
-    elif options.is_configure: # Si on est dans les options, on affiche les options
-        options.drawOptions(screen)
+    elif credits.is_credits: # Si on est dans les options, on affiche les options
+        credits.drawCredits(screen)
     else: # Sinon on affiche le menu principal (c'est ce qui se passe quand on lance le jeu)
         if music == False:
             music = True
@@ -55,9 +55,9 @@ while running:
                     game.pressed[event.key] = False
                 elif event.type == pygame.K_RETURN:
                     game.pressed[event.key] = False
-        elif event.type == MOUSEBUTTONDOWN and options.is_configure:
-            options.catch_signal(event)
-        elif event.type == MOUSEBUTTONDOWN and not menu.catch_signal(game, options, event): # Si la fonction renvoie faux, on doit arrêter le programme
+        elif event.type == MOUSEBUTTONDOWN and credits.is_credits:
+            credits.catch_signal(event)
+        elif event.type == MOUSEBUTTONDOWN and not menu.catch_signal(game, credits, event): # Si la fonction renvoie faux, on doit arrêter le programme
             running = False 
 
         
