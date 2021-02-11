@@ -6,7 +6,7 @@ import json
 import math
 from classes.textDisplayer import TextDisplayer
 from classes.novelDialog import NovelDialog
-from classes.borderRectangle import BorderRectangle
+from classes.interface.borderRectangle import BorderRectangle
 pygame.mixer.init
 
 class VisualNovel:

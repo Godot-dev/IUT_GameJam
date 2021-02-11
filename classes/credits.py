@@ -1,11 +1,11 @@
 import pygame
-from classes.button import Button
+from classes.interface.button import Button
 
 class Credits:
     def __init__(self):
         # Image de background
-        self.background = pygame.image.load('assets/Crédit.png')
-        self.menu =    Button(260, 107, 382, 650, 'assets/M.png')
+        self.background = pygame.image.load('assets/backgrounds/Crédit.png')
+        self.menu =    Button(260, 107, 382, 650, 'assets/buttons/M.png')
         # Instanciation des éléments liés au menu des options
         self.is_credits = False
 

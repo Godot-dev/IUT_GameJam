@@ -1,5 +1,5 @@
 import pygame
-from classes.button import Button
+from classes.interface.button import Button
 
 class Menu:
     def __init__(self):
