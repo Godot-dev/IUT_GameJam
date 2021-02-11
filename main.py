@@ -8,6 +8,7 @@ from classes.credits import Credits
 pygame.init()
 pygame.display.set_caption("Farmer in deep doo-doo")
 screen = pygame.display.set_mode((1024, 768))
+pygame.display.set_icon(pygame.image.load('assets/character/charFront.png'))
 game = Game()
 menu = Menu()
 credits = Credits()
