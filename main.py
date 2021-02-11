@@ -6,7 +6,7 @@ from classes.credits import Credits
 
 # Instanciations obligatoires initiales
 pygame.init()
-pygame.display.set_caption("Game")
+pygame.display.set_caption("Farmer in deep doo-doo")
 screen = pygame.display.set_mode((1024, 768))
 game = Game()
 menu = Menu()
