@@ -16,6 +16,8 @@ class Game:
         self.finCauchemar = False
         self.music = False
         self.victoire = False
+        self.temps = 60
+        self.health = 0
 
     def drawJeu(self,screen,display):
         if self.perdu and self.phaseDeJeu == None:

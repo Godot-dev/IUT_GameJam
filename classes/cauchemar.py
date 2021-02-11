@@ -54,6 +54,7 @@ class Cauchemar:
                     pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Hit1.ogg'))
                     self.player.imageVie = pygame.image.load('assets/character/1coeurs.png')
                 else: # Le joueur perds la partie, il faudra remplir plus tard le else
+                    self.game.temps = self.time / 60
                     pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Hit1.ogg'))
                     self.game.perdu = True # Permettra de charger la bonne cinématique de défaite
                     self.terminerCauchemar()
@@ -114,6 +115,7 @@ class Cauchemar:
 
         if(l == 128): # Le niveau est terminé
             if self.difficulty == 3: # Si le joueur vient de finir le dernier niveau, alors on informe game qui se chargera de finir le jeu
+                self.game.health = self.player.health
                 self.game.victoire = True 
             self.terminerCauchemar()
 
