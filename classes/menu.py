@@ -4,10 +4,10 @@ from classes.button import Button
 class Menu:
     def __init__(self):
         # Instanciation des éléments liés au menu
-        self.background = pygame.image.load('assets/background.png')
-        self.playButton =    Button(400, 107, 312, 100, 'assets/play.png')
-        self.optionsButton = Button(400, 107, 312, 300, 'assets/options.png')
-        self.quitButton =    Button(400, 107, 312, 500, 'assets/quit.png')
+        self.background = pygame.image.load('assets/Menu/bg.png')
+        self.playButton =    Button(260, 107, 382, 300, 'assets/Menu/Jouer.png')
+        self.optionsButton = Button(260, 107, 382, 425, 'assets/Menu/Credits.png')
+        self.quitButton =    Button(260, 107, 382, 550, 'assets/Menu/quitter.png')
 
     def drawMenu(self,screen): # On affiche le menu, chaque bouton est positionné au rectangle formé par sa hitbox
         screen.blit(self.background, (0, 0))
