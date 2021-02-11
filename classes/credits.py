@@ -7,7 +7,7 @@ class Credits:
         # Instanciation des éléments liés au menu des options
         self.is_credits = False
 
-    def drawOptions(self,screen):
+    def drawCredits(self,screen):
         screen.blit(self.background, (0, 0))
 
     def catch_signal(self,event):
