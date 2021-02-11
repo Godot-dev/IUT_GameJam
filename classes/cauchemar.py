@@ -20,7 +20,7 @@ class Cauchemar:
         self.images = self.loadImagesEnnemis()
         self.game = game
         self.player = Player()    
-        self.background = pygame.image.load(f'assets/backgroundD{difficulty}.jpg')
+        self.background = pygame.image.load(f'assets/backgrounds/backgroundD{difficulty}.jpg')
         self.background = pygame.transform.scale(self.background, (1024, 768))
         self.liste_projectiles = []
         self.time = 0 # Indique le nombre de frames effectuées dans le cauchemar depuis son début
@@ -49,10 +49,10 @@ class Cauchemar:
                 self.player.health -= 1
                 if self.player.health == 2:
                     pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Hit1.ogg'))
-                    self.player.imageVie = pygame.image.load('assets/2coeurs.png')
+                    self.player.imageVie = pygame.image.load('assets/character/2coeurs.png')
                 elif self.player.health == 1:
                     pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Hit1.ogg'))
-                    self.player.imageVie = pygame.image.load('assets/1coeurs.png')
+                    self.player.imageVie = pygame.image.load('assets/character/1coeurs.png')
                 else: # Le joueur perds la partie, il faudra remplir plus tard le else
                     pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Hit1.ogg'))
                     self.game.perdu = True # Permettra de charger la bonne cinématique de défaite

@@ -19,7 +19,7 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = 540
         self.rect.y = 360
-        self.imageVie = pygame.image.load('assets/3coeurs.png')
+        self.imageVie = pygame.image.load('assets/character/3coeurs.png')
 
     def move_right(self):
         self.image = self.imageSideRight
