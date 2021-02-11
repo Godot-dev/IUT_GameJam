@@ -11,6 +11,7 @@ from classes.typesProjectiles.citrouille import Citrouille
 from classes.typesProjectiles.carotte import Carotte
 from classes.typesProjectiles.cerise import Cerise
 from classes.typesProjectiles.raisin import Raisin
+pygame.mixer.init
 
 class Cauchemar:
     def __init__(self, difficulty, legumesFruits, game):
@@ -48,10 +49,13 @@ class Cauchemar:
                 self.liste_projectiles.remove(projectile)
                 self.player.health -= 1
                 if self.player.health == 2:
+                    pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Hit1.ogg'))
                     self.player.imageVie = pygame.image.load('assets/2coeurs.png')
                 elif self.player.health == 1:
+                    pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Hit1.ogg'))
                     self.player.imageVie = pygame.image.load('assets/1coeurs.png')
                 else: # Le joueur perds la partie, il faudra remplir plus tard le else
+                    pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Hit1.ogg'))
                     self.game.perdu = True # Permettra de charger la bonne cinématique de défaite
                     self.terminerCauchemar()
         self.updateTimeBar(screen)
@@ -83,6 +87,7 @@ class Cauchemar:
             self.player.move_down()
             immobile = False
         if pressed.get(pygame.K_SPACE) and self.cooldownDash > 120 and not diagonale and not immobile:
+            pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Dash1.wav'))
             self.player.dash(pressed)
             self.cooldownDash = 0 # On remets le cooldown à 0, il faudra donc attendre deux secondes (60*2 = 120) pour en effectuer un à nouveau 
 
@@ -107,7 +112,7 @@ class Cauchemar:
         pygame.draw.rect(screen,bar_back_color,bar_back_position)
         pygame.draw.rect(screen,bar_color,bar_position)
 
-        if(l == 12): # Le niveau est terminé
+        if(l == 128): # Le niveau est terminé
             self.terminerCauchemar()
 
     def updateDashBar(self, screen):

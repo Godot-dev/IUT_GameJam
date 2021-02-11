@@ -17,6 +17,10 @@ class Game:
 
     def drawJeu(self,screen,display):
         if self.perdu and self.phaseDeJeu == None:
+            if self.music == False:
+                music = True
+                pygame.mixer.music.load("assets/music/themeHome/Rio_Bravo_Home.ogg")
+                pygame.mixer.music.play()
             print(f"assets/novels/defaiteDay{self.etape}.json")
             self.jour = True
             self.phaseDeJeu = VisualNovel(f"assets/novels/defaiteDay{self.etape}.json", screen, display)
