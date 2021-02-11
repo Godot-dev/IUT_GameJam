@@ -17,7 +17,7 @@
         "7":{
             "type": "text", "img":"Sales1.png", "name": "Jour 1", "text" : "Robert prend le kit de test, l'homme s'en va, et Robert d\u00e9cide d'essayer ce nouveau produit sur ses carottes qui ont tr\u00e8s peu produit et ses salades qui sont envahies par les limaces.", "next": 9},
         "8":{
-            "type": "text", "img":"Sales3.png", "name": "Jour 1", "text" : "Le vendeur explique \u00e0 Robert tous les avantages que ce produit pourrait apporter \u00e0 sa ferme, et lui fait une d\u00e9 monstration sur certains de ses plans de carottes, lui laisse le kit d'essai en cadeau, puis s'en va.", "next": 9},
+            "type": "text", "img":"Sales3.png", "name": "Jour 1", "text" : "Le vendeur explique \u00e0 Robert tous les avantages que ce produit pourrait apporter \u00e0 sa ferme, et lui fait une d\u00e9monstration sur certains de ses plans de carottes, lui laisse le kit d'essai en cadeau, puis s'en va.", "next": 9},
         "9":{
             "type": "text", "img":"Carrot1.png", "name": "Jour 1", "text" : "Robert choisit les fruits et l\u00e9gumes pour son repas avant de rentrer chez lui pour cuisiner, il d\u00e9cide de prendre une partie de ces derniers sur lesquels le produit a \u00e9t\u00e9 appliqu\u00e9 pour voir si leur go\u00fbt est alt\u00e9r\u00e9.", "next": 10},
         "10":{
