@@ -19,23 +19,28 @@ class Game:
             print(f"assets/novels/defaiteDay{self.etape}.json")
             self.jour = True
             self.phaseDeJeu = VisualNovel(f"assets/novels/defaiteDay{self.etape}.json", screen, display)
-        if self.jour and self.phaseDeJeu == None:
-            self.phaseDeJeu = VisualNovel("assets/novels/day1.json", screen, display)
-        if not self.jour and self.phaseDeJeu == None:
-            print()
+
+        elif not self.perdu and self.jour and self.phaseDeJeu == None:
+            self.phaseDeJeu = VisualNovel(f"assets/novels/day{self.etape}.json", screen, display)
+        elif not self.jour and self.phaseDeJeu == None:
             self.phaseDeJeu = Cauchemar(self.etape, self.legumesFruits, self)
-        if not self.jour and not self.finCauchemar:
+        elif not self.jour and not self.finCauchemar:
             self.phaseDeJeu.drawCauchemar(screen)
 
     def catch_signal(self, event):
         # On effectue les actions du jeu en fonction de l'endroit où nous sommes
         if self.jour:
-            if self.phaseDeJeu.catch_signal(self.pressed, event):
+            if self.phaseDeJeu.catch_signal(self.pressed, event): # Fin dialogue
                 self.legumesFruits = self.phaseDeJeu.listValeurs # On passe la liste des choix au futur cauchemar
-                #for lg in self.phaseDeJeu.listValeurs:
-                    #self.legumesFruits.append(lg)
                 self.jour = False
                 self.phaseDeJeu = None
+                if self.perdu: # Le joueur a perdu et la cinématique de défaite est terminée
+                    self.is_playing = False
+        elif self.finCauchemar:
+            self.etape += 1
+            self.jour = True
+            self.finCauchemar = False
         elif not self.perdu:
             self.phaseDeJeu.catch_signal(self.pressed)
+        
             

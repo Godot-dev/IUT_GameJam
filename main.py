@@ -26,6 +26,8 @@ while running:
         options.drawOptions(screen)
     else: # Sinon on affiche le menu principal (c'est ce qui se passe quand on lance le jeu)
         menu.drawMenu(screen)
+        if(game.perdu == True):
+            game = Game() # On remets la partie à 0
 
     pygame.display.flip() # On met à jour l'écran à chaque itération de la boucle
 
