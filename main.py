@@ -14,6 +14,7 @@ options = Options()
 currentEvent = None
 running = True
 clock = pygame.time.Clock()
+music = False
 
 while running: 
     clock.tick(60) 
@@ -25,9 +26,14 @@ while running:
     elif options.is_configure: # Si on est dans les options, on affiche les options
         options.drawOptions(screen)
     else: # Sinon on affiche le menu principal (c'est ce qui se passe quand on lance le jeu)
+        if music == False:
+            music = True
+            pygame.mixer.music.load("assets/music/themeHome/Rio_Bravo_Home.ogg")
+            pygame.mixer.music.play()
         menu.drawMenu(screen)
         if(game.perdu == True):
             game = Game() # On remets la partie à 0
+            music = False # On remets la musique du menu
 
     pygame.display.flip() # On met à jour l'écran à chaque itération de la boucle
 
