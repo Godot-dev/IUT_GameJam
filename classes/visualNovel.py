@@ -31,10 +31,10 @@ class VisualNovel:
     def drawDialog(self):
         # Background
         self.screen.blit(pygame.transform.scale(pygame.image.load(self.currentDialog.img), (1024, 768)), (0, 0))
-        BorderRectangle(964, 170, 30, 568, 3, (0, 0, 0, 128), (255, 255, 255), self.screen)
+        BorderRectangle(964, 170, 30, 568, 3, (0, 0, 0, 175), (255, 255, 255), self.screen)
         # Nom
         if self.currentDialog.type != "notice":
-            BorderRectangle(250, 50, 30, 508, 3, (0, 0, 0, 128), (255, 255, 255), self.screen)
+            BorderRectangle(250, 50, 30, 508, 3, (0, 0, 0, 175), (255, 255, 255), self.screen)
             self.screen.blit(self.fontNom.render(self.currentDialog.name, 0, (255, 255, 255)), (40, 518))
         #Choix
         if self.currentDialog.type == "narchoice" or self.currentDialog.type == "choice":
@@ -62,15 +62,15 @@ class VisualNovel:
             choiceText = self.fontChoix.render(str, 0, (255, 255, 255))
             largChoixText, hautChoixText = choiceText.get_size()
             if lastmissing > 0 and added > 0:
-                rect = BorderRectangle(butLen+1, 50, 30+added+i*butLen-3*i, 688, 3, (0, 0, 0, 128), (255, 255, 255), self.screen)
+                rect = BorderRectangle(butLen+1, 50, 30+added+i*butLen-3*i, 688, 3, (0, 0, 0, 175), (255, 255, 255), self.screen)
                 added += 1
                 lastmissing -= 1
             elif lastmissing > 0:
-                rect = BorderRectangle(butLen+1, 50, 30+i*butLen-3*i, 688, 3, (0, 0, 0, 128), (255, 255, 255), self.screen)
+                rect = BorderRectangle(butLen+1, 50, 30+i*butLen-3*i, 688, 3, (0, 0, 0, 175), (255, 255, 255), self.screen)
             elif added > 0:
-                rect = BorderRectangle(butLen, 50, 30+added+i*butLen-3*i, 688, 3, (0, 0, 0, 128), (255, 255, 255), self.screen)
+                rect = BorderRectangle(butLen, 50, 30+added+i*butLen-3*i, 688, 3, (0, 0, 0, 175), (255, 255, 255), self.screen)
             else:
-                rect = BorderRectangle(butLen, 50, 30+i*butLen-3*i, 688, 3, (0, 0, 0, 128), (255, 255, 255), self.screen)
+                rect = BorderRectangle(butLen, 50, 30+i*butLen-3*i, 688, 3, (0, 0, 0, 175), (255, 255, 255), self.screen)
             self.listCurrentChoix.append(rect)
             largMax = self.listCurrentChoix[i].width
             hautMax = self.listCurrentChoix[i].height
