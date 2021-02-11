@@ -30,6 +30,7 @@ class Cauchemar:
     def drawCauchemar(self, screen):
         screen.blit(self.background, (0,0))
         screen.blit(self.player.image, self.player.rect)
+        self.player.image = self.player.imageFront
         self.time += 1
         if self.time % self.frequence == 0: # On ajoute un ennemi tous les self.frequence frames
             j = random.randint(0,2) # sélectionne l'un des trois legumes/fruits du cauchemar
@@ -41,7 +42,6 @@ class Cauchemar:
             screen.blit(projectile.image,projectile.rect) 
             if(projectile.__class__.__name__ == "Carotte" and projectile.time > 120 and projectile.time < 180):
                 pygame.draw.rect(screen,(255,255,255),projectile.bar_position)
-
             if projectile.rect.x + projectile.rect.w < 0  or projectile.rect.x - projectile.rect.w > 1024 or projectile.rect.y + projectile.rect.h < 0 or projectile.rect.y - projectile.rect.h > 768: 
                 self.liste_projectiles.remove(projectile)
             elif self.check_collision(projectile):
@@ -60,6 +60,7 @@ class Cauchemar:
         self.updateTimeBar(screen)
         if self.cooldownDash < 120:
             self.updateDashBar(screen)
+        
         screen.blit(self.player.imageVie, (884,670))
         
 
