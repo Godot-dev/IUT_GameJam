@@ -39,6 +39,8 @@
         "18":{
             "type": "notice", "img":"sky1.jpg", "name": "Jour 1", "text" : "C'est parti !", "next": -1},
         "19": {
-            "type": "text", "img": "Farm1.png", "name": "Introduction", "text": "Robert travaille dur tous les jours, peut-\u00eatre trop pour son \u00e2ge avanc\u00e9. Mais malgr\u00e9 cela, la production ne s'am\u00e9liore pas et ses revenus continuent de baisser.", "next": 1}
+            "type": "text", "img": "Farm1.png", "name": "Introduction", "text": "Robert travaille dur tous les jours, peut-\u00eatre trop pour son \u00e2ge avanc\u00e9. Mais malgr\u00e9 cela, la production ne s'am\u00e9liore pas et ses revenus continuent de baisser.", "next": 1},
+        "20": {
+            "type": "text", "img": "Carrot1.png", "name": "Jour 1", "text": "", "next": -2}
         }
 }

@@ -10,7 +10,7 @@ from classes.borderRectangle import BorderRectangle
 pygame.mixer.init
 
 class VisualNovel:
-    def __init__(self, file, screen, display):
+    def __init__(self, file, screen, display, legFruChoi):
         # Définition de la police
         self.fontTexte = pygame.font.Font("assets/fonts/font.ttf", 24)
         self.fontNom = pygame.font.Font('assets/fonts/fontBold.ttf', 32)
@@ -18,6 +18,7 @@ class VisualNovel:
         self.alpha = 215
 
         # Remplissage des attributs
+        self.legFruChoi = legFruChoi
         self.screen = screen
         self.display = display
         self.listDialog = []
@@ -126,11 +127,17 @@ class VisualNovel:
                     for choix in self.listCurrentChoix:
                         if choix.hitbox.collidepoint(event.pos):
                             pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Select1.wav'))
-                            self.listValeurs.append(self.currentDialog.choices[i][1])
-                            self.listCurrentChoix = []
-                            if self.currentDialog.next == -1:
-                                return True
+                            c = self.currentDialog.choices[i][1]
+                            if (c in self.legFruChoi):
+                                cuId = self.currentDialog.id
+                                self.currentDialog = self.listDialog[20]
+                                self.currentDialog.next = cuId
                             else:
-                                self.currentDialog = self.listDialog[self.currentDialog.next]
-                                self.drawDialog()
+                                self.listValeurs.append(c)
+                                self.listCurrentChoix = []
+                                if self.currentDialog.next == -1:
+                                    return True
+                                else:
+                                    self.currentDialog = self.listDialog[self.currentDialog.next]
+                                    self.drawDialog()
                         i += 1            
