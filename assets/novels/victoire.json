@@ -6,16 +6,16 @@
             "type": "text", "img": "backgroundD2.jpg", "name": "Fin", "text": "Il a donc révélé la vérité au monde entier et sauvé le monde, qui a pu supprimer toute trace de ce produit mystérieux. Le fabricant du produit a été retrouvé et comdamné à mort pour crime contre l'humanité.", "next": 2},
         "2": {
             "type": "text", "img": "backgroundD3.jpg", "name": "Fin", "text":"Robert est donc devenu un riche héros, qui vit maintenant dans une grande villa et peut enfin profiter d'une vie paisible", "next": 3},
-        "10":{
-            "type": "text", "img":"background.png", "name": "Fin", "text" : "FIN.", "next": 11},
-        "11":{
-            "type": "notice", "img":"background.png", "name": "Fin", "text" : "NONNNN C'est impossible !!!! Le dernier niveau était si dur !!!! Je n'arrive pas à croire que je suis vaincu !", "next": 12},
-        "12":{
-            "type": "notice", "img":"background.png", "name": "Fin", "text" : "Cependant, je me dois de réviser mon jugement à votre égard, vous êtes un joueur très impressionant et j'admire votre persévérance.", "next": 13},
-        "13":{
-            "type": "notice", "img":"background.png", "name": "Fin", "text" : "Je vais donc vous récompenser comme il se doit. Tout d'abord, vous avez mes félicitations, ce qui est un immense honneur. Et vous avez également ", "next": 14},
-        "14":{
-            "type": "notice", "img":"background.png", "name": "Fin", "text" : "Maintenant !", "next": -1}    
+        "3":{
+            "type": "text", "img":"background.png", "name": "Fin", "text" : "Fin.", "next": 4},
+        "4":{
+            "type": "notice", "img":"background.png", "name": "Fin", "text" : "NONNNN C'est impossible !!!! Le dernier niveau était si dur !!!! Je n'arrive pas à croire que je suis vaincu !", "next": 5},
+        "5":{
+            "type": "notice", "img":"background.png", "name": "Fin", "text" : "Cependant, je me dois de réviser mon jugement à votre égard, vous êtes un joueur très impressionant et j'admire votre persévérance.", "next": 6},
+        "6":{
+            "type": "notice", "img":"background.png", "name": "Fin", "text" : "Je vais donc vous récompenser comme il se doit. En effet, vous obtenez mes félicitations, ce qui est un immense honneur.", "next": 7},
+        "7":{
+            "type": "notice", "img":"background.png", "name": "Fin", "text" : "Merci d'avoir joué, j'espère que le jeu de notre team vous a plus, n'hésitez pas à nous envoyer des retours par discord ;)", "next": -1}    
 
     }
 }

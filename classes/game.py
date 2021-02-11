@@ -14,6 +14,7 @@ class Game:
         self.perdu = False # Passe à true si le joueur meurt pendant le cauchemar
         self.finCauchemar = False
         self.music = False
+        self.victoire = False
 
     def drawJeu(self,screen,display):
         if self.perdu and self.phaseDeJeu == None:
@@ -29,7 +30,10 @@ class Game:
                 pygame.mixer.music.load("assets/music/mainTheme/Who_Shot_Liberty_Valance.ogg")
                 pygame.mixer.music.play()
                 self.music = True
-            self.phaseDeJeu = VisualNovel(f"assets/novels/day{self.etape}.json", screen, display)
+            if self.victoire == True: # On charge la fin du jeu
+                self.phaseDeJeu = VisualNovel(f"assets/novels/victoire.json", screen, display)
+            else:
+                self.phaseDeJeu = VisualNovel(f"assets/novels/day{self.etape}.json", screen, display)
         elif not self.jour and self.phaseDeJeu == None:
             if self.music == False:
                 pygame.mixer.music.load(f"assets/music/Nightmare/nightmare{self.etape}.ogg")
@@ -47,9 +51,9 @@ class Game:
                 self.jour = False
                 self.phaseDeJeu = None
                 self.music = False
-                if self.perdu: # Le joueur a perdu et la cinématique de défaite est terminée
+                if self.perdu or self.victoire: # Le joueur a perdu et la cinématique de défaite est terminée
                     self.is_playing = False
-        elif self.finCauchemar:
+        elif self.finCauchemar and not self.perdu:
             self.etape += 1
             self.jour = True
             self.finCauchemar = False

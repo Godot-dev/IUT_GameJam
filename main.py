@@ -31,7 +31,7 @@ while running:
             pygame.mixer.music.load("assets/music/themeHome/Rio_Bravo_Home.ogg")
             pygame.mixer.music.play()
         menu.drawMenu(screen)
-        if(game.perdu == True):
+        if(game.perdu == True or game.victoire == True):
             game = Game() # On remets la partie à 0
             music = False # On remets la musique du menu
 
