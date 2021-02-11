@@ -1,21 +1,21 @@
 {
     "dialogs": {
         "0": {
-            "type": "text", "img": "backgroundD1.jpg", "name": "Fin", "text": "Robert n'a jamais été aussi heureux de se réveiller le matin, il a vaincu ses démons et il a développé une immunité au virus.", "next" : 1},
+            "type": "text", "img": "backgroundD1.jpg", "name": "Fin", "text": "Robert n'a jamais \u00e9t\u00e9 aussi heureux de se r\u00e9veiller le matin, il a vaincu ses d\u00e9mons et il a d\u00e9velopp\u00e9 une immunit\u00e9 au virus.", "next" : 1},
         "1": {
-            "type": "text", "img": "backgroundD2.jpg", "name": "Fin", "text": "Il a donc révélé la vérité au monde entier et sauvé le monde, qui a pu supprimer toute trace de ce produit mystérieux. Le fabricant du produit a été retrouvé et comdamné à mort pour crime contre l'humanité.", "next": 2},
+            "type": "text", "img": "backgroundD2.jpg", "name": "Fin", "text": "Il a donc r\u00e9v\u00e9l\u00e9 la v\u00e9rit\u00e9 au monde entier et sauv\u00e9 le monde, qui a pu supprimer toute trace de ce produit myst\u00e9rieux. Le fabricant du produit a \u00e9t\u00e9 retrouv\u00e9 et comdamn\u00e9 \u00e0 mort pour crime contre l'humanit\u00e9.", "next": 2},
         "2": {
-            "type": "text", "img": "backgroundD3.jpg", "name": "Fin", "text":"Robert est donc devenu un riche héros, qui vit maintenant dans une grande villa et peut enfin profiter d'une vie paisible", "next": 3},
+            "type": "text", "img": "backgroundD3.jpg", "name": "Fin", "text":"Robert est donc devenu un riche h\u00e9ros, qui vit maintenant dans une grande villa et peut enfin profiter d'une vie paisible", "next": 3},
         "3":{
-            "type": "text", "img":"background.png", "name": "Fin", "text" : "Fin.", "next": 4},
+            "type": "text", "img":"background.png", "name": "Fin", "text" : "FIN.", "next": 4},
         "4":{
-            "type": "notice", "img":"background.png", "name": "Fin", "text" : "NONNNN C'est impossible !!!! Le dernier niveau était si dur !!!! Je n'arrive pas à croire que je suis vaincu !", "next": 5},
+            "type": "notice", "img":"background.png", "name": "Fin", "text" : "NONNNN C'est impossible !!!! Le dernier niveau \u00e9tait si dur !!!! Je n'arrive pas \u00e0 croire que je suis vaincu !", "next": 5},
         "5":{
-            "type": "notice", "img":"background.png", "name": "Fin", "text" : "Cependant, je me dois de réviser mon jugement à votre égard, vous êtes un joueur très impressionant et j'admire votre persévérance.", "next": 6},
+            "type": "notice", "img":"background.png", "name": "Fin", "text" : "Cependant, je me dois de r\u00e9viser mon jugement \u00e0 votre \u00e9gard, vous êtes un joueur tr\u00e8s impressionant et j'admire votre pers\u00e9v\u00e9rance.", "next": 6},
         "6":{
-            "type": "notice", "img":"background.png", "name": "Fin", "text" : "Je vais donc vous récompenser comme il se doit. En effet, vous obtenez mes félicitations, ce qui est un immense honneur.", "next": 7},
+            "type": "notice", "img":"background.png", "name": "Fin", "text" : "Je vais donc vous r\u00e9compenser comme il se doit. Tout d'abord, vous avez mes f\u00e9licitations, ce qui est un immense honneur. Et vous avez \u00e9galement ", "next": 7},
         "7":{
-            "type": "notice", "img":"background.png", "name": "Fin", "text" : "Merci d'avoir joué, j'espère que le jeu de notre team vous a plus, n'hésitez pas à nous envoyer des retours par discord ;)", "next": -1}    
+            "type": "notice", "img":"background.png", "name": "Fin", "text" : "Maintenant !", "next": -1}
 
     }
 }
