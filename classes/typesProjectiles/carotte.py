@@ -37,7 +37,6 @@ class Carotte(Projectile): # Apparait sur les bords de l'écran, puis lance un l
 
     def move(self):
         if self.time > 180:
-            print(self.time)
             if self.pointDeDepart == 0:
                 self.rect.y += self.velocity
             elif self.pointDeDepart == 1:
