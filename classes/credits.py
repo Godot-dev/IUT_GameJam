@@ -11,4 +11,4 @@ class Credits:
         screen.blit(self.background, (0, 0))
 
     def catch_signal(self,event):
-        pass
+        self.is_credits = True
