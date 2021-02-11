@@ -14,6 +14,9 @@ class Cerise(Projectile): # La cerise commence tout droit puis fait un virage à
         self.rect = self.image.get_rect()
         self.mask = pygame.mask.from_surface(self.image)
         self.firstStep = True # Passera à False quand la cerise commencera son angle
+        self.direction = random.randint(0,1)
+        if self.direction == 0: # on veut que self.direction soit égal à -1 ou 1 aléatoirement
+            self.direction = -1
         self.rect_init()
 
     def rect_init(self): # A modifier chez les classes filles si nous voulons changer l'emplacement des points de spawn
@@ -35,27 +38,27 @@ class Cerise(Projectile): # La cerise commence tout droit puis fait un virage à
             if self.firstStep == True and self.rect.y > 384 - self.rect.h/2: # Pour faire un virage pile au milieu
                 self.rect.y -= self.velocity
             elif self.firstStep == False:
-                self.rect.x += self.velocity
+                self.rect.x += self.velocity * self.direction
             else:
                 self.firstStep = False
         elif self.pointDeDepart == 1:
             if self.firstStep == True and self.rect.x > 512 - self.rect.w/2:
                 self.rect.x -= self.velocity
             elif self.firstStep == False:
-                self.rect.y += self.velocity
+                self.rect.y += self.velocity * self.direction
             else:
                 self.firstStep = False
         elif self.pointDeDepart == 2:
             if self.firstStep == True and self.rect.y < 384 - self.rect.h/2:
                 self.rect.y += self.velocity
             elif self.firstStep == False:
-                self.rect.x -= self.velocity
+                self.rect.x -= self.velocity * self.direction
             else:
                 self.firstStep = False
         elif self.pointDeDepart == 3:
             if self.firstStep == True and self.rect.x < 512 - self.rect.w/2:
                 self.rect.x += self.velocity
             elif self.firstStep == False:
-                self.rect.y -= self.velocity
+                self.rect.y -= self.velocity * self.direction
             else:
                 self.firstStep = False
