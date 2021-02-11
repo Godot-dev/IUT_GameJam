@@ -7,7 +7,7 @@
         "2": {
             "type": "narchoice", "img": "backgroundD3.jpg", "name": "Jour 1", "text": "Robert s'appr\u00eate \u00e0 arroser ses champs de salades, quand le bruit sourd de pneu crissant sur l'asphalte interrompt le silence habituel de la ferme.", "choices": [["Sortir pour voir ce qu'il se passe","3"], ["Rester \u00e0 l'int\u00e9rieur et continuer de se pr\u00e9parer","4"]]},
         "3": {
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert voit un homme en costume sortir de la voiture et marcher vers lui.", "next": 5},
+            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert voit un homme en chemise sortir de la voiture et marcher vers lui.", "next": 5},
         "4": {
             "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Quelqu'un sonne \u00e0 la porte", "next": 5},
         "5":{
@@ -15,11 +15,11 @@
         "6":{
             "type": "narchoice", "img":"background.png", "name": "Jour 1", "text" : "Vendeur : Avec notre produit, vous pouvez dire adieu aux pertes de production, aux d\u00e9gâts caus\u00e9s par les insectes, vos plantations produiront deux fois plus que la normale ! Souhaitez-vous un kit d'essai pour vivre l'exp\u00e9rience par vous-m\u00eame ? Si le produit vous a convaincu, il vous suffit de remplir ce document et de nous l'envoyer pour en commander d'autres.", "choices": [["Accepter le kit d'essai","7"], ["D\u00e9cliner l'offre","8"]] },
         "7":{
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert prend le kit de test, l'homme sen va, et Robert d\u00e9cide d'essayer ce nouveau produit sur ses carottes qui ont tr\u00e8s peu produit et ses salades qui sont envahies par les limaces.", "next": 9},
+            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert prend le kit de test, l'homme s'en va, et Robert d\u00e9cide d'essayer ce nouveau produit sur ses carottes qui ont tr\u00e8s peu produit et ses salades qui sont envahies par les limaces.", "next": 9},
         "8":{
             "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Le vendeur explique \u00e0 Robert tous les avantages que ce produit pourrait apporter \u00e0 sa ferme, et lui fait une d\u00e9 monstration sur certains de ses plans de carottes, lui laisse le kit d'essai en cadeau, puis s'en va.", "next": 9},
         "9":{
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert choisit les  fruits et l\u00e9gumes pour son repas avant de rentrer chez lui pour cuisiner, il d\u00e9cide de prendre une partie de ces derniers sur lesquels le produit a \u00e9t\u00e9 appliqu\u00e9 pour voir si leur goût est alt\u00e9r\u00e9.", "next": 10},
+            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert choisit les fruits et l\u00e9gumes pour son repas avant de rentrer chez lui pour cuisiner, il d\u00e9cide de prendre une partie de ces derniers sur lesquels le produit a \u00e9t\u00e9 appliqu\u00e9 pour voir si leur goût est alt\u00e9r\u00e9.", "next": 10},
         "10":{
             "type": "choice", "img":"background.png", "name": "Jour 1", "text" : "En premier lieu, il choisit : ", "choices": [["Des pommes", "Pomme"], ["Des citrouilles", "Citrouille"], ["Des radis", "Radis"]], "next": 11},
         "11":{
