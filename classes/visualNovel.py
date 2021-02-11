@@ -121,14 +121,9 @@ class VisualNovel:
             elif self.currentDialog.type == "choice":
                 if event != None:
                     i = 0
-                    print("Id :")
-                    print(self.currentDialog.id)
                     for choix in self.listCurrentChoix:
                         if choix.hitbox.collidepoint(event.pos):
                             pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Select1.wav'))
-                            print("Id in boucle :")
-                            print(self.currentDialog.id)
-                            print(self.currentDialog.type)
                             c = self.currentDialog.choices[i][1]
                             if (c in self.legFruChoi):
                                 cuId = self.currentDialog.id

@@ -1,21 +1,21 @@
 {
     "dialogs": {
         "0": {
-            "type": "text", "img": "backgroundD1.jpg", "name": "Fin", "text": "Robert n'a jamais \u00e9t\u00e9 aussi heureux de se r\u00e9veiller le matin, il a vaincu ses d\u00e9mons et il a d\u00e9velopp\u00e9 une immunit\u00e9 au virus.", "next" : 1},
+            "type": "text", "img": "tree.png", "name": "Fin", "text": "Robert n'a jamais \u00e9t\u00e9 aussi heureux de se r\u00e9veiller le matin, il a vaincu ses d\u00e9mons et il a d\u00e9velopp\u00e9 une immunit\u00e9 au virus.", "next" : 1},
         "1": {
-            "type": "text", "img": "backgroundD2.jpg", "name": "Fin", "text": "Il a donc r\u00e9v\u00e9l\u00e9 la v\u00e9rit\u00e9 au monde entier et sauv\u00e9 le monde, qui a pu supprimer toute trace de ce produit myst\u00e9rieux. Le fabricant du produit a \u00e9t\u00e9 retrouv\u00e9 et comdamn\u00e9 \u00e0 mort pour crime contre l'humanit\u00e9.", "next": 2},
+            "type": "text", "img": "tree.png", "name": "Fin", "text": "Il a donc r\u00e9v\u00e9l\u00e9 la v\u00e9rit\u00e9 au monde entier et sauv\u00e9 le monde, qui a pu supprimer toute trace de ce produit myst\u00e9rieux. Le fabricant du produit a \u00e9t\u00e9 retrouv\u00e9 et comdamn\u00e9 \u00e0 mort pour crime contre l'humanit\u00e9.", "next": 2},
         "2": {
-            "type": "text", "img": "backgroundD3.jpg", "name": "Fin", "text":"Robert est donc devenu un riche h\u00e9ros, qui vit maintenant dans une grande villa et peut enfin profiter d'une vie paisible", "next": 3},
+            "type": "text", "img": "tree.png", "name": "Fin", "text":"Robert est donc devenu un riche h\u00e9ros, qui vit maintenant dans une grande villa et peut enfin profiter d'une vie paisible", "next": 3},
         "3":{
-            "type": "text", "img":"background.png", "name": "Fin", "text" : "FIN.", "next": 4},
+            "type": "text", "img":"tree.png", "name": "Fin", "text" : "FIN.", "next": 4},
         "4":{
-            "type": "notice", "img":"background.png", "name": "Fin", "text" : "NONNNN C'est impossible !!!! Le dernier niveau \u00e9tait si dur !!!! Je n'arrive pas \u00e0 croire que je suis vaincu !", "next": 5},
+            "type": "notice", "img":"tree.png", "name": "Fin", "text" : "NONNNN C'est impossible !!!! Le dernier niveau \u00e9tait si dur !!!! Je n'arrive pas \u00e0 croire que je suis vaincu !", "next": 5},
         "5":{
-            "type": "notice", "img":"background.png", "name": "Fin", "text" : "Cependant, je me dois de r\u00e9viser mon jugement \u00e0 votre \u00e9gard, vous êtes un joueur tr\u00e8s impressionant et j'admire votre pers\u00e9v\u00e9rance.", "next": 6},
+            "type": "notice", "img":"tree.png", "name": "Fin", "text" : "Cependant, je me dois de r\u00e9viser mon jugement \u00e0 votre \u00e9gard, vous êtes un joueur tr\u00e8s impressionant et j'admire votre pers\u00e9v\u00e9rance.", "next": 6},
         "6":{
-            "type": "notice", "img":"background.png", "name": "Fin", "text" : "Je vais donc vous r\u00e9compenser comme il se doit. Tout d'abord, vous avez mes f\u00e9licitations, ce qui est un immense honneur. Et vous avez \u00e9galement ", "next": 7},
+            "type": "notice", "img":"tree.png", "name": "Fin", "text" : "Je vais donc vous r\u00e9compenser comme il se doit. Tout d'abord, vous avez mes f\u00e9licitations, ce qui est un immense honneur. Et vous avez \u00e9galement ", "next": 7},
         "7":{
-            "type": "notice", "img":"background.png", "name": "Fin", "text" : "Maintenant !", "next": -1}
+            "type": "notice", "img":"tree.png", "name": "Fin", "text" : "Maintenant !", "next": -1}
 
     }
 }
