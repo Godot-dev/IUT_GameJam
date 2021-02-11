@@ -19,7 +19,7 @@
         "8":{
             "type": "choice", "img":"Interior1.png", "name": "Jour 3", "text" : "La force myst\u00e9rieuse continue de manipuler Robert et le force \u00e0 prendre :", "choices": [["Des carottes", "Carotte"], ["Des raisins", "Raisin"], ["Des cerises", "Cerise"]],  "next": 9},
         "9":{
-            "type": "text", "img":"Interior1.png", "name": "Jour 3", "text" : "Robert cuisine les 3 aliments restants contre son gr\u00e9, et lutte tant bien que mal pour ne pas les manger mais il finit tout de m\u00eame par les d\u00e9vorer. Cette force terrorisse Robert, mais dans un \u00e9lan de courage, celui-ci d\u00e9cide de faire face \u00e0 ses peurs et d\u00e9cide d'aller se coucher pour en finir une bonne fois pour toutes.", "next": 10},
+            "type": "text", "img":"Interior1.png", "name": "Jour 3", "text" : "Robert cuisine les trois aliments restants contre son gr\u00e9, et lutte tant bien que mal pour ne pas les manger mais il finit tout de m\u00eame par les d\u00e9vorer. Cette force terrorise Robert, mais dans un \u00e9lan de courage, celui-ci d\u00e9cide de faire face \u00e0 ses peurs et d\u00e9cide d'aller se coucher pour en finir une bonne fois pour toutes.", "next": 10},
         "10":{
             "type": "text", "img":"sky1.jpg", "name": "Jour 3", "text" : "Cette nuit est la nuit ultime. Robert sent que s'il parvient \u00e0 survivre face \u00e0 ses d\u00e9mons dans son cauchemar, cette fois il sera lib\u00e9r\u00e9.", "next": 11},
         "11":{
@@ -29,7 +29,8 @@
         "13":{
             "type": "notice", "img":"sky1.jpg", "name": "Jour 3", "text" : "Vous allez perdre lamentablement face \u00e0 ma grande puissance dans 3..2..1...", "next": 14},
         "14":{
-            "type": "notice", "img":"sky1.jpg", "name": "Jour 3", "text" : "Maintenant !", "next": -1}
-
+            "type": "notice", "img":"sky1.jpg", "name": "Jour 3", "text" : "Maintenant !", "next": -1},
+        "15": {
+            "type": "text", "img": "Interior1.png", "name": "Jour 1", "text": "Il n'y en a plus.", "next": -2}
     }
 }

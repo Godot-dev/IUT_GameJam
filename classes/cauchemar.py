@@ -111,7 +111,7 @@ class Cauchemar:
         pygame.draw.rect(screen,bar_back_color,bar_back_position)
         pygame.draw.rect(screen,bar_color,bar_position)
 
-        if(l == 128): # Le niveau est terminé
+        if(l == 16): # Le niveau est terminé
             if self.difficulty == 3: # Si le joueur vient de finir le dernier niveau, alors on informe game qui se chargera de finir le jeu
                 self.game.victoire = True 
             self.terminerCauchemar()

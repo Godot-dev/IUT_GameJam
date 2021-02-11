@@ -39,11 +39,8 @@ class VisualNovel:
         if self.currentDialog.type != "notice":
             BorderRectangle(250, 50, 30, 508, 3, (0, 0, 0, self.alpha), (255, 255, 255), self.screen)
             self.screen.blit(self.fontNom.render(self.currentDialog.name, 0, (255, 255, 255)), (40, 518))
-        #Choix
-        if self.currentDialog.type == "narchoice" or self.currentDialog.type == "choice":
-            self.afficherChoix()
         # Texte
-        self.threadTexte = TextDisplayer(self.currentDialog.text, self.screen, self.display, self.currentDialog.type, self.fontTexte)
+        self.threadTexte = TextDisplayer(self.currentDialog.text, self.screen, self.display, self.currentDialog.type, self.fontTexte, self.currentDialog, self)
         self.threadTexte.start()
 
     def afficherChoix(self):
@@ -124,14 +121,21 @@ class VisualNovel:
             elif self.currentDialog.type == "choice":
                 if event != None:
                     i = 0
+                    print("Id :")
+                    print(self.currentDialog.id)
                     for choix in self.listCurrentChoix:
                         if choix.hitbox.collidepoint(event.pos):
                             pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Select1.wav'))
+                            print("Id in boucle :")
+                            print(self.currentDialog.id)
+                            print(self.currentDialog.type)
                             c = self.currentDialog.choices[i][1]
                             if (c in self.legFruChoi):
                                 cuId = self.currentDialog.id
-                                self.currentDialog = self.listDialog[20]
-                                self.currentDialog.next = cuId
+                                self.currentDialog = self.listDialog[len(self.listDialog)-1]
+                                self.currentDialog.next = int(cuId)
+                                self.listCurrentChoix = []
+                                self.drawDialog()
                             else:
                                 self.listValeurs.append(c)
                                 self.listCurrentChoix = []
@@ -140,4 +144,4 @@ class VisualNovel:
                                 else:
                                     self.currentDialog = self.listDialog[self.currentDialog.next]
                                     self.drawDialog()
-                        i += 1            
+                        i += 1

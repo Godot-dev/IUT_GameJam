@@ -19,7 +19,7 @@
         "8":{
             "type": "choice", "img":"Carrot1.png", "name": "Jour 2", "text" : "Et enfin, il choisit : ", "choices": [["Des carottes", "Carotte"], ["Des raisins", "Raisin"], ["Des cerises", "Cerise"]],  "next": 9},
         "9":{
-            "type": "text", "img":"Interior1.png", "name": "Jour 2", "text" : "Robert cuisine les 3 aliments qu'il a choisi ensemble, et se demande \u00e0 nouveau pourquoi est ce qu'il a fait \u00e7a... Ce m\u00e9lange n'avait aucun sens et aucun \u00eatre humain n'a d\u00e9j\u00e0 d\u00fb le faire, et pourtant Robert se dit que ce n'\u00e9tais pas si mauvais, mais il a quand m\u00eame l'impression d'\u00eatre poss\u00e9d\u00e9 par une forc\u00e9 myst\u00e9rieuse qui lui dit quoi faire quand il doit d\u00e9cider ce qu'il mange. Trouvant sa r\u00e9flexion absurde, il d\u00e9cida d'aller se coucher.", "next": 10},
+            "type": "text", "img":"Interior1.png", "name": "Jour 2", "text" : "Robert cuisine les trois aliments qu'il a choisi ensemble, et se demande \u00e0 nouveau pourquoi est ce qu'il a fait \u00e7a... Ce m\u00e9lange n'avait aucun sens et aucun \u00eatre humain n'a d\u00e9j\u00e0 d\u00fb le faire, et pourtant Robert se dit que ce n'\u00e9tais pas si mauvais, mais il a quand m\u00eame l'impression d'\u00eatre poss\u00e9d\u00e9 par une forc\u00e9 myst\u00e9rieuse qui lui dit quoi faire quand il doit d\u00e9cider ce qu'il mange. Trouvant sa r\u00e9flexion absurde, il d\u00e9cida d'aller se coucher.", "next": 10},
         "10":{
             "type": "text", "img":"sky1.jpg", "name": "Jour 2", "text" : "C'est une nuit tourment\u00e9e \u00e0 nouveau pour Robert, il se souvient d'un coup de son cauchemar de la veille, et fait le lien. Les fruits et l\u00e9gumes qu'il mange le jour essaient de le tuer dans ses r\u00eaves la nuit.", "next": 11},
         "11":{
@@ -29,7 +29,8 @@
         "13":{
             "type": "notice", "img":"sky1.jpg", "name": "Jour 2", "text" : "3..2..1...", "next": 14},
         "14":{
-            "type": "notice", "img":"sky1.jpg", "name": "Jour 2", "text" : "C'est parti !", "next": -1}
-
+            "type": "notice", "img":"sky1.jpg", "name": "Jour 2", "text" : "C'est parti !", "next": -1},
+        "15": {
+            "type": "text", "img": "Carrot1.png", "name": "Jour 1", "text": "Robert se rend compte qu'il n'a plus aucun aliment de ce type.", "next": -2}
     }
 }

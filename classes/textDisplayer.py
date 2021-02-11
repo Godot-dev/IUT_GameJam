@@ -3,12 +3,14 @@ from threading import Thread
 from queue import Queue
 
 class TextDisplayer(Thread):
-    def __init__(self, text, screen, display, type, font):
+    def __init__(self, text, screen, display, type, font, dialog, vN):
         Thread.__init__(self)
         self.text = text
+        self.vN = vN
         self.screen = screen
         self.display = display
         self.displaying = False
+        self.currentDialog = dialog
         if type == "notice":
             self.color = (77, 230, 39)
             self.fontTexte = pygame.font.Font('assets/fonts/font.ttf', 24) # Application de la police
@@ -18,6 +20,10 @@ class TextDisplayer(Thread):
 
     def run(self):
         self.afficherTexte()
+        
+        #Choix
+        if self.currentDialog.type == "narchoice" or self.currentDialog.type == "choice":
+            self.vN.afficherChoix()
     
     def afficherTexte(self):
         mots = [mot.split(' ') for mot in self.text.splitlines()]  # Créé un tableau en 2D où chaque ligne est un tableau de mots

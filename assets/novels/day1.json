@@ -27,7 +27,7 @@
         "12":{
             "type": "choice", "img":"Carrot1.png", "name": "Jour 1", "text" : "Enfin, il choisit : ", "choices": [["Des carottes", "Carotte"], ["Des raisins", "Raisin"], ["Des cerises", "Cerise"]],  "next": 13},
         "13":{
-            "type": "text", "img":"Interior1.png", "name": "Jour 1", "text" : "Robert cuisine les 3 aliments qu'il a choisi ensemble, et se demande d'un coup pourquoi est ce qu'il a fait \u00e7a... Ce m\u00e9lange n'avait aucun sens et ce n'\u00e9tait pas bon du tout, il s'est demand\u00e9 s'il n'\u00e9tait pas devenu fou. Il d\u00e9cida donc d'aller se coucher, se disa qu'il devait \u00eatre tr\u00e8s fatigu\u00e9", "next": 14},
+            "type": "text", "img":"Interior1.png", "name": "Jour 1", "text" : "Robert cuisine les trois aliments qu'il a choisi ensemble, et se demande d'un coup pourquoi est ce qu'il a fait \u00e7a... Ce m\u00e9lange n'avait aucun sens et ce n'\u00e9tait pas bon du tout, il s'est demand\u00e9 s'il n'\u00e9tait pas devenu fou. Il d\u00e9cida donc d'aller se coucher, se disa qu'il devait \u00eatre tr\u00e8s fatigu\u00e9", "next": 14},
         "14":{
             "type": "text", "img":"sky1.jpg", "name": "Jour 1", "text" : "C'est une nuit tourment\u00e9e pour Robert, il se retrouve dans un cauchemar inhabituel, comme si son \u00e2me \u00e9tait pourchass\u00e9e...", "next": 15},
         "15":{
@@ -39,8 +39,6 @@
         "18":{
             "type": "notice", "img":"sky1.jpg", "name": "Jour 1", "text" : "C'est parti !", "next": -1},
         "19": {
-            "type": "text", "img": "Farm1.png", "name": "Introduction", "text": "Robert travaille dur tous les jours, peut-\u00eatre trop pour son \u00e2ge avanc\u00e9. Mais malgr\u00e9 cela, la production ne s'am\u00e9liore pas et ses revenus continuent de baisser.", "next": 1},
-        "20": {
-            "type": "text", "img": "Carrot1.png", "name": "Jour 1", "text": "", "next": -2}
-        }
+            "type": "text", "img": "Farm1.png", "name": "Introduction", "text": "Robert travaille dur tous les jours, peut-\u00eatre trop pour son \u00e2ge avanc\u00e9. Mais malgr\u00e9 cela, la production ne s'am\u00e9liore pas et ses revenus continuent de baisser.", "next": 1}
+    }
 }
