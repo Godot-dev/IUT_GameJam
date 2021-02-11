@@ -23,7 +23,7 @@
         "10":{
             "type": "text", "img":"sky1.jpg", "name": "Jour 3", "text" : "Cette nuit est la nuit ultime. Robert sent que s'il parvient \u00e0 survivre face \u00e0 ses d\u00e9mons dans son cauchemar, cette fois il sera lib\u00e9r\u00e9.", "next": 11},
         "11":{
-            "type": "notice", "img":"sky1.jpg", "name": "Jour 3", "text" : "Grrrrr. Vous commencez s\u00e9rieusement \u00e0 m'\u00e9nerver... Comment \u00e8tes vous arriv\u00e9s jusque l\u00e0? Avez vous trich\u00e9? De toute fa\u00e7on ce n'est pas grave, j'ai toujours ma botte secr\u00e8te, le cauchemar de ce fermier sera si effrayant que m\u00eame vous ne parviendrez pas \u00e0 vous concentrer pour esquivez les fruits et l\u00e9gumes !", "next": 12},
+            "type": "notice", "img":"sky1.jpg", "name": "Jour 3", "text" : "Grrrrr. Vous commencez s\u00e9rieusement \u00e0 m'\u00e9nerver... Comment \u00eates vous arriv\u00e9s jusque l\u00e0? Avez vous trich\u00e9? De toute fa\u00e7on ce n'est pas grave, j'ai toujours ma botte secr\u00e8te, le cauchemar de ce fermier sera si effrayant que m\u00eame vous ne parviendrez pas \u00e0 vous concentrer pour esquivez les fruits et l\u00e9gumes !", "next": 12},
         "12":{
             "type": "notice", "img":"sky1.jpg", "name": "Jour 3", "text" : "Je suis le jeu vid\u00e9o ultime ! Immortel ! Jamais un simple humain mortel ne pourra me vaincre ! JAMAIS !!!! ", "next": 13},
         "13":{
