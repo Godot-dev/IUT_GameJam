@@ -15,6 +15,7 @@ class VisualNovel:
         self.fontTexte = pygame.font.Font("assets/fonts/font.ttf", 24)
         self.fontNom = pygame.font.Font('assets/fonts/fontBold.ttf', 32)
         self.fontChoix = pygame.font.Font('assets/fonts/fontItalic.ttf', 24)
+        self.alpha = 215
 
         # Remplissage des attributs
         self.screen = screen
@@ -32,10 +33,10 @@ class VisualNovel:
     def drawDialog(self):
         # Background
         self.screen.blit(pygame.transform.scale(pygame.image.load(self.currentDialog.img), (1024, 768)), (0, 0))
-        BorderRectangle(964, 170, 30, 568, 3, (0, 0, 0, 175), (255, 255, 255), self.screen)
+        BorderRectangle(964, 170, 30, 568, 3, (0, 0, 0, self.alpha), (255, 255, 255), self.screen)
         # Nom
         if self.currentDialog.type != "notice":
-            BorderRectangle(250, 50, 30, 508, 3, (0, 0, 0, 175), (255, 255, 255), self.screen)
+            BorderRectangle(250, 50, 30, 508, 3, (0, 0, 0, self.alpha), (255, 255, 255), self.screen)
             self.screen.blit(self.fontNom.render(self.currentDialog.name, 0, (255, 255, 255)), (40, 518))
         #Choix
         if self.currentDialog.type == "narchoice" or self.currentDialog.type == "choice":
