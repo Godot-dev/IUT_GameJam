@@ -24,7 +24,7 @@ while running:
         game.catch_signal(currentEvent)
         currentEvent = None
         game.pressed["Clic"] = False
-    elif credits.is_credits: # Si on est dans les options, on affiche les options
+    elif credits.is_credits: # Si on est dans les crédits, on affiche les crédits
         credits.drawCredits(screen)
     else: # Sinon on affiche le menu principal (c'est ce qui se passe quand on lance le jeu)
         if music == False:
