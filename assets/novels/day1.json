@@ -1,44 +1,44 @@
 {
     "dialogs": {
         "0": {
-            "type": "text", "img": "backgroundD1.jpg", "name": "Introduction", "text": "Robert Johnson, est un vieux fermier du sud de la Californie. Robert vient d'une famille d'agriculteurs. Mais apr\u00e8s 45 ans de dur labeur, Robert est maintenant la seule personne qui reste pour diriger la ferme familiale. Les derni\u00e8res ann\u00e9es ont \u00e9t\u00e9 particuli\u00e8rement difficiles pour Robert. La chute du prix d'achat de ses fruits et l\u00e9gumes par les grossistes, ainsi que diverses catastrophes naturelles, ont fortement affect\u00e9 sa production et ses revenus.", "next": 19},
+            "type": "text", "img": "Farm1.png", "name": "Introduction", "text": "Robert Johnson, est un vieux fermier du sud de la Californie. Robert vient d'une famille d'agriculteurs. Mais apr\u00e8s 45 ans de dur labeur, Robert est maintenant la seule personne qui reste pour diriger la ferme familiale. Les derni\u00e8res ann\u00e9es ont \u00e9t\u00e9 particuli\u00e8rement difficiles pour Robert. La chute du prix d'achat de ses fruits et l\u00e9gumes par les grossistes, ainsi que diverses catastrophes naturelles, ont fortement affect\u00e9 sa production et ses revenus.", "next": 19},
         "1": {
-            "type": "text", "img": "backgroundD2.jpg", "name": "Jour 1", "text": "Une nouvelle journ\u00e9e commence pour Robert, le soleil est d\u00e9j\u00e0 haut dans le ciel et semble br\u00fbler tout ce qu'il touche, comme d'habitude \u00e0 cette \u00e9poque de l'ann\u00e9e.", "next": 2},
+            "type": "text", "img": "Farm1.png", "name": "Jour 1", "text": "Une nouvelle journ\u00e9e commence pour Robert, le soleil est d\u00e9j\u00e0 haut dans le ciel et semble br\u00fbler tout ce qu'il touche, comme d'habitude \u00e0 cette \u00e9poque de l'ann\u00e9e.", "next": 2},
         "2": {
-            "type": "narchoice", "img": "backgroundD3.jpg", "name": "Jour 1", "text": "Robert s'appr\u00eate \u00e0 arroser ses champs de salades, quand le bruit sourd de pneu crissant sur l'asphalte interrompt le silence habituel de la ferme.", "choices": [["Sortir pour voir ce qu'il se passe","3"], ["Rester \u00e0 l'int\u00e9rieur","4"]]},
+            "type": "narchoice", "img": "Farm3.png", "name": "Jour 1", "text": "Robert s'appr\u00eate \u00e0 arroser ses champs de salades, quand le bruit sourd de pneu crissant sur l'asphalte interrompt le silence habituel de la ferme.", "choices": [["Sortir pour voir ce qu'il se passe","3"], ["Rester \u00e0 l'int\u00e9rieur","4"]]},
         "3": {
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert voit un homme en chemise sortir de la voiture et marcher vers lui.", "next": 5},
+            "type": "text", "img":"Sales4.png", "name": "Jour 1", "text" : "Robert voit un homme en chemise sortir de la voiture et marcher vers lui.", "next": 5},
         "4": {
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Quelqu'un sonne \u00e0 la porte", "next": 5},
+            "type": "text", "img":"Interior1.png", "name": "Jour 1", "text" : "Quelqu'un sonne \u00e0 la porte", "next": 5},
         "5":{
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "L'homme s'approche et s'exclame : << Bonjour Monsieur, je suis vendeur chez Utopia Worldwide, je fais le tour de la r\u00e9gion pour promouvoir notre nouveau produit le SquareUp >>", "next": 6},
+            "type": "text", "img":"Sales4.png", "name": "Jour 1", "text" : "L'homme s'approche et s'exclame : << Bonjour Monsieur, je suis vendeur chez Utopia Worldwide, je fais le tour de la r\u00e9gion pour promouvoir notre nouveau produit le SquareUp >>", "next": 6},
         "6":{
-            "type": "narchoice", "img":"background.png", "name": "Jour 1", "text" : "Vendeur : Avec notre produit, vous pouvez dire adieu aux pertes de production, aux d\u00e9g\u00e2ts caus\u00e9s par les insectes, vos plantations produiront deux fois plus que la normale ! Souhaitez-vous un kit d'essai pour vivre l'exp\u00e9rience par vous-m\u00eame ? Si le produit vous a convaincu, il vous suffit de remplir ce document et de nous l'envoyer pour en commander d'autres.", "choices": [["Accepter le kit d'essai","7"], ["D\u00e9cliner l'offre","8"]] },
+            "type": "narchoice", "img":"Sales2.png", "name": "Jour 1", "text" : "Vendeur : Avec notre produit, vous pouvez dire adieu aux pertes de production, aux d\u00e9g\u00e2ts caus\u00e9s par les insectes, vos plantations produiront deux fois plus que la normale ! Souhaitez-vous un kit d'essai pour vivre l'exp\u00e9rience par vous-m\u00eame ? Si le produit vous a convaincu, il vous suffit de remplir ce document et de nous l'envoyer pour en commander d'autres.", "choices": [["Accepter le kit d'essai","7"], ["D\u00e9cliner l'offre","8"]] },
         "7":{
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert prend le kit de test, l'homme s'en va, et Robert d\u00e9cide d'essayer ce nouveau produit sur ses carottes qui ont tr\u00e8s peu produit et ses salades qui sont envahies par les limaces.", "next": 9},
+            "type": "text", "img":"Sales1.png", "name": "Jour 1", "text" : "Robert prend le kit de test, l'homme s'en va, et Robert d\u00e9cide d'essayer ce nouveau produit sur ses carottes qui ont tr\u00e8s peu produit et ses salades qui sont envahies par les limaces.", "next": 9},
         "8":{
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Le vendeur explique \u00e0 Robert tous les avantages que ce produit pourrait apporter \u00e0 sa ferme, et lui fait une d\u00e9 monstration sur certains de ses plans de carottes, lui laisse le kit d'essai en cadeau, puis s'en va.", "next": 9},
+            "type": "text", "img":"Sales3.png", "name": "Jour 1", "text" : "Le vendeur explique \u00e0 Robert tous les avantages que ce produit pourrait apporter \u00e0 sa ferme, et lui fait une d\u00e9 monstration sur certains de ses plans de carottes, lui laisse le kit d'essai en cadeau, puis s'en va.", "next": 9},
         "9":{
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert choisit les fruits et l\u00e9gumes pour son repas avant de rentrer chez lui pour cuisiner, il d\u00e9cide de prendre une partie de ces derniers sur lesquels le produit a \u00e9t\u00e9 appliqu\u00e9 pour voir si leur go\u00fbt est alt\u00e9r\u00e9.", "next": 10},
+            "type": "text", "img":"Carrot1.png", "name": "Jour 1", "text" : "Robert choisit les fruits et l\u00e9gumes pour son repas avant de rentrer chez lui pour cuisiner, il d\u00e9cide de prendre une partie de ces derniers sur lesquels le produit a \u00e9t\u00e9 appliqu\u00e9 pour voir si leur go\u00fbt est alt\u00e9r\u00e9.", "next": 10},
         "10":{
-            "type": "choice", "img":"background.png", "name": "Jour 1", "text" : "En premier lieu, il choisit : ", "choices": [["Des pommes", "Pomme"], ["Des citrouilles", "Citrouille"], ["Des radis", "Radis"]], "next": 11},
+            "type": "choice", "img":"Carrot1.png", "name": "Jour 1", "text" : "En premier lieu, il choisit : ", "choices": [["Des pommes", "Pomme"], ["Des citrouilles", "Citrouille"], ["Des radis", "Radis"]], "next": 11},
         "11":{
-            "type": "choice", "img":"background.png", "name": "Jour 1", "text" : "En second lieu, il choisit : ", "choices": [["Des salades", "Salade"], ["Des bananes", "Banane"], ["Des poireaux", "Poireau"]], "next": 12},
+            "type": "choice", "img":"Carrot1.png", "name": "Jour 1", "text" : "En second lieu, il choisit : ", "choices": [["Des salades", "Salade"], ["Des bananes", "Banane"], ["Des poireaux", "Poireau"]], "next": 12},
         "12":{
-            "type": "choice", "img":"background.png", "name": "Jour 1", "text" : "Enfin, il choisit : ", "choices": [["Des carottes", "Carotte"], ["Des raisins", "Raisin"], ["Des cerises", "Cerise"]],  "next": 13},
+            "type": "choice", "img":"Carrot1.png", "name": "Jour 1", "text" : "Enfin, il choisit : ", "choices": [["Des carottes", "Carotte"], ["Des raisins", "Raisin"], ["Des cerises", "Cerise"]],  "next": 13},
         "13":{
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "Robert cuisine les 3 aliments qu'il a choisi ensemble, et se demande d'un coup pourquoi est ce qu'il a fait \u00e7a... Ce m\u00e9lange n'avait aucun sens et ce n'\u00e9tait pas bon du tout, il s'est demand\u00e9 s'il n'\u00e9tait pas devenu fou. Il d\u00e9cida donc d'aller se coucher, se disa qu'il devait \u00eatre tr\u00e8s fatigu\u00e9", "next": 14},
+            "type": "text", "img":"Interior1.png", "name": "Jour 1", "text" : "Robert cuisine les 3 aliments qu'il a choisi ensemble, et se demande d'un coup pourquoi est ce qu'il a fait \u00e7a... Ce m\u00e9lange n'avait aucun sens et ce n'\u00e9tait pas bon du tout, il s'est demand\u00e9 s'il n'\u00e9tait pas devenu fou. Il d\u00e9cida donc d'aller se coucher, se disa qu'il devait \u00eatre tr\u00e8s fatigu\u00e9", "next": 14},
         "14":{
-            "type": "text", "img":"background.png", "name": "Jour 1", "text" : "C'est une nuit tourment\u00e9e pour Robert, il se retrouve dans un cauchemar inhabituel, comme si son \u00e2me \u00e9tait pourchass\u00e9e...", "next": 15},
+            "type": "text", "img":"sky1.jpg", "name": "Jour 1", "text" : "C'est une nuit tourment\u00e9e pour Robert, il se retrouve dans un cauchemar inhabituel, comme si son \u00e2me \u00e9tait pourchass\u00e9e...", "next": 15},
         "15":{
-            "type": "notice", "img":"background.png", "name": "Jour 1", "text" : "Comme vous pouvez le voir, notre petit fermier est actuellement en train de faire un cauchemar rempli de fruits et de l\u00e9gumes ! Est ce que cela est li\u00e9 \u00e0 ce qu'il a mang\u00e9 tout \u00e0 l'heure? Hum.... Excellente question ! D\u00e9placez vous avec les fl\u00e8ches et esquivez tous ces \u00e9tranges assaillants, sinon ce cauchemar pourrait bien emp\u00eacher notre fermier de se r\u00e9veiller \u00e0 tout jamais ! ", "next": 16},
+            "type": "notice", "img":"sky1.jpg", "name": "Jour 1", "text" : "Comme vous pouvez le voir, notre petit fermier est actuellement en train de faire un cauchemar rempli de fruits et de l\u00e9gumes ! Est ce que cela est li\u00e9 \u00e0 ce qu'il a mang\u00e9 tout \u00e0 l'heure? Hum.... Excellente question ! D\u00e9placez vous avec les fl\u00e8ches et esquivez tous ces \u00e9tranges assaillants, sinon ce cauchemar pourrait bien emp\u00eacher notre fermier de se r\u00e9veiller \u00e0 tout jamais ! ", "next": 16},
         "16":{
-            "type": "notice", "img":"background.png", "name": "Jour 1", "text" : "Vous pouvez \u00e9galement effectuer une petite ru\u00e9e en appuyant en m\u00eame temps sur une fl\u00e8che de direction et la touche espace. Survivez 60 secondes sans \u00e9puiser vos 3 vies et votre fermier se r\u00e9veillera demain.", "next": 17},
+            "type": "notice", "img":"sky1.jpg", "name": "Jour 1", "text" : "Vous pouvez \u00e9galement effectuer une petite ru\u00e9e en appuyant en m\u00eame temps sur une fl\u00e8che de direction et la touche espace. Survivez 60 secondes sans \u00e9puiser vos 3 vies et votre fermier se r\u00e9veillera demain.", "next": 17},
         "17":{
-            "type": "notice", "img":"background.png", "name": "Jour 1", "text" : "Est ce que vous \u00eates pr\u00eats? 3..2..1...", "next": 18},
+            "type": "notice", "img":"sky1.jpg", "name": "Jour 1", "text" : "Est ce que vous \u00eates pr\u00eats? 3..2..1...", "next": 18},
         "18":{
-            "type": "notice", "img":"background.png", "name": "Jour 1", "text" : "C'est parti !", "next": -1},
+            "type": "notice", "img":"sky1.jpg", "name": "Jour 1", "text" : "C'est parti !", "next": -1},
         "19": {
-            "type": "text", "img": "backgroundD1.jpg", "name": "Introduction", "text": "Robert travaille dur tous les jours, peut-\u00eatre trop pour son \u00e2ge avanc\u00e9. Mais malgr\u00e9 cela, la production ne s'am\u00e9liore pas et ses revenus continuent de baisser.", "next": 1}
+            "type": "text", "img": "Farm1.png", "name": "Introduction", "text": "Robert travaille dur tous les jours, peut-\u00eatre trop pour son \u00e2ge avanc\u00e9. Mais malgr\u00e9 cela, la production ne s'am\u00e9liore pas et ses revenus continuent de baisser.", "next": 1}
         }
 }
