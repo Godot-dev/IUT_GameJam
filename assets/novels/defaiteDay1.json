@@ -1,0 +1,8 @@
+{
+    "dialogs": {
+        "0": {
+            "type": "notice", "img": "backgroundD1.jpg", "name": "???", "text": "Désolé de te l'annoncer, mais tu as perdu ! Robert est mort tué par ses légumes à cause de ton incompétence ! Ce jeu doit être un peu trop difficile pour toi, j'ai dû surestimer tes capacités...", "next": 1},
+        "1": {
+            "type": "notice", "img": "backgroundD1.jpg", "name": "???", "text": "Comme je suis gentil, je vais te donner un conseil : les fruits et légumes que tu choisis pendant le jour auront un impact sur la difficulté du cauchemar. Alors.... choisis bien la prochaine fois ;)", "next": -1}
+    }
+}

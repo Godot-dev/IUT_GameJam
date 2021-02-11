@@ -107,7 +107,7 @@ class Cauchemar:
         pygame.draw.rect(screen,bar_back_color,bar_back_position)
         pygame.draw.rect(screen,bar_color,bar_position)
 
-        if(l == 128): # Le niveau est terminé
+        if(l == 12): # Le niveau est terminé
             self.terminerCauchemar()
 
     def updateDashBar(self, screen):

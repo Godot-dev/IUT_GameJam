@@ -1,0 +1,8 @@
+{
+    "dialogs": {
+        "0": {
+            "type": "notice", "img": "backgroundD3.jpg", "name": "Le testeur fou", "text": "PERDU ! Dommage ! ENFIN ! Tu étais vraiment coriace, tu m'as poussé dans mes derniers retanch", "next": 1},
+        "1": {
+            "type": "notice", "img": "backgroundD3.jpg", "name": "Le testeur fou", "text": "Aucun joueur ne peut me battre dans ce monde, je suis invincible ! Tu as juste eu un coup de chance au niveau précédent. Si tu le souhaites, tu peux réessayer, mais comme tu l'as vu, quand je suis sérieux, tu ne peux pas me battre ! Mouahahahaa", "next": -1}
+    }
+}
