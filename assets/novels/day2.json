@@ -9,27 +9,27 @@
         "3": {
             "type": "narchoice", "img":"Farm8.png", "name": "Jour 2", "text" : "Robert r\u00e9alise que c'est le produit donn\u00e9 par le commercial d'hier qui a permis ces miracles. Il se demande alors si le produit serait efficace sur les fruits. Il se dit que ce produit pourrait enfin le rendre riche, il n'aurait alors plus \u00e0 trimer tous les jours au champ et pourrait alors employer de la main d'\u0153uvre pour s'occuper de sa ferme", "choices": [["Utiliser le produit sur les arbres fruitiers ","4"],["Ne pas utiliser le produit","5"]]},
         "4": {
-            "type": "text", "img":"background.png", "name": "Jour 2", "text" : "Robert r\u00e9pand du produit sur les arbres fruitiers pendant le reste de la journ\u00e9e. Robert cueille les fruits et l\u00e9gumes n\u00e9cessaires pour pr\u00e9parer son repas et rentre pour commencer \u00e0 cuisiner.", "next": 6},
+            "type": "text", "img":"Farm8.png", "name": "Jour 2", "text" : "Robert r\u00e9pand du produit sur les arbres fruitiers pendant le reste de la journ\u00e9e. Robert cueille les fruits et l\u00e9gumes n\u00e9cessaires pour pr\u00e9parer son repas et rentre pour commencer \u00e0 cuisiner.", "next": 6},
         "5":{
-            "type": "text", "img":"background.png", "name": "Jour 2", "text" : "Robert continue sa journ\u00e9e de travail, lorsque le ciel s'assombrit et se teinte d'une voile orange Robert, cueille les fruits et l\u00e9gumes n\u00e9cessaires pour pr\u00e9parer son repas et rentre pour commencer \u00e0 cuisiner.", "next": 6},
+            "type": "text", "img":"Carrot1.png", "name": "Jour 2", "text" : "Robert continue sa journ\u00e9e de travail, lorsque le ciel s'assombrit et se teinte d'une voile orange Robert, cueille les fruits et l\u00e9gumes n\u00e9cessaires pour pr\u00e9parer son repas et rentre pour commencer \u00e0 cuisiner.", "next": 6},
         "6":{
-            "type": "choice", "img":"background.png", "name": "Jour 2", "text" : "Pour varier un peu les repas, Robert d\u00e9cide de ne pas choisir les m\u00eames aliments qu'hier pour son repas. En premier, il choisit : ", "choices": [["Des pommes", "Pomme"], ["Des citrouilles", "Citrouille"], ["Des radis", "Radis"]], "next": 7},
+            "type": "choice", "img":"Carrot1.png", "name": "Jour 2", "text" : "Pour varier un peu les repas, Robert d\u00e9cide de ne pas choisir les m\u00eames aliments qu'hier pour son repas. En premier, il choisit : ", "choices": [["Des pommes", "Pomme"], ["Des citrouilles", "Citrouille"], ["Des radis", "Radis"]], "next": 7},
         "7":{
-            "type": "choice", "img":"background.png", "name": "Jour 2", "text" : "Ensuite, il choisit : ", "choices": [["Des salades", "Salade"], ["Des bananes", "Banane"], ["Des poireaux", "Poireau"]], "next": 8},
+            "type": "choice", "img":"Carrot1.png", "name": "Jour 2", "text" : "Ensuite, il choisit : ", "choices": [["Des salades", "Salade"], ["Des bananes", "Banane"], ["Des poireaux", "Poireau"]], "next": 8},
         "8":{
-            "type": "choice", "img":"background.png", "name": "Jour 2", "text" : "Et enfin, il choisit : ", "choices": [["Des carottes", "Carotte"], ["Des raisins", "Raisin"], ["Des cerises", "Cerise"]],  "next": 9},
+            "type": "choice", "img":"Carrot1.png", "name": "Jour 2", "text" : "Et enfin, il choisit : ", "choices": [["Des carottes", "Carotte"], ["Des raisins", "Raisin"], ["Des cerises", "Cerise"]],  "next": 9},
         "9":{
-            "type": "text", "img":"background.png", "name": "Jour 2", "text" : "Robert cuisine les 3 aliments qu'il a choisi ensemble, et se demande \u00e0 nouveau pourquoi est ce qu'il a fait \u00e7a... Ce m\u00e9lange n'avait aucun sens et aucun \u00eatre humain n'a d\u00e9j\u00e0 d\u00fb le faire, et pourtant Robert se dit que ce n'\u00e9tais pas si mauvais, mais il a quand m\u00eame l'impression d'\u00eatre poss\u00e9d\u00e9 par une forc\u00e9 myst\u00e9rieuse qui lui dit quoi faire quand il doit d\u00e9cider ce qu'il mange. Trouvant sa r\u00e9flexion absurde, il d\u00e9cida d'aller se coucher.", "next": 10},
+            "type": "text", "img":"Interior1.png", "name": "Jour 2", "text" : "Robert cuisine les 3 aliments qu'il a choisi ensemble, et se demande \u00e0 nouveau pourquoi est ce qu'il a fait \u00e7a... Ce m\u00e9lange n'avait aucun sens et aucun \u00eatre humain n'a d\u00e9j\u00e0 d\u00fb le faire, et pourtant Robert se dit que ce n'\u00e9tais pas si mauvais, mais il a quand m\u00eame l'impression d'\u00eatre poss\u00e9d\u00e9 par une forc\u00e9 myst\u00e9rieuse qui lui dit quoi faire quand il doit d\u00e9cider ce qu'il mange. Trouvant sa r\u00e9flexion absurde, il d\u00e9cida d'aller se coucher.", "next": 10},
         "10":{
-            "type": "text", "img":"background.png", "name": "Jour 2", "text" : "C'est une nuit tourment\u00e9e \u00e0 nouveau pour Robert, il se souvient d'un coup de son cauchemar de la veille, et fait le lien. Les fruits et l\u00e9gumes qu'il mange le jour essaient de le tuer dans ses r\u00eaves la nuit.", "next": 11},
+            "type": "text", "img":"sky1.jpg", "name": "Jour 2", "text" : "C'est une nuit tourment\u00e9e \u00e0 nouveau pour Robert, il se souvient d'un coup de son cauchemar de la veille, et fait le lien. Les fruits et l\u00e9gumes qu'il mange le jour essaient de le tuer dans ses r\u00eaves la nuit.", "next": 11},
         "11":{
-            "type": "notice", "img":"background.png", "name": "Jour 2", "text" : "Comment !? Si vous \u00eates arriv\u00e9s jusque l\u00e0 c'est que vous avez surv\u00e9cu au premier niveau ! Ce n'\u00e9tait jamais arriv\u00e9 auparavant, mon \u00e9go a \u00e9t\u00e9 atteint ! Mais maintenant je vous pr\u00e9viens, la difficult\u00e9 va augmenter ! Mon objectif est que jamais personne ne me termine, je veux rester un jeu vid\u00e9o totalement invaincu !", "next": 12},
+            "type": "notice", "img":"sky1.jpg", "name": "Jour 2", "text" : "Comment !? Si vous \u00eates arriv\u00e9s jusque l\u00e0 c'est que vous avez surv\u00e9cu au premier niveau ! Ce n'\u00e9tait jamais arriv\u00e9 auparavant, mon \u00e9go a \u00e9t\u00e9 atteint ! Mais maintenant je vous pr\u00e9viens, la difficult\u00e9 va augmenter ! Mon objectif est que jamais personne ne me termine, je veux rester un jeu vid\u00e9o totalement invaincu !", "next": 12},
         "12":{
-            "type": "notice", "img":"background.png", "name": "Jour 2", "text" : "Cette fois-ci, vous n'y survivrez pas, est ce que vous \u00eates \u00e0 pr\u00eats \u00e0 rencontrer la d\u00e9faite?", "next": 13},
+            "type": "notice", "img":"sky1.jpg", "name": "Jour 2", "text" : "Cette fois-ci, vous n'y survivrez pas, est ce que vous \u00eates \u00e0 pr\u00eats \u00e0 rencontrer la d\u00e9faite?", "next": 13},
         "13":{
-            "type": "notice", "img":"background.png", "name": "Jour 2", "text" : "3..2..1...", "next": 14},
+            "type": "notice", "img":"sky1.jpg", "name": "Jour 2", "text" : "3..2..1...", "next": 14},
         "14":{
-            "type": "notice", "img":"background.png", "name": "Jour 2", "text" : "C'est parti !", "next": -1}
+            "type": "notice", "img":"sky1.jpg", "name": "Jour 2", "text" : "C'est parti !", "next": -1}
 
     }
 }
