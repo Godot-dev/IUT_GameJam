@@ -62,15 +62,16 @@ class VisualNovel:
             choiceText = self.fontChoix.render(str, 0, (255, 255, 255))
             largChoixText, hautChoixText = choiceText.get_size()
             if lastmissing > 0 and added > 0:
-                self.listCurrentChoix.append(BorderRectangle(butLen+1, 50, 30+added+i*butLen-3*i, 688, 3, (0, 0, 0, 128), (255, 255, 255), self.screen))
+                rect = BorderRectangle(butLen+1, 50, 30+added+i*butLen-3*i, 688, 3, (0, 0, 0, 128), (255, 255, 255), self.screen)
                 added += 1
                 lastmissing -= 1
             elif lastmissing > 0:
-                self.listCurrentChoix.append(BorderRectangle(butLen+1, 50, 30+i*butLen-3*i, 688, 3, (0, 0, 0, 128), (255, 255, 255), self.screen))
+                rect = BorderRectangle(butLen+1, 50, 30+i*butLen-3*i, 688, 3, (0, 0, 0, 128), (255, 255, 255), self.screen)
             elif added > 0:
-                self.listCurrentChoix.append(BorderRectangle(butLen, 50, 30+added+i*butLen-3*i, 688, 3, (0, 0, 0, 128), (255, 255, 255), self.screen))
+                rect = BorderRectangle(butLen, 50, 30+added+i*butLen-3*i, 688, 3, (0, 0, 0, 128), (255, 255, 255), self.screen)
             else:
-                self.listCurrentChoix.append(BorderRectangle(butLen, 50, 30+i*butLen-3*i, 688, 3, (0, 0, 0, 128), (255, 255, 255), self.screen))
+                rect = BorderRectangle(butLen, 50, 30+i*butLen-3*i, 688, 3, (0, 0, 0, 128), (255, 255, 255), self.screen)
+            self.listCurrentChoix.append(rect)
             largMax = self.listCurrentChoix[i].width
             hautMax = self.listCurrentChoix[i].height
             self.screen.blit(choiceText, ((30+i*butLen-3*i)+(largMax-largChoixText)/2, 688+(hautMax-hautChoixText)/2))

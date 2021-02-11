@@ -7,9 +7,7 @@ class BorderRectangle:
         self.height = height
         self.surf = pygame.Surface((self.width, self.height), pygame.SRCALPHA)
         self.surf.fill(color)
-        self.hitbox = self.surf.get_rect()
-        self.hitbox.x = posx
-        self.hitbox.y = posy
+        self.hitbox = pygame.Rect(posx+3, posy+3, self.surf.get_width()-6, self.surf.get_height()-6)
         screen.blit(self.surf, (posx, posy))
         # Bordures
         pygame.draw.rect(screen, borderColor, pygame.Rect(posx, posy, border, height))
