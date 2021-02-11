@@ -1,35 +1,35 @@
 {
     "dialogs": {
         "0": {
-            "type": "text", "img": "backgroundD1.jpg", "name": "Jour 3", "text": "Cette fois-ci, Robert se souvient parfaitement de son cauchemar. Le produit pr\u00e9sent sur les l\u00e9gumes leurs permettent de prendre vie dans les r\u00eaves de la personnes qui l'a mang\u00e9.", "next" : 1},
+            "type": "text", "img": "interior2.png", "name": "Jour 3", "text": "Cette fois-ci, Robert se souvient parfaitement de son cauchemar. Le produit pr\u00e9sent sur les l\u00e9gumes leurs permettent de prendre vie dans les r\u00eaves de la personnes qui l'a mang\u00e9.", "next" : 1},
         "1": {
-            "type": "text", "img": "backgroundD2.jpg", "name": "Jour 3", "text": "Il comprit alors que si les l\u00e9gumes parviennent \u00e0 le tuer dans un de ses cauchemars, les l\u00e9gumes pourraient se mettre \u00e0 contr\u00f4ler le corps de Robert pour se venger des humains qui les mangent depuis des ann\u00e9es en utilisant le corps de Robert et des autres humains infect\u00e9s par le virus pour d\u00e9truire l'humanit\u00e9", "next": 2},
+            "type": "text", "img": "interior2.png", "name": "Jour 3", "text": "Il comprit alors que si les l\u00e9gumes parviennent \u00e0 le tuer dans un de ses cauchemars, les l\u00e9gumes pourraient se mettre \u00e0 contr\u00f4ler le corps de Robert pour se venger des humains qui les mangent depuis des ann\u00e9es en utilisant le corps de Robert et des autres humains infect\u00e9s par le virus pour d\u00e9truire l'humanit\u00e9", "next": 2},
         "2": {
-            "type": "text", "img": "backgroundD3.jpg", "name": "Jour 3", "text":"Robert d\u00e9cide alors de sortir de sa maison, et de se d\u00e9barasser de tous les fruits et l\u00e9gumes de son potager en les faisant tous br\u00fbler dans un immense feu.", "next": 3},
+            "type": "text", "img": "fire.png", "name": "Jour 3", "text":"Robert d\u00e9cide alors de sortir de sa maison, et de se d\u00e9barasser de tous les fruits et l\u00e9gumes de son potager en les faisant tous br\u00fbler dans un immense feu.", "next": 3},
         "3": {
-            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "Apr\u00e8s avoir fini cette t\u00e2che tr\u00e8s fatiguante, Robert se rendit compte qu'il avait tr\u00e8s fin et rien d'autre \u00e0 manger que ses fruits et l\u00e9gumes, infect\u00e9s par le produit.", "next": 4},
+            "type": "text", "img":"salad1.png", "name": "Jour 3", "text" : "Apr\u00e8s avoir fini cette t\u00e2che tr\u00e8s fatiguante, Robert se rendit compte qu'il avait tr\u00e8s faim et rien d'autre \u00e0 manger que ses fruits et l\u00e9gumes, infect\u00e9s par le produit.", "next": 4},
         "4": {
-            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "C'est alors que Robert d\u00e9cida de commander une pizza bien grasse sans le moindre l\u00e9gume, afin de ne pas reproduire encore une fois un cauchemar mortel.", "next": 5},
+            "type": "text", "img":"Farm6.png", "name": "Jour 3", "text" : "C'est alors que Robert d\u00e9cida de commander une pizza bien grasse sans le moindre l\u00e9gume, afin de ne pas reproduire encore une fois un cauchemar mortel.", "next": 5},
         "5":{
-            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "Apr\u00e8s avoir mang\u00e9 sa d\u00e9licieuse pizza, Robert s'approcha de sa cuisine pour faire la vaiselle quand soundain...", "next": 6},
+            "type": "text", "img":"Interior1.png", "name": "Jour 3", "text" : "Apr\u00e8s avoir mang\u00e9 sa d\u00e9licieuse pizza, Robert s'approcha de sa cuisine pour faire la vaiselle quand soundain...", "next": 6},
         "6":{
-            "type": "choice", "img":"background.png", "name": "Jour 3", "text" : "Tout d'un coup, une force myst\u00e9rieuse s'empare de lui et saisit :", "choices": [["Des pommes", "Pomme"], ["Des citrouilles", "Citrouille"], ["Des radis", "Radis"]], "next": 7},
+            "type": "choice", "img":"Interior1.png", "name": "Jour 3", "text" : "Tout d'un coup, une force myst\u00e9rieuse s'empare de lui et saisit :", "choices": [["Des pommes", "Pomme"], ["Des citrouilles", "Citrouille"], ["Des radis", "Radis"]], "next": 7},
         "7":{
-            "type": "choice", "img":"background.png", "name": "Jour 3", "text" : "Robert essaie de lutter tant bien que mal, mais il s'empare tout de m\u00eame de :", "choices": [["Des salades", "Salade"], ["Des bananes", "Banane"], ["Des poireaux", "Poireau"]], "next": 8},
+            "type": "choice", "img":"Interior1.png", "name": "Jour 3", "text" : "Robert essaie de lutter tant bien que mal, mais il s'empare tout de m\u00eame de :", "choices": [["Des salades", "Salade"], ["Des bananes", "Banane"], ["Des poireaux", "Poireau"]], "next": 8},
         "8":{
-            "type": "choice", "img":"background.png", "name": "Jour 3", "text" : "La force myst\u00e9rieuse continue de manipuler Robert et le force \u00e0 prendre :", "choices": [["Des carottes", "Carotte"], ["Des raisins", "Raisin"], ["Des cerises", "Cerise"]],  "next": 9},
+            "type": "choice", "img":"Interior1.png", "name": "Jour 3", "text" : "La force myst\u00e9rieuse continue de manipuler Robert et le force \u00e0 prendre :", "choices": [["Des carottes", "Carotte"], ["Des raisins", "Raisin"], ["Des cerises", "Cerise"]],  "next": 9},
         "9":{
-            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "Robert cuisine les 3 aliments restants contre son gr\u00e9, et lutte tant bien que mal pour ne pas les manger mais il finit tout de m\u00eame par les d\u00e9vorer. Cette force terrorisse Robert, mais dans un \u00e9lan de courage, celui-ci d\u00e9cide de faire face \u00e0 ses peurs et d\u00e9cide d'aller se coucher pour en finir une bonne fois pour toutes.", "next": 10},
+            "type": "text", "img":"Interior1.png", "name": "Jour 3", "text" : "Robert cuisine les 3 aliments restants contre son gr\u00e9, et lutte tant bien que mal pour ne pas les manger mais il finit tout de m\u00eame par les d\u00e9vorer. Cette force terrorisse Robert, mais dans un \u00e9lan de courage, celui-ci d\u00e9cide de faire face \u00e0 ses peurs et d\u00e9cide d'aller se coucher pour en finir une bonne fois pour toutes.", "next": 10},
         "10":{
-            "type": "text", "img":"background.png", "name": "Jour 3", "text" : "Cette nuit est la nuit ultime. Robert sent que s'il parvient \u00e0 survivre face \u00e0 ses d\u00e9mons dans son cauchemar, cette fois il sera lib\u00e9r\u00e9.", "next": 11},
+            "type": "text", "img":"sky1.jpg", "name": "Jour 3", "text" : "Cette nuit est la nuit ultime. Robert sent que s'il parvient \u00e0 survivre face \u00e0 ses d\u00e9mons dans son cauchemar, cette fois il sera lib\u00e9r\u00e9.", "next": 11},
         "11":{
-            "type": "notice", "img":"background.png", "name": "Jour 3", "text" : "Grrrrr. Vous commencez s\u00e9rieusement \u00e0 m'\u00e9nerver... Comment \u00e8tes vous arriv\u00e9s jusque l\u00e0? Avez vous trich\u00e9? De toute fa\u00e7on ce n'est pas grave, j'ai toujours ma botte secr\u00e8te, le cauchemar de ce fermier sera si effrayant que m\u00eame vous ne parviendrez pas \u00e0 vous concentrer pour esquivez les fruits et l\u00e9gumes !", "next": 12},
+            "type": "notice", "img":"sky1.jpg", "name": "Jour 3", "text" : "Grrrrr. Vous commencez s\u00e9rieusement \u00e0 m'\u00e9nerver... Comment \u00e8tes vous arriv\u00e9s jusque l\u00e0? Avez vous trich\u00e9? De toute fa\u00e7on ce n'est pas grave, j'ai toujours ma botte secr\u00e8te, le cauchemar de ce fermier sera si effrayant que m\u00eame vous ne parviendrez pas \u00e0 vous concentrer pour esquivez les fruits et l\u00e9gumes !", "next": 12},
         "12":{
-            "type": "notice", "img":"background.png", "name": "Jour 3", "text" : "Je suis le jeu vid\u00e9o ultime ! Immortel ! Jamais un simple humain mortel ne pourra me vaincre ! JAMAIS !!!! ", "next": 13},
+            "type": "notice", "img":"sky1.jpg", "name": "Jour 3", "text" : "Je suis le jeu vid\u00e9o ultime ! Immortel ! Jamais un simple humain mortel ne pourra me vaincre ! JAMAIS !!!! ", "next": 13},
         "13":{
-            "type": "notice", "img":"background.png", "name": "Jour 3", "text" : "Vous allez perdre lamentablement face \u00e0 ma grande puissance dans 3..2..1...", "next": 14},
+            "type": "notice", "img":"sky1.jpg", "name": "Jour 3", "text" : "Vous allez perdre lamentablement face \u00e0 ma grande puissance dans 3..2..1...", "next": 14},
         "14":{
-            "type": "notice", "img":"background.png", "name": "Jour 3", "text" : "Maintenant !", "next": -1}
+            "type": "notice", "img":"sky1.jpg", "name": "Jour 3", "text" : "Maintenant !", "next": -1}
 
     }
 }
