@@ -11,6 +11,7 @@ class Game:
         self.jour = True # indique s'il fait jour ou nuit, au début du jeu, on est sur la phase Jour 
         self.phaseDeJeu = None
         self.legumesFruits = []
+        self.legumesFruitsChoisis = []
         self.perdu = False # Passe à true si le joueur meurt pendant le cauchemar
         self.finCauchemar = False
         self.music = False
@@ -23,7 +24,7 @@ class Game:
                 pygame.mixer.music.load("assets/music/Defeat.ogg")
                 pygame.mixer.music.play()
             self.jour = True
-            self.phaseDeJeu = VisualNovel(f"assets/novels/defaiteDay{self.etape}.json", screen, display)
+            self.phaseDeJeu = VisualNovel(f"assets/novels/defaiteDay{self.etape}.json", screen, display, self.legumesFruitsChoisis)
 
         elif not self.perdu and self.jour and self.phaseDeJeu == None:
             if self.music == False:
@@ -31,9 +32,9 @@ class Game:
                 pygame.mixer.music.play()
                 self.music = True
             if self.victoire == True: # On charge la fin du jeu
-                self.phaseDeJeu = VisualNovel(f"assets/novels/victoire.json", screen, display)
+                self.phaseDeJeu = VisualNovel(f"assets/novels/victoire.json", screen, display, self.legumesFruitsChoisis)
             else:
-                self.phaseDeJeu = VisualNovel(f"assets/novels/day{self.etape}.json", screen, display)
+                self.phaseDeJeu = VisualNovel(f"assets/novels/day{self.etape}.json", screen, display, self.legumesFruitsChoisis)
         elif not self.jour and self.phaseDeJeu == None:
             if self.music == False:
                 pygame.mixer.music.load(f"assets/music/Nightmare/nightmare{self.etape}.ogg")
@@ -48,6 +49,8 @@ class Game:
         if self.jour:
             if self.phaseDeJeu.catch_signal(self.pressed, event): # Fin dialogue
                 self.legumesFruits = self.phaseDeJeu.listValeurs # On passe la liste des choix au futur cauchemar
+                for val in self.phaseDeJeu.listValeurs:
+                    self.legumesFruitsChoisis.append(val)
                 self.jour = False
                 self.phaseDeJeu = None
                 self.music = False
