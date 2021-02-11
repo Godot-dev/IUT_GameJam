@@ -7,6 +7,7 @@ import math
 from classes.textDisplayer import TextDisplayer
 from classes.novelDialog import NovelDialog
 from classes.borderRectangle import BorderRectangle
+pygame.mixer.init
 
 class VisualNovel:
     def __init__(self, file, screen, display):
@@ -93,10 +94,12 @@ class VisualNovel:
                 
     def catch_signal(self, pressed, event):
         if self.threadTexte.displaying and (pressed.get(pygame.K_SPACE) or pressed.get(pygame.K_RETURN) or pressed.get("Clic")):
+            pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Select1.wav'))
             self.threadTexte.displaying = False
         else:
             if self.currentDialog.type == "text" or self.currentDialog.type == "notice":
                 if pressed.get(pygame.K_SPACE) or pressed.get(pygame.K_RETURN) or pressed.get("Clic"):
+                    pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Select1.wav'))
                     if self.currentDialog.next == -1:
                         return True
                     else:
@@ -107,6 +110,7 @@ class VisualNovel:
                     i = 0
                     for choix in self.listCurrentChoix:
                         if choix.hitbox.collidepoint(event.pos):
+                            pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Select1.wav'))
                             nextI = int(self.currentDialog.choices[i][1])
                             if nextI == -1:
                                 return True
@@ -120,6 +124,7 @@ class VisualNovel:
                     i = 0
                     for choix in self.listCurrentChoix:
                         if choix.hitbox.collidepoint(event.pos):
+                            pygame.mixer.Sound.play(pygame.mixer.Sound('assets/music/SoundFX/Select1.wav'))
                             self.listValeurs.append(self.currentDialog.choices[i][1])
                             self.listCurrentChoix = []
                             if self.currentDialog.next == -1:
