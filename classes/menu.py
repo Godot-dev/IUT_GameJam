@@ -17,7 +17,7 @@ class Menu:
         screen.blit(self.creditsButton.img, self.creditsButton.hitbox)
         screen.blit(self.quitButton.img, self.quitButton.hitbox)
         screen.blit(self.HighScore.img, self.HighScore.hitbox)
-        screen.blit(self.SandBox.img, self.SandBox.hitbox)
+        # screen.blit(self.SandBox.img, self.SandBox.hitbox)
         
 
     def catch_signal(self, game, credits, event): # Effectue l'action appropriée si l'utilisateur a cliqué sur un des boutons du menu
