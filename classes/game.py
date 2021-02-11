@@ -26,6 +26,7 @@ class Game:
                 pygame.mixer.music.load("assets/music/Defeat.ogg")
                 pygame.mixer.music.play()
             self.jour = True
+            print(self.temps)
             self.phaseDeJeu = VisualNovel(f"assets/novels/defaiteDay{self.etape}.json", screen, display, self.legumesFruitsChoisis)
 
         elif not self.perdu and self.jour and self.phaseDeJeu == None:
