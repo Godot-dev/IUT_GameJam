@@ -29,7 +29,7 @@
         "13":{
             "type": "text", "img":"Interior1.png", "name": "Jour 1", "text" : "Robert cuisine les trois aliments qu'il a choisi ensemble, et se demande d'un coup pourquoi est ce qu'il a fait ces choix... Ce m\u00e9lange n'a aucun sens et le go\u00fbt est horrible, il se demande s'il n'est pas devenu fou. Il d\u00e9cide donc d'aller se coucher, se disant qu'il doit \u00eatre tr\u00e8s fatigu\u00e9.", "next": 14},
         "14":{
-            "type": "text", "img":"sky1.jpg", "name": "Jour 1", "text" : "C'est une nuit tourment\u00e9e pour Robert, il se retrouve dans un cauchemar inhabituel, comme si son \u00e2me \u00e9tait pourchass\u00e9e... par les légumes de son repas, qui sembleraient avoir pris vie !", "next": 15},
+            "type": "text", "img":"sky1.jpg", "name": "Jour 1", "text" : "C'est une nuit tourment\u00e9e pour Robert, il se retrouve dans un cauchemar inhabituel, comme si son \u00e2me \u00e9tait pourchass\u00e9e... par les l\u00e9gumes de son repas, qui sembleraient avoir pris vie !", "next": 15},
         "15":{
             "type": "notice", "img":"sky1.jpg", "name": "Jour 1", "text" : "Comme vous pouvez le voir, notre petit fermier est actuellement en train de faire un cauchemar rempli de fruits et de l\u00e9gumes ! Est ce que cela est li\u00e9 \u00e0 ce qu'il a mang\u00e9 tout \u00e0 l'heure ? Hum.... Excellente question ! D\u00e9placez vous avec les fl\u00e8ches et esquivez tous ces \u00e9tranges assaillants, sinon ce cauchemar pourrait bien emp\u00eacher notre fermier de se r\u00e9veiller \u00e0 tout jamais ! ", "next": 16},
         "16":{

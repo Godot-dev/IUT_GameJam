@@ -11,7 +11,7 @@
         "4":{
             "type": "notice", "img":"tree.png", "name": "Fin", "text" : "NONNNN C'est impossible !!! Le dernier niveau \u00e9tait si dur !!! Je n'arrive pas \u00e0 croire que je suis vaincu !", "next": 5},
         "5":{
-            "type": "notice", "img":"tree.png", "name": "Fin", "text" : "Cependant, je me dois de r\u00e9viser mon jugement \u00e0 votre \u00e9gard, vous êtes un joueur tr\u00e8s impressionant et j'admire votre pers\u00e9v\u00e9rance.", "next": 6},
+            "type": "notice", "img":"tree.png", "name": "Fin", "text" : "Cependant, je me dois de r\u00e9viser mon jugement \u00e0 votre \u00e9gard, vous \u00eates un joueur tr\u00e8s impressionant et j'admire votre pers\u00e9v\u00e9rance.", "next": 6},
         "6":{
             "type": "notice", "img":"tree.png", "name": "Fin", "text" : "Je vais donc vous r\u00e9compenser comme il se doit. Tout d'abord, vous avez mes f\u00e9licitations, ce qui est un immense honneur. Et vous avez \u00e9galement le droit de voter pour nous pour qu'on ait une bonne note :p", "next": 7},
         "7":{
