@@ -20,6 +20,16 @@ class ChoseHighscore:
         self.rect.topleft = (1024/2-237, 263)
         self.edittext = None
         self.cursor = pygame.Rect(self.rect.topright, (3, self.rect.height))
+        self.set = False
+        self.perdu = None
+        self.health = None
+        self.temps = None
+
+    def setAttributes(self, perdu, health, temps):
+        self.perdu = perdu
+        self.health = health
+        self.temps = temps
+        self.set = True
 
     def drawHighscore(self, screen, display):
         screen.blit(self.background, (0, 0))
@@ -32,7 +42,7 @@ class ChoseHighscore:
         self.drawText(screen,display) 
             
     def drawText(self,screen,display):
-        self.edittext = BorderRectangle(500, 75, 1024/2-150, 250, 3, (0, 0, 0, 255), (255, 255, 255), screen)
+        self.edittext = BorderRectangle(500, 75, 1024/2-250, 250, 3, (0, 0, 0, 255), (255, 255, 255), screen)
         img = self.font.render(self.text, True, (255, 255, 255))
         self.rect.size = img.get_size()
         self.cursor.topleft = self.rect.topright
@@ -81,13 +91,19 @@ class ChoseHighscore:
             self.is_writing = False
 
     def finishChoice(self):
-        with open('assets/properties/highscores.json') as fr:
-            data = json.load(fr)
-            if len(self.text) == 0 or self.default == True:
-                data['highscores'].pop()
-            else:
-                data['highscores'][len(data['highscores'])-1]['name'] = self.text
-            with open('assets/properties/highscores.json', 'w') as fw:
-                json.dump(data, fw)
+        if len(self.text) != 0 and not self.default:
+            with open('assets/properties/highscores.json') as fr:
+                data = json.load(fr)
+                if (self.perdu):
+                    data['highscores'].append({"type":"lose", "name": self.text, "time": self.temps})
+                else:
+                    data['highscores'].append({"type":"win", "name": self.text, "heart": self.health})
+                with open('assets/properties/highscores.json', 'w') as fw:
+                    json.dump(data, fw)
         self.default = True
         self.is_highscore = False
+        self.set = False
+        self.perdu = None
+        self.health = None
+        self.temps = None
+        self.text = "Pseudonyme"

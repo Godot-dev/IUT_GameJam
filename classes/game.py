@@ -69,12 +69,4 @@ class Game:
             self.phaseDeJeu.catch_signal(self.pressed)
         
     def finishPartie(self, screen, choseHighscore):
-        with open('assets/properties/highscores.json') as fr:
-            data = json.load(fr)
-            if (self.perdu):
-                data['highscores'].append({"type":"lose", "name": "", "time": self.temps})
-            else:
-                data['highscores'].append({"type":"win", "name": "", "heart": self.health})
-            with open('assets/properties/highscores.json', 'w') as fw:
-                json.dump(data, fw)
         choseHighscore.is_highscore = True

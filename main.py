@@ -33,6 +33,8 @@ while running:
     elif highscore.is_highscore: # Si on est dans les highscores, on affiche les highscores
         highscore.drawHighscore(screen)
     elif choseHighscore.is_highscore: # Si on est dans les highscores, on affiche les highscores
+        if not choseHighscore.set:
+            choseHighscore.setAttributes(game.perdu, game.health, game.temps)
         choseHighscore.drawHighscore(screen, pygame.display)
     else: # Sinon on affiche le menu principal (c'est ce qui se passe quand on lance le jeu)
         if music == False:
