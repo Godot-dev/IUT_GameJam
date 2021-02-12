@@ -16,5 +16,3 @@ class Credits:
     def catch_signal(self,event):
         if self.menu.hitbox.collidepoint(event.pos):
             self.is_credits = False
-        
-

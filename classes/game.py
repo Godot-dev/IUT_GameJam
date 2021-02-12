@@ -1,4 +1,5 @@
 import pygame
+import json
 from classes.cauchemar import Cauchemar
 from classes.visualNovel import VisualNovel
 
@@ -46,7 +47,7 @@ class Game:
         elif not self.jour and not self.finCauchemar:
             self.phaseDeJeu.drawCauchemar(screen)
 
-    def catch_signal(self, event):
+    def catch_signal(self, screen, choseHighscore, event):
         # On effectue les actions du jeu en fonction de l'endroit où nous sommes
         if self.jour:
             if self.phaseDeJeu.catch_signal(self.pressed, event): # Fin dialogue
@@ -57,6 +58,7 @@ class Game:
                 self.phaseDeJeu = None
                 self.music = False
                 if self.perdu or self.victoire: # Le joueur a perdu et la cinématique de défaite est terminée
+                    self.finishPartie(screen, choseHighscore)
                     self.is_playing = False
         elif self.finCauchemar and not self.perdu:
             self.etape += 1
@@ -66,4 +68,13 @@ class Game:
         elif not self.perdu:
             self.phaseDeJeu.catch_signal(self.pressed)
         
-            
+    def finishPartie(self, screen, choseHighscore):
+        with open('assets/properties/highscores.json') as fr:
+            data = json.load(fr)
+            if (self.perdu):
+                data['highscores'].append({"type":"lose", "name": "", "time": self.temps})
+            else:
+                data['highscores'].append({"type":"win", "name": "", "heart": self.health})
+            with open('assets/properties/highscores.json', 'w') as fw:
+                json.dump(data, fw)
+        choseHighscore.is_highscore = True

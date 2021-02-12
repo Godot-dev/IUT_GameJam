@@ -3,6 +3,8 @@ from pygame.constants import MOUSEBUTTONDOWN
 from classes.game import Game
 from classes.menu import Menu
 from classes.credits import Credits
+from classes.highscore import Highscore
+from classes.choseHighscore import ChoseHighscore
 
 # Instanciations obligatoires initiales
 pygame.init()
@@ -11,6 +13,8 @@ screen = pygame.display.set_mode((1024, 768))
 pygame.display.set_icon(pygame.image.load('assets/character/charFront.png'))
 game = Game()
 menu = Menu()
+highscore = Highscore()
+choseHighscore = ChoseHighscore()
 credits = Credits()
 currentEvent = None
 running = True
@@ -21,11 +25,15 @@ while running:
     clock.tick(60) 
     if game.is_playing: # Si on est en jeu, on lance la boucle du jeu
         game.drawJeu(screen, pygame.display)
-        game.catch_signal(currentEvent)
+        game.catch_signal(screen, choseHighscore, currentEvent)
         currentEvent = None
         game.pressed["Clic"] = False
     elif credits.is_credits: # Si on est dans les crédits, on affiche les crédits
         credits.drawCredits(screen)
+    elif highscore.is_highscore: # Si on est dans les highscores, on affiche les highscores
+        highscore.drawHighscore(screen)
+    elif choseHighscore.is_highscore: # Si on est dans les highscores, on affiche les highscores
+        choseHighscore.drawHighscore(screen, pygame.display)
     else: # Sinon on affiche le menu principal (c'est ce qui se passe quand on lance le jeu)
         if music == False:
             music = True
@@ -42,6 +50,9 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
+        if choseHighscore.is_highscore and event.type == pygame.KEYDOWN:
+            choseHighscore.catch_signalC(event, screen, pygame.display)
+
         if game.is_playing:
             # On met à jour pressed
             if event.type == MOUSEBUTTONDOWN:
@@ -56,10 +67,15 @@ while running:
                     game.pressed[event.key] = False
                 elif event.type == pygame.K_RETURN:
                     game.pressed[event.key] = False
-        elif event.type == MOUSEBUTTONDOWN and credits.is_credits:
-            credits.catch_signal(event)
-        elif event.type == MOUSEBUTTONDOWN and not menu.catch_signal(game, credits, event): # Si la fonction renvoie faux, on doit arrêter le programme
-            running = False 
+        elif event.type == MOUSEBUTTONDOWN:
+            if credits.is_credits:
+                credits.catch_signal(event)
+            elif highscore.is_highscore:
+                highscore.catch_signal(event)
+            elif choseHighscore.is_highscore:
+                choseHighscore.catch_signalM(event, screen, pygame.display)
+            elif not menu.catch_signal(game, credits, highscore, event): # Si la fonction renvoie faux, on doit arrêter le programme
+                running = False 
 
         
 pygame.quit()
